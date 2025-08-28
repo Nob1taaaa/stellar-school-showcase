@@ -46,7 +46,7 @@
     --blue-deep: 220 100% 35; /* Deep blue */
     --orange-vibrant: 25 100% 55; /* Bright orange */
     --orange-light: 35 100% 70; /* Light orange */
-    --yellow-warm: 45 100% 60; /* Warm yellow */
+    --emerald-vibrant: 160 100% 45; /* Beautiful emerald green */
 
     /* Beautiful Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(220 100% 60%) 0%, hsl(230 100% 65%) 30%, hsl(240 100% 70%) 100%);
@@ -56,11 +56,12 @@
     --gradient-button: linear-gradient(135deg, hsl(25 100% 55%) 0%, hsl(35 100% 60%) 100%);
 
     /* Enhanced Shadows */
-    --shadow-elegant: 0 20px 60px hsla(220 100% 50% / 0.15);
-    --shadow-glow: 0 0 40px hsla(25 100% 55% / 0.4);
-    --shadow-card: 0 10px 40px hsla(220 100% 15% / 0.08);
-    --shadow-hero: 0 30px 80px hsla(220 100% 50% / 0.25);
-    --shadow-button: 0 8px 30px hsla(25 100% 55% / 0.3);
+    --shadow-elegant: 0 25px 80px hsla(220 100% 50% / 0.2);
+    --shadow-glow: 0 0 50px hsla(25 100% 55% / 0.5);
+    --shadow-card: 0 15px 60px hsla(220 100% 15% / 0.12);
+    --shadow-hero: 0 40px 120px hsla(220 100% 50% / 0.3);
+    --shadow-button: 0 12px 40px hsla(25 100% 55% / 0.4);
+    --shadow-emerald: 0 0 40px hsla(160 100% 45% / 0.4);
 
     /* Typography */
     --font-heading: 'Inter', system-ui, sans-serif;

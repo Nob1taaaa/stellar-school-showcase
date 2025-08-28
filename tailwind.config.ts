@@ -68,8 +68,8 @@ export default {
 					vibrant: 'hsl(var(--orange-vibrant))',
 					light: 'hsl(var(--orange-light))'
 				},
-				yellow: {
-					warm: 'hsl(var(--yellow-warm))'
+				emerald: {
+					vibrant: 'hsl(var(--emerald-vibrant))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -98,7 +98,8 @@ export default {
 				'glow': 'var(--shadow-glow)',
 				'card': 'var(--shadow-card)',
 				'hero': 'var(--shadow-hero)',
-				'button': 'var(--shadow-button)'
+				'button': 'var(--shadow-button)',
+				'emerald': 'var(--shadow-emerald)'
 			},
 			transitionTimingFunction: {
 				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
