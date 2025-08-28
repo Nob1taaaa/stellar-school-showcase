@@ -147,7 +147,33 @@ const SchoolLife = () => {
             </p>
           </div>
 
-          <div className="mobile-grid gap-4 sm:gap-6 md:gap-8 mb-16 sm:mb-20">
+          {/* Mobile Horizontal Scroll for Daily Activities */}
+          <div className="lg:hidden overflow-x-auto pb-4 mb-8">
+            <div className="flex space-x-4 w-max">
+              {dailyActivities.map((activity, index) => {
+                const Icon = activity.icon;
+                return (
+                  <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll w-72 flex-shrink-0" style={{animationDelay: `${index * 0.1}s`}}>
+                    <CardContent className="mobile-card-padding">
+                      <div className="flex items-center justify-between mb-4 sm:mb-6">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-accent rounded-2xl flex items-center justify-center group-hover:scale-110 smooth-transition">
+                          <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-accent-foreground" />
+                        </div>
+                        <Badge variant="outline" className="text-xs sm:text-sm">{activity.time}</Badge>
+                      </div>
+                      <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-accent smooth-transition">
+                        {activity.title}
+                      </h4>
+                      <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{activity.description}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+          
+          {/* Desktop Grid for Daily Activities */}
+          <div className="hidden lg:grid lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-16 sm:mb-20">
             {dailyActivities.map((activity, index) => {
               const Icon = activity.icon;
               return (
@@ -205,7 +231,30 @@ const SchoolLife = () => {
             </p>
           </div>
 
-          <div className="mobile-grid gap-4 sm:gap-6 md:gap-8">
+          {/* Mobile Horizontal Scroll for School Values */}
+          <div className="lg:hidden overflow-x-auto pb-4">
+            <div className="flex space-x-4 w-max">
+              {schoolValues.map((value, index) => {
+                const Icon = value.icon;
+                return (
+                  <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll w-72 flex-shrink-0" style={{animationDelay: `${index * 0.1}s`}}>
+                    <CardContent className="mobile-card-padding text-center">
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-hero rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 smooth-transition">
+                        <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary-foreground" />
+                      </div>
+                      <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-primary smooth-transition">
+                        {value.title}
+                      </h4>
+                      <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{value.description}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+          
+          {/* Desktop Grid for School Values */}
+          <div className="hidden lg:grid lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {schoolValues.map((value, index) => {
               const Icon = value.icon;
               return (

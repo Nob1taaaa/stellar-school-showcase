@@ -72,17 +72,37 @@ const Contact = () => {
           {/* Contact Grid */}
           <div className="grid lg:grid-cols-2 gap-16 mb-16">
             {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-3xl font-bold text-foreground mb-6">Get in Touch</h3>
-                <p className="text-lg text-muted-foreground mb-8">
-                  Whether you're a prospective parent, current student, or community member, 
-                  we're always ready to assist you with any inquiries about our school.
-                </p>
+            <div className="block space-y-8">
+              {/* Mobile Horizontal Scroll for Contact Cards */}
+              <div className="lg:hidden overflow-x-auto pb-4">
+                <div className="flex space-x-4 w-max">
+                  {contactInfo.map((info, index) => {
+                    const Icon = info.icon;
+                    return (
+                      <Card key={index} className="glass-card border-none hover:shadow-elegant smooth-transition interactive-card w-80 flex-shrink-0">
+                        <CardContent className="p-6">
+                          <div className="flex items-start space-x-4">
+                            <div className="w-12 h-12 bg-gradient-hero rounded-2xl flex items-center justify-center flex-shrink-0">
+                              <Icon className="w-6 h-6 text-primary-foreground" />
+                            </div>
+                            <div>
+                              <h4 className="text-lg font-bold text-foreground mb-2">{info.title}</h4>
+                              <div className="space-y-1">
+                                {info.details.map((detail, idx) => (
+                                  <p key={idx} className="text-muted-foreground">{detail}</p>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    );
+                  })}
+                </div>
               </div>
 
-              {/* Contact Cards */}
-              <div className="grid gap-6">
+              {/* Desktop Contact Cards */}
+              <div className="hidden lg:grid lg:gap-6">
                 {contactInfo.map((info, index) => {
                   const Icon = info.icon;
                   return (
