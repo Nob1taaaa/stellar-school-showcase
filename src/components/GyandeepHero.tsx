@@ -71,10 +71,10 @@ const GyandeepHero = () => {
                 <div className="text-sm text-muted-foreground">Years</div>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 bg-emerald-vibrant/10 rounded-xl flex items-center justify-center mx-auto mb-2 shadow-emerald">
-                  <Award className="w-6 h-6 text-emerald-vibrant" />
+                <div className="w-12 h-12 bg-emerald-force rounded-xl flex items-center justify-center mx-auto mb-2 shadow-emerald">
+                  <Award className="w-6 h-6 text-emerald-force" style={{color: 'hsl(160 84% 39)'}} />
                 </div>
-                <div className="text-2xl font-bold text-emerald-vibrant">98%</div>
+                <div className="text-2xl font-bold text-emerald-force" style={{color: 'hsl(160 84% 39)'}}>98%</div>
                 <div className="text-sm text-muted-foreground">Success</div>
               </div>
             </div>

@@ -46,7 +46,7 @@
     --blue-deep: 220 100% 35; /* Deep blue */
     --orange-vibrant: 25 100% 55; /* Bright orange */
     --orange-light: 35 100% 70; /* Light orange */
-    --emerald-vibrant: 160 100% 45; /* Beautiful emerald green */
+    --emerald-vibrant: 160 84% 39; /* Beautiful emerald green */
 
     /* Beautiful Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(220 100% 60%) 0%, hsl(230 100% 65%) 30%, hsl(240 100% 70%) 100%);
@@ -269,5 +269,14 @@
   .gpu-accelerated {
     transform: translateZ(0);
     will-change: transform, opacity;
+  }
+
+  /* Force emerald color utility */
+  .text-emerald-force {
+    color: hsl(160 84% 39) !important;
+  }
+
+  .bg-emerald-force {
+    background-color: hsl(160 84% 39 / 0.1) !important;
   }
 }
