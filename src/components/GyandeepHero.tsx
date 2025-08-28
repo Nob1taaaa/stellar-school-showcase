@@ -8,7 +8,7 @@ const GyandeepHero = () => {
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full"></div>
         <div className="absolute top-40 right-20 w-20 h-20 bg-orange-vibrant/20 rounded-lg rotate-12"></div>
-        <div className="absolute bottom-40 left-20 w-16 h-16 bg-emerald-vibrant/30 rounded-full shadow-emerald"></div>
+        <div className="absolute bottom-40 left-20 w-16 h-16 bg-purple-vibrant/30 rounded-full shadow-purple glow-effect"></div>
         <div className="absolute bottom-20 right-40 w-24 h-24 bg-white/10 rounded-lg rotate-45"></div>
       </div>
 
@@ -71,10 +71,10 @@ const GyandeepHero = () => {
                 <div className="text-sm text-muted-foreground">Years</div>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 bg-emerald-force rounded-xl flex items-center justify-center mx-auto mb-2 shadow-emerald">
-                  <Award className="w-6 h-6 text-emerald-force" style={{color: 'hsl(160 84% 39)'}} />
+                <div className="w-12 h-12 bg-purple-force rounded-xl flex items-center justify-center mx-auto mb-2 shadow-purple glow-effect">
+                  <Award className="w-6 h-6 text-purple-force" style={{color: 'hsl(280 100% 60)'}} />
                 </div>
-                <div className="text-2xl font-bold text-emerald-force" style={{color: 'hsl(160 84% 39)'}}>98%</div>
+                <div className="text-2xl font-bold text-purple-force" style={{color: 'hsl(280 100% 60)'}}>98%</div>
                 <div className="text-sm text-muted-foreground">Success</div>
               </div>
             </div>
