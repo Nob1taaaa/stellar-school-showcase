@@ -1,6 +1,5 @@
 import GyandeepNavigation from "@/components/GyandeepNavigation";
 import GyandeepHero from "@/components/GyandeepHero";
-import GyandeepAbout from "@/components/GyandeepAbout";
 import GyandeepAcademic from "@/components/GyandeepAcademic";
 import SchoolLife from "@/components/SchoolLife";
 import NoticeBoard from "@/components/NoticeBoard";
@@ -12,7 +11,6 @@ const Index = () => {
     <div className="min-h-screen">
       <GyandeepNavigation />
       <GyandeepHero />
-      <GyandeepAbout />
       <GyandeepAcademic />
       <SchoolLife />
       <NoticeBoard />
