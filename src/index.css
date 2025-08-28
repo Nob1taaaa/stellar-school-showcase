@@ -182,4 +182,70 @@
   .spring-transition {
     transition: var(--transition-spring);
   }
+
+  /* Mobile-First Responsive Classes */
+  .mobile-hero-text {
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl;
+  }
+
+  .mobile-section-title {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  .mobile-card-padding {
+    @apply p-4 sm:p-6 md:p-8;
+  }
+
+  .mobile-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+  }
+
+  /* Enhanced Animations */
+  .animate-on-scroll {
+    @apply opacity-0 translate-y-8;
+    animation: fade-in 0.8s ease-out forwards;
+  }
+
+  .animate-delay-100 {
+    animation-delay: 0.1s;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 0.3s;
+  }
+
+  .animate-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .hover-lift {
+    @apply smooth-transition hover:-translate-y-2 hover:shadow-elegant;
+  }
+
+  .hover-glow {
+    @apply smooth-transition hover:shadow-glow hover:scale-105;
+  }
+
+  .interactive-card {
+    @apply smooth-transition hover:-translate-y-1 hover:shadow-hero hover:border-accent/30;
+  }
+
+  /* Mobile Touch Improvements */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+  }
+
+  .mobile-nav-item {
+    @apply py-4 px-6 text-lg font-medium smooth-transition;
+  }
+
+  /* Performance Optimizations */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform, opacity;
+  }
 }
