@@ -19,7 +19,7 @@ const Navigation = () => {
   return (
     <>
       {/* Top Header */}
-      <div className="bg-primary text-primary-foreground py-2 text-sm">
+      <div className="bg-gradient-hero text-primary-foreground py-3 text-sm shadow-golden">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
             <div className="flex items-center space-x-2 sm:space-x-4">
@@ -49,7 +49,7 @@ const Navigation = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="fixed top-12 left-0 right-0 z-50 glass-card border-b border-white/10">
+      <nav className="fixed top-14 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-golden-accent/20 shadow-golden">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
@@ -62,13 +62,13 @@ const Navigation = () => {
                 />
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-xl sm:text-2xl font-bold text-gradient">Gyandeep Public School</h1>
-                <p className="text-xs sm:text-sm text-muted-foreground">Dharsauna, Cholapur, Varanasi-221101</p>
-                <p className="text-xs text-muted-foreground hidden md:block">Affiliated to CBSE (10+2) New Delhi | School Code: 71458</p>
+                <h1 className="text-xl sm:text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent">Gyandeep Public School</h1>
+                <p className="text-xs sm:text-sm text-foreground/70 font-medium">Dharsauna, Cholapur, Varanasi-221101</p>
+                <p className="text-xs text-foreground/60 hidden md:block font-medium">Affiliated to CBSE (10+2) New Delhi | School Code: 71458</p>
               </div>
               <div className="sm:hidden">
-                <h1 className="text-lg font-bold text-gradient">Gyandeep</h1>
-                <p className="text-xs text-muted-foreground">Public School</p>
+                <h1 className="text-lg font-bold bg-gradient-hero bg-clip-text text-transparent">Gyandeep</h1>
+                <p className="text-xs text-foreground/70 font-medium">Public School</p>
               </div>
             </div>
 
@@ -78,13 +78,13 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-foreground hover:text-primary smooth-transition font-medium relative group"
+                  className="text-foreground hover:text-primary smooth-transition font-semibold relative group text-lg"
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-hero group-hover:w-full smooth-transition"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-1 bg-gradient-hero group-hover:w-full smooth-transition rounded-full shadow-golden"></span>
                 </a>
               ))}
-              <Button variant="hero" size="sm" className="text-sm sm:text-base px-3 sm:px-4">
+              <Button variant="default" size="lg" className="bg-gradient-hero text-primary-foreground font-semibold shadow-golden hover:shadow-glow px-6 py-3">
                 <Download className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                 <span className="hidden sm:inline">Admission Form</span>
                 <span className="sm:hidden">Apply</span>
@@ -105,19 +105,19 @@ const Navigation = () => {
 
           {/* Mobile Navigation */}
           {isOpen && (
-            <div className="lg:hidden py-4 border-t border-white/10 animate-slide-up">
+            <div className="lg:hidden py-4 border-t border-golden-accent/20 animate-slide-up bg-white/95">
               <div className="flex flex-col space-y-2">
                 {navItems.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
-                    className="mobile-nav-item text-foreground hover:text-primary smooth-transition hover:bg-accent/10 rounded-lg"
+                    className="mobile-nav-item text-foreground hover:text-primary smooth-transition hover:bg-gradient-accent/10 rounded-lg font-semibold"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
                   </a>
                 ))}
-                <Button variant="hero" size="sm" className="w-fit mt-4 mx-6">
+                <Button variant="default" size="lg" className="w-fit mt-4 mx-6 bg-gradient-hero text-primary-foreground font-semibold shadow-golden">
                   <Download className="w-4 h-4 mr-2" />
                   Admission Form
                 </Button>

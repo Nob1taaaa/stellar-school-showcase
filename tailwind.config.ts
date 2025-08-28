@@ -58,14 +58,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Scarlet Style Colors
-				scarlet: {
-					primary: 'hsl(var(--scarlet-primary))',
-					secondary: 'hsl(var(--scarlet-secondary))',
-					deep: 'hsl(var(--scarlet-deep))',
-					accent: 'hsl(var(--scarlet-accent))',
-					light: 'hsl(var(--scarlet-light))',
-					vibrant: 'hsl(var(--scarlet-vibrant))'
+				// Golden & White Style Colors
+				golden: {
+					primary: 'hsl(var(--golden-primary))',
+					secondary: 'hsl(var(--golden-secondary))',
+					deep: 'hsl(var(--golden-deep))',
+					accent: 'hsl(var(--golden-accent))',
+					light: 'hsl(var(--golden-light))',
+					pure: 'hsl(var(--white-pure))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -95,7 +95,7 @@ export default {
 				'card': 'var(--shadow-card)',
 				'hero': 'var(--shadow-hero)',
 				'button': 'var(--shadow-button)',
-				'scarlet': 'var(--shadow-scarlet)'
+				'golden': 'var(--shadow-golden)'
 			},
 			transitionTimingFunction: {
 				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
