@@ -58,23 +58,19 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Indian School Colors
+				// VidyArk Style Colors
+				blue: {
+					primary: 'hsl(var(--blue-primary))',
+					secondary: 'hsl(var(--blue-secondary))',
+					deep: 'hsl(var(--blue-deep))'
+				},
 				orange: {
 					vibrant: 'hsl(var(--orange-vibrant))',
-					deep: 'hsl(var(--orange-deep))'
-				},
-				red: {
-					vibrant: 'hsl(var(--red-vibrant))',
-					deep: 'hsl(var(--red-deep))'
-				},
-				green: {
-					vibrant: 'hsl(var(--green-vibrant))',
-					deep: 'hsl(var(--green-deep))'
+					light: 'hsl(var(--orange-light))'
 				},
 				yellow: {
 					warm: 'hsl(var(--yellow-warm))'
 				},
-				saffron: 'hsl(var(--saffron))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -95,14 +91,14 @@ export default {
 				'gradient-accent': 'var(--gradient-accent)',
 				'gradient-subtle': 'var(--gradient-subtle)',
 				'gradient-card': 'var(--gradient-card)',
-				'gradient-saffron': 'var(--gradient-saffron)'
+				'gradient-button': 'var(--gradient-button)'
 			},
 			boxShadow: {
 				'elegant': 'var(--shadow-elegant)',
 				'glow': 'var(--shadow-glow)',
 				'card': 'var(--shadow-card)',
 				'hero': 'var(--shadow-hero)',
-				'orange': 'var(--shadow-orange)'
+				'button': 'var(--shadow-button)'
 			},
 			transitionTimingFunction: {
 				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',

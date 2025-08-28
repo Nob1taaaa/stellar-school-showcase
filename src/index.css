@@ -6,62 +6,61 @@
 
 @layer base {
   :root {
-    --background: 248 250 252;
-    --foreground: 15 23 42;
+    /* VidyArk Inspired Color Scheme */
+    --background: 214 88 176; /* Beautiful blue gradient background */
+    --foreground: 255 255 255;
 
     --card: 255 255 255;
-    --card-foreground: 15 23 42;
+    --card-foreground: 30 41 59;
 
     --popover: 255 255 255;
-    --popover-foreground: 15 23 42;
+    --popover-foreground: 30 41 59;
 
-    --primary: 220 38 127;
-    --primary-foreground: 248 250 252;
-    --primary-glow: 236 72 153;
+    --primary: 59 130 246; /* Beautiful blue */
+    --primary-foreground: 255 255 255;
+    --primary-glow: 96 165 250;
 
-    --secondary: 241 245 249;
-    --secondary-foreground: 15 23 42;
+    --secondary: 255 255 255;
+    --secondary-foreground: 30 41 59;
 
     --muted: 248 250 252;
     --muted-foreground: 100 116 139;
 
-    --accent: 34 197 94;
+    --accent: 251 146 60; /* Orange accent like VidyArk */
     --accent-foreground: 255 255 255;
-    --accent-glow: 74 222 128;
+    --accent-glow: 253 186 116;
 
-    --success: 16 185 129;
+    --success: 34 197 94;
     --success-foreground: 255 255 255;
 
     --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
 
     --border: 226 232 240;
-    --input: 241 245 249;
-    --ring: 220 38 127;
+    --input: 255 255 255;
+    --ring: 59 130 246;
 
-    /* Beautiful Indian School Colors */
+    /* VidyArk Style Colors */
+    --blue-primary: 59 130 246;
+    --blue-secondary: 96 165 250;
+    --blue-deep: 29 78 216;
     --orange-vibrant: 251 146 60;
-    --orange-deep: 234 88 12;
-    --red-vibrant: 239 68 68;
-    --red-deep: 185 28 28;
-    --green-vibrant: 34 197 94;
-    --green-deep: 21 128 61;
+    --orange-light: 253 186 116;
     --yellow-warm: 251 191 36;
-    --saffron: 255 153 51;
 
-    /* Enhanced Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--red-vibrant)) 0%, hsl(var(--orange-vibrant)) 50%, hsl(var(--yellow-warm)) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(var(--green-vibrant)) 0%, hsl(var(--accent)) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(241 245 249) 100%);
-    --gradient-card: linear-gradient(145deg, hsla(255 255 255 / 0.95) 0%, hsla(248 250 252 / 0.9) 100%);
-    --gradient-saffron: linear-gradient(135deg, hsl(var(--saffron)) 0%, hsl(var(--orange-vibrant)) 100%);
+    /* VidyArk Inspired Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(214 88% 51%) 0%, hsl(217 91% 60%) 50%, hsl(213 94% 68%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--orange-light)) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(214 88% 51%) 0%, hsl(217 91% 60%) 100%);
+    --gradient-card: linear-gradient(145deg, hsla(255 255 255 / 0.95) 0%, hsla(255 255 255 / 0.9) 100%);
+    --gradient-button: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--yellow-warm)) 100%);
 
-    /* Enhanced Shadows */
-    --shadow-elegant: 0 10px 40px hsla(220 38 127 / 0.15);
-    --shadow-glow: 0 0 60px hsla(34 197 94 / 0.4);
-    --shadow-card: 0 6px 30px hsla(15 23 42 / 0.08);
-    --shadow-hero: 0 25px 100px hsla(220 38 127 / 0.25);
-    --shadow-orange: 0 8px 32px hsla(251 146 60 / 0.3);
+    /* VidyArk Style Shadows */
+    --shadow-elegant: 0 10px 40px hsla(214 88% 51% / 0.25);
+    --shadow-glow: 0 0 60px hsla(251 146 60 / 0.4);
+    --shadow-card: 0 8px 32px hsla(30 41 59 / 0.08);
+    --shadow-hero: 0 25px 100px hsla(214 88% 51% / 0.3);
+    --shadow-button: 0 4px 20px hsla(251 146 60 / 0.3);
 
     /* Typography */
     --font-heading: 'Inter', system-ui, sans-serif;
@@ -178,8 +177,8 @@
     background: var(--gradient-accent);
   }
 
-  .saffron-gradient {
-    background: var(--gradient-saffron);
+  .button-gradient {
+    background: var(--gradient-button);
   }
 
   .text-gradient {
