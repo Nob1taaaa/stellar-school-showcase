@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Star, Users, Award, BookOpen, Globe, TrendingUp, Download } from "lucide-react";
-import heroImage from "@/assets/gyandeep-hero.jpg";
+import heroImage from "@/assets/school-campus-main.png";
 
 const GyandeepHero = () => {
   return (

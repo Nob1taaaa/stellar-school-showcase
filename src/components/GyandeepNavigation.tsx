@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Download, User } from "lucide-react";
+import schoolLogo from "@/assets/school-logo-header.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,8 +54,12 @@ const Navigation = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex items-center space-x-2 sm:space-x-4">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-hero flex items-center justify-center shadow-glow">
-                <span className="text-lg sm:text-2xl font-bold text-primary-foreground">G</span>
+              <div className="h-12 sm:h-16 md:h-20">
+                <img
+                  src={schoolLogo}
+                  alt="Gyandeep Public School Logo"
+                  className="h-full w-auto object-contain"
+                />
               </div>
               <div className="hidden sm:block">
                 <h1 className="text-xl sm:text-2xl font-bold text-gradient">Gyandeep Public School</h1>
