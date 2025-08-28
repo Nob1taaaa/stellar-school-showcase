@@ -51,19 +51,21 @@ const GyandeepAbout = () => {
   ];
 
   return (
-    <section id="about" className="py-16 sm:py-20 md:py-24 bg-gradient-subtle">
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-16 sm:py-20 md:py-24 bg-gradient-hero">
+      <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12 sm:mb-16 md:mb-20">
-            <Badge variant="secondary" className="mb-4 sm:mb-6 text-base sm:text-lg px-4 sm:px-6 py-2">About Our Institution</Badge>
-            <h2 className="mobile-section-title font-bold text-foreground mb-6 sm:mb-8 animate-fade-in">
-              We Are An <span className="text-gradient">Awesome Team</span>
-            </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
-              Gyandeep Public School is a private co-educational English medium school located at 
-              Dharsauna Cholapur Varanasi, sprawling across 2 acres of green land.
-            </p>
+            <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-hero mx-auto max-w-4xl animate-fade-in">
+              <Badge variant="outline" className="mb-4 sm:mb-6 text-base sm:text-lg px-4 sm:px-6 py-2 border-blue-primary text-blue-primary">About Our Institution</Badge>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 sm:mb-8">
+                We Are An <span className="text-blue-primary">Awesome Team</span>
+              </h2>
+              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
+                Gyandeep Public School is a private co-educational English medium school located at 
+                Dharsauna Cholapur Varanasi, sprawling across 2 acres of green land.
+              </p>
+            </div>
           </div>
 
           {/* Leadership & Foundation */}
