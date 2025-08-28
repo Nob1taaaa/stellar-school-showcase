@@ -67,9 +67,18 @@
     --font-heading: 'Inter', system-ui, sans-serif;
     --font-body: 'Inter', system-ui, sans-serif;
 
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
+    
     /* Smooth Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    
+    /* Mobile Scrollbar Styling */
+    --scrollbar-track: rgba(255, 255, 255, 0.1);
+    --scrollbar-thumb: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --scrollbar-thumb-hover: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary-glow)));
 
     --radius: 0.75rem;
 
@@ -278,5 +287,35 @@
 
   .bg-purple-force {
     background-color: hsl(280 100% 60 / 0.15) !important;
+  }
+  
+  /* Custom Scrollbar for Mobile Horizontal Scroll */
+  .overflow-x-auto::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .overflow-x-auto::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 10px;
+  }
+  
+  .overflow-x-auto::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .overflow-x-auto::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+  }
+  
+  /* Enhanced Card Animations */
+  .interactive-card {
+    @apply transition-all duration-500 ease-out hover:shadow-2xl hover:-translate-y-2;
+    transform-origin: center;
+  }
+  
+  .interactive-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 30px rgba(255, 193, 7, 0.2);
   }
 }
