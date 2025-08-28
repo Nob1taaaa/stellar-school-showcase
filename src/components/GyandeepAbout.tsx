@@ -57,9 +57,9 @@ const GyandeepAbout = () => {
           {/* Section Header */}
           <div className="text-center mb-12 sm:mb-16 md:mb-20">
             <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-hero mx-auto max-w-4xl animate-fade-in">
-              <Badge variant="outline" className="mb-4 sm:mb-6 text-base sm:text-lg px-4 sm:px-6 py-2 border-blue-primary text-blue-primary">About Our Institution</Badge>
+              <Badge variant="outline" className="mb-4 sm:mb-6 text-base sm:text-lg px-4 sm:px-6 py-2 border-primary text-primary">About Our Institution</Badge>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 sm:mb-8">
-                We Are An <span className="text-blue-primary">Awesome Team</span>
+                We Are An <span className="text-primary">Awesome Team</span>
               </h2>
               <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
                 Gyandeep Public School is a private co-educational English medium school located at 
