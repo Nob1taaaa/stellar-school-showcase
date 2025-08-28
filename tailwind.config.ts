@@ -58,18 +58,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// VidyArk Style Colors
-				blue: {
-					primary: 'hsl(var(--blue-primary))',
-					secondary: 'hsl(var(--blue-secondary))',
-					deep: 'hsl(var(--blue-deep))'
-				},
-				orange: {
-					vibrant: 'hsl(var(--orange-vibrant))',
-					light: 'hsl(var(--orange-light))'
-				},
-				purple: {
-					vibrant: 'hsl(var(--purple-vibrant))'
+				// Scarlet Style Colors
+				scarlet: {
+					primary: 'hsl(var(--scarlet-primary))',
+					secondary: 'hsl(var(--scarlet-secondary))',
+					deep: 'hsl(var(--scarlet-deep))',
+					accent: 'hsl(var(--scarlet-accent))',
+					light: 'hsl(var(--scarlet-light))',
+					vibrant: 'hsl(var(--scarlet-vibrant))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -99,7 +95,7 @@ export default {
 				'card': 'var(--shadow-card)',
 				'hero': 'var(--shadow-hero)',
 				'button': 'var(--shadow-button)',
-				'purple': 'var(--shadow-purple)'
+				'scarlet': 'var(--shadow-scarlet)'
 			},
 			transitionTimingFunction: {
 				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',

@@ -16,19 +16,19 @@
     --popover: 255 255 255;
     --popover-foreground: 220 100% 15;
 
-    --primary: 220 100% 50; /* Bright vibrant blue */
+    --primary: 11 100% 50; /* Vibrant scarlet red */
     --primary-foreground: 255 255 255;
-    --primary-glow: 220 100% 70; /* Lighter blue glow */
+    --primary-glow: 16 100% 66; /* Lighter scarlet glow */
 
     --secondary: 255 255 255;
-    --secondary-foreground: 220 100% 15;
+    --secondary-foreground: 11 100% 15;
 
-    --muted: 220 60% 98;
-    --muted-foreground: 220 30% 40;
+    --muted: 11 20% 98;
+    --muted-foreground: 11 15% 40;
 
-    --accent: 25 100% 55; /* Vibrant orange */
+    --accent: 16 100% 60; /* Rich red-orange */
     --accent-foreground: 255 255 255;
-    --accent-glow: 35 100% 65; /* Bright orange glow */
+    --accent-glow: 20 100% 70; /* Bright red-orange glow */
 
     --success: 120 100% 40;
     --success-foreground: 255 255 255;
@@ -40,28 +40,28 @@
     --input: 255 255 255;
     --ring: 220 100% 50;
 
-    /* Vibrant Enhanced Colors */
-    --blue-primary: 220 100% 50; /* Bright royal blue */
-    --blue-secondary: 220 100% 65; /* Lighter blue */
-    --blue-deep: 220 100% 35; /* Deep blue */
-    --orange-vibrant: 25 100% 55; /* Bright orange */
-    --orange-light: 35 100% 70; /* Light orange */
-    --purple-vibrant: 280 100% 60; /* Stunning vibrant purple */
+    /* Scarlet Enhanced Colors */
+    --scarlet-primary: 11 100% 50; /* Vibrant scarlet */
+    --scarlet-secondary: 16 100% 66; /* Lighter scarlet */
+    --scarlet-deep: 8 100% 35; /* Deep scarlet */
+    --scarlet-accent: 16 100% 60; /* Rich red-orange */
+    --scarlet-light: 20 100% 75; /* Light red-orange */
+    --scarlet-vibrant: 14 100% 55; /* Stunning vibrant scarlet */
 
-    /* Beautiful Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220 100% 60%) 0%, hsl(230 100% 65%) 30%, hsl(240 100% 70%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(25 100% 55%) 0%, hsl(35 100% 65%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(220 100% 60%) 0%, hsl(230 100% 70%) 100%);
-    --gradient-card: linear-gradient(145deg, hsla(255 255 255 / 1) 0%, hsla(220 60% 98% / 0.95) 100%);
-    --gradient-button: linear-gradient(135deg, hsl(25 100% 55%) 0%, hsl(35 100% 60%) 100%);
+    /* Beautiful Scarlet Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(11 100% 50%) 0%, hsl(16 100% 60%) 30%, hsl(20 100% 70%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(16 100% 60%) 0%, hsl(20 100% 70%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(11 100% 50%) 0%, hsl(16 100% 60%) 100%);
+    --gradient-card: linear-gradient(145deg, hsla(255 255 255 / 1) 0%, hsla(11 20% 98% / 0.95) 100%);
+    --gradient-button: linear-gradient(135deg, hsl(11 100% 50%) 0%, hsl(16 100% 60%) 100%);
 
-    /* Enhanced Shadows */
-    --shadow-elegant: 0 25px 80px hsla(220 100% 50% / 0.2);
-    --shadow-glow: 0 0 50px hsla(25 100% 55% / 0.5);
-    --shadow-card: 0 15px 60px hsla(220 100% 15% / 0.12);
-    --shadow-hero: 0 40px 120px hsla(220 100% 50% / 0.3);
-    --shadow-button: 0 12px 40px hsla(25 100% 55% / 0.4);
-    --shadow-purple: 0 0 50px hsla(280 100% 60% / 0.5);
+    /* Enhanced Scarlet Shadows */
+    --shadow-elegant: 0 25px 80px hsla(11 100% 50% / 0.2);
+    --shadow-glow: 0 0 50px hsla(16 100% 60% / 0.5);
+    --shadow-card: 0 15px 60px hsla(11 100% 15% / 0.12);
+    --shadow-hero: 0 40px 120px hsla(11 100% 50% / 0.3);
+    --shadow-button: 0 12px 40px hsla(16 100% 60% / 0.4);
+    --shadow-scarlet: 0 0 50px hsla(11 100% 50% / 0.5);
 
     /* Typography */
     --font-heading: 'Inter', system-ui, sans-serif;
