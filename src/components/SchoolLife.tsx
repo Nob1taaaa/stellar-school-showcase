@@ -5,9 +5,9 @@ import {
   Users, Award, Star, Clock, Flag, Heart, Target, 
   Calendar, Trophy, Sunrise, BookOpen, Shield
 } from "lucide-react";
-import assemblyImage from "@/assets/school-assembly.png";
-import campusImage from "@/assets/school-building.png";
-import groundsImage from "@/assets/school-grounds.png";
+import assemblyImage from "/lovable-uploads/5793a2d7-39eb-47f1-8378-cf6688e3fc63.png";
+import campusImage from "/lovable-uploads/8b4b7aed-88f9-4ea8-9a81-19b5e3c9137b.png";
+import groundsImage from "/lovable-uploads/a01561ee-2798-4641-8400-95961985d26a.png";
 
 const SchoolLife = () => {
   const dailyActivities = [

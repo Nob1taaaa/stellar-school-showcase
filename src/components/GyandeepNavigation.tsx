@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Download, User } from "lucide-react";
-import schoolLogo from "@/assets/school-logo-header.png";
+import schoolLogo from "/lovable-uploads/eee98edb-6bfe-4a7e-b26b-21d9bc08b5a4.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);

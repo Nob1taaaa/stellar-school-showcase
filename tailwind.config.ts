@@ -58,6 +58,23 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Indian School Colors
+				orange: {
+					vibrant: 'hsl(var(--orange-vibrant))',
+					deep: 'hsl(var(--orange-deep))'
+				},
+				red: {
+					vibrant: 'hsl(var(--red-vibrant))',
+					deep: 'hsl(var(--red-deep))'
+				},
+				green: {
+					vibrant: 'hsl(var(--green-vibrant))',
+					deep: 'hsl(var(--green-deep))'
+				},
+				yellow: {
+					warm: 'hsl(var(--yellow-warm))'
+				},
+				saffron: 'hsl(var(--saffron))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -77,13 +94,15 @@ export default {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-accent': 'var(--gradient-accent)',
 				'gradient-subtle': 'var(--gradient-subtle)',
-				'gradient-card': 'var(--gradient-card)'
+				'gradient-card': 'var(--gradient-card)',
+				'gradient-saffron': 'var(--gradient-saffron)'
 			},
 			boxShadow: {
 				'elegant': 'var(--shadow-elegant)',
 				'glow': 'var(--shadow-glow)',
 				'card': 'var(--shadow-card)',
-				'hero': 'var(--shadow-hero)'
+				'hero': 'var(--shadow-hero)',
+				'orange': 'var(--shadow-orange)'
 			},
 			transitionTimingFunction: {
 				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
