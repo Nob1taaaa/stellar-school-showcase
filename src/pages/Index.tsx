@@ -1,15 +1,19 @@
-import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Programs from "@/components/Programs";
+import GyandeepNavigation from "@/components/GyandeepNavigation";
+import GyandeepHero from "@/components/GyandeepHero";
+import GyandeepAbout from "@/components/GyandeepAbout";
+import NoticeBoard from "@/components/NoticeBoard";
+import Gallery from "@/components/Gallery";
+import Contact from "@/components/Contact";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Navigation />
-      <Hero />
-      <About />
-      <Programs />
+      <GyandeepNavigation />
+      <GyandeepHero />
+      <GyandeepAbout />
+      <NoticeBoard />
+      <Gallery />
+      <Contact />
     </div>
   );
 };
