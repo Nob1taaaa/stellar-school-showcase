@@ -5,7 +5,6 @@ import SchoolLife from "@/components/SchoolLife";
 import NoticeBoard from "@/components/NoticeBoard";
 import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
-import Chatbot from "@/components/Chatbot";
 
 const Index = () => {
   return (
@@ -17,7 +16,6 @@ const Index = () => {
       <NoticeBoard />
       <Gallery />
       <Contact />
-      <Chatbot />
     </div>
   );
 };

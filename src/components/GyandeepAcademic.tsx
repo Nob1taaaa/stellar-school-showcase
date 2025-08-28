@@ -199,25 +199,23 @@ const GyandeepAcademic = () => {
             </p>
           </div>
 
-          <div className="md:mobile-grid gap-4 sm:gap-6 md:gap-8 mb-16 sm:mb-20 overflow-x-auto md:overflow-visible">
-            <div className="flex md:grid gap-4 sm:gap-6 md:gap-8 pb-4 md:pb-0">
-              {modernFacilities.map((facility, index) => {
-                const Icon = facility.icon;
-                return (
-                  <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll flex-shrink-0 w-64 md:w-auto" style={{animationDelay: `${index * 0.1}s`}}>
-                    <CardContent className="mobile-card-padding text-center">
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-accent rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 smooth-transition">
-                        <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent-foreground" />
-                      </div>
-                      <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-accent smooth-transition">
-                        {facility.title}
-                      </h4>
-                      <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{facility.description}</p>
-                    </CardContent>
-                  </Card>
-                );
-              })}
-            </div>
+          <div className="mobile-grid gap-4 sm:gap-6 md:gap-8 mb-16 sm:mb-20">
+            {modernFacilities.map((facility, index) => {
+              const Icon = facility.icon;
+              return (
+                <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
+                  <CardContent className="mobile-card-padding text-center">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-accent rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 smooth-transition">
+                      <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent-foreground" />
+                    </div>
+                    <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-accent smooth-transition">
+                      {facility.title}
+                    </h4>
+                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{facility.description}</p>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
 
           {/* Co-curricular Activities */}
