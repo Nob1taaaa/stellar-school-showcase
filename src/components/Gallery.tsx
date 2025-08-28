@@ -152,21 +152,23 @@ const Gallery = () => {
           </div>
 
           {/* Gallery Statistics */}
-          <div className="mobile-grid gap-4 sm:gap-6 md:gap-8 mb-16 sm:mb-20">
-            {galleryStats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <Card key={index} className="glass-card border-none text-center animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
-                  <CardContent className="mobile-card-padding">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 saffron-gradient rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                      <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
-                    </div>
-                    <div className="text-2xl sm:text-3xl font-bold text-orange-vibrant mb-1 sm:mb-2">{stat.number}</div>
-                    <p className="text-muted-foreground font-medium text-sm sm:text-base">{stat.text}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
+          <div className="md:mobile-grid gap-4 sm:gap-6 md:gap-8 mb-16 sm:mb-20 overflow-x-auto md:overflow-visible">
+            <div className="flex md:grid gap-4 sm:gap-6 md:gap-8 pb-4 md:pb-0">
+              {galleryStats.map((stat, index) => {
+                const Icon = stat.icon;
+                return (
+                  <Card key={index} className="glass-card border-none text-center animate-on-scroll flex-shrink-0 w-48 md:w-auto" style={{animationDelay: `${index * 0.1}s`}}>
+                    <CardContent className="mobile-card-padding">
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 saffron-gradient rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                        <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+                      </div>
+                      <div className="text-2xl sm:text-3xl font-bold text-orange-vibrant mb-1 sm:mb-2">{stat.number}</div>
+                      <p className="text-muted-foreground font-medium text-sm sm:text-base">{stat.text}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
 
           {/* CTA Section */}
