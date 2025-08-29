@@ -318,4 +318,124 @@
   .interactive-card:hover {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 30px rgba(255, 193, 7, 0.2);
   }
+
+  /* 3D Card Effects */
+  .card-3d-parent {
+    width: 100%;
+    height: auto;
+    perspective: 1000px;
+  }
+
+  .card-3d {
+    height: 100%;
+    border-radius: 50px;
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    transition: all 0.5s ease-in-out;
+    transform-style: preserve-3d;
+    box-shadow: rgba(5, 71, 17, 0) 40px 50px 25px -40px, rgba(5, 71, 17, 0.2) 0px 25px 25px -5px;
+    position: relative;
+  }
+
+  .card-3d-glass {
+    transform-style: preserve-3d;
+    position: absolute;
+    inset: 8px;
+    border-radius: 55px;
+    border-top-right-radius: 100%;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.349) 0%, rgba(255, 255, 255, 0.815) 100%);
+    backdrop-filter: blur(5px);
+    transform: translate3d(0px, 0px, 25px);
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .card-3d-content {
+    transform: translate3d(0, 0, 26px);
+    position: relative;
+    z-index: 10;
+  }
+
+  .card-3d-logo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-style: preserve-3d;
+  }
+
+  .card-3d-circle {
+    display: block;
+    position: absolute;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) -10px 10px 20px 0px;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 249, 203, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .card-3d-circle1 {
+    width: 170px;
+    transform: translate3d(0, 0, 20px);
+    top: 8px;
+    right: 8px;
+  }
+
+  .card-3d-circle2 {
+    width: 140px;
+    transform: translate3d(0, 0, 40px);
+    top: 10px;
+    right: 10px;
+    backdrop-filter: blur(1px);
+    transition-delay: 0.4s;
+  }
+
+  .card-3d-circle3 {
+    width: 110px;
+    transform: translate3d(0, 0, 60px);
+    top: 17px;
+    right: 17px;
+    transition-delay: 0.8s;
+  }
+
+  .card-3d-circle4 {
+    width: 80px;
+    transform: translate3d(0, 0, 80px);
+    top: 23px;
+    right: 23px;
+    transition-delay: 1.2s;
+  }
+
+  .card-3d-circle5 {
+    width: 50px;
+    transform: translate3d(0, 0, 100px);
+    top: 30px;
+    right: 30px;
+    display: grid;
+    place-content: center;
+    transition-delay: 1.6s;
+  }
+
+  .card-3d-parent:hover .card-3d {
+    transform: rotate3d(1, 1, 0, 30deg);
+    box-shadow: rgba(5, 71, 17, 0.3) 30px 50px 25px -40px, rgba(5, 71, 17, 0.1) 0px 25px 30px 0px;
+  }
+
+  .card-3d-parent:hover .card-3d-circle2 {
+    transform: translate3d(0, 0, 60px);
+  }
+
+  .card-3d-parent:hover .card-3d-circle3 {
+    transform: translate3d(0, 0, 80px);
+  }
+
+  .card-3d-parent:hover .card-3d-circle4 {
+    transform: translate3d(0, 0, 100px);
+  }
+
+  .card-3d-parent:hover .card-3d-circle5 {
+    transform: translate3d(0, 0, 120px);
+  }
 }
