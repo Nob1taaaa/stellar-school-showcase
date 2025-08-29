@@ -3,7 +3,7 @@ import { ArrowRight, Users, Award, BookOpen } from "lucide-react";
 
 const GyandeepHero = () => {
   return (
-    <section className="min-h-screen bg-gradient-hero relative overflow-hidden" style={{marginTop: '0px'}}>
+    <section className="min-h-screen bg-gradient-warm relative overflow-hidden" style={{marginTop: '0px'}}>
       {/* Decorative Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full"></div>
