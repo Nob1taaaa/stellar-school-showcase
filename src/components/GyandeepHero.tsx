@@ -13,11 +13,11 @@ const GyandeepHero = () => {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 pt-28 md:pt-32 lg:pt-36 pb-16 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[70vh]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center min-h-[70vh]">
           {/* Content Card */}
-          <div className="bg-white rounded-3xl p-6 md:p-8 lg:p-12 shadow-hero animate-fade-in">
+          <div className="bg-white rounded-3xl p-4 md:p-6 lg:p-8 xl:p-12 shadow-hero animate-fade-in order-2 md:order-1">
             <div className="mb-8">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight mb-6">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-foreground leading-tight mb-4 md:mb-6">
                 Nurturing minds,
                 <span className="block text-primary">building futures</span>
                 <span className="block text-accent">at Gyandeep</span>
@@ -33,65 +33,65 @@ const GyandeepHero = () => {
                 </div>
               </div>
 
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8">
+              <p className="text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed mb-4 md:mb-6 lg:mb-8">
                 Excellence in education through innovative teaching methods, 
                 personalized attention, and holistic development for every child 
                 at Gyandeep Public School, Varanasi.
               </p>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-hero text-primary-foreground px-6 md:px-8 py-4 md:py-6 text-base md:text-lg rounded-2xl shadow-golden hover:shadow-glow">About Our School
-                <ArrowRight className="ml-2 w-4 md:w-5 h-4 md:h-5" />
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+              <Button size="lg" className="bg-gradient-hero text-primary-foreground px-4 md:px-6 lg:px-8 py-3 md:py-4 lg:py-6 text-sm md:text-base lg:text-lg rounded-2xl shadow-golden hover:shadow-glow">About Our School
+                <ArrowRight className="ml-2 w-3 md:w-4 lg:w-5 h-3 md:h-4 lg:h-5" />
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="button-gradient text-white border-0 px-6 md:px-8 py-4 md:py-6 text-base md:text-lg rounded-2xl shadow-button hover:shadow-glow"
+                className="button-gradient text-white border-0 px-4 md:px-6 lg:px-8 py-3 md:py-4 lg:py-6 text-sm md:text-base lg:text-lg rounded-2xl shadow-button hover:shadow-glow"
               >
                 Our Story
               </Button>
             </div>
 
             {/* School Stats */}
-            <div className="grid grid-cols-3 gap-4 md:gap-6 mt-8 md:mt-12 pt-6 md:pt-8 border-t border-gray-100">
+            <div className="grid grid-cols-3 gap-3 md:gap-4 lg:gap-6 mt-6 md:mt-8 lg:mt-12 pt-4 md:pt-6 lg:pt-8 border-t border-gray-100">
               <div className="text-center">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-2">
                   <Users className="w-6 h-6 text-primary" />
                 </div>
-                <div className="text-xl md:text-2xl font-bold text-primary">2000+</div>
+                <div className="text-lg md:text-xl lg:text-2xl font-bold text-primary">2000+</div>
                 <div className="text-xs md:text-sm text-muted-foreground">Students</div>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-2">
                   <BookOpen className="w-6 h-6 text-accent" />
                 </div>
-                <div className="text-xl md:text-2xl font-bold text-accent">25+</div>
+                <div className="text-lg md:text-xl lg:text-2xl font-bold text-accent">25+</div>
                 <div className="text-xs md:text-sm text-muted-foreground">Years</div>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-purple-force rounded-xl flex items-center justify-center mx-auto mb-2 shadow-purple glow-effect">
                   <Award className="w-6 h-6 text-purple-force" style={{color: 'hsl(280 100% 60)'}} />
                 </div>
-                <div className="text-xl md:text-2xl font-bold text-purple-force" style={{color: 'hsl(280 100% 60)'}}>98%</div>
+                <div className="text-lg md:text-xl lg:text-2xl font-bold text-purple-force" style={{color: 'hsl(280 100% 60)'}}>98%</div>
                 <div className="text-xs md:text-sm text-muted-foreground">Success</div>
               </div>
             </div>
           </div>
 
           {/* Image Section */}
-          <div className="relative animate-fade-in animate-delay-200">
+          <div className="relative animate-fade-in animate-delay-200 order-1 md:order-2">
             <div className="relative">
               <img 
                 src="/lovable-uploads/759d8b35-7caa-44ea-a405-bbd7d9d07a26.png" 
                 alt="Gyandeep Public School Campus" 
-                className="w-full h-64 md:h-80 lg:h-96 xl:h-auto object-cover rounded-3xl shadow-hero"
+                className="w-full h-48 sm:h-64 md:h-80 lg:h-96 xl:h-auto object-cover rounded-3xl shadow-hero"
               />
               {/* Contact Info Card */}
-              <div className="absolute top-2 sm:top-4 md:top-6 right-2 sm:right-4 md:right-6 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 shadow-card">
+              <div className="absolute top-2 sm:top-3 md:top-4 lg:top-6 right-2 sm:right-3 md:right-4 lg:right-6 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 shadow-card">
                 <div className="text-right">
-                  <div className="text-sm sm:text-lg md:text-2xl font-bold text-primary">+91-8010200666</div>
-                  <div className="text-xs sm:text-sm text-muted-foreground hidden sm:block">Monday - Friday, 9:00 AM - 6:00 PM</div>
+                  <div className="text-xs sm:text-sm md:text-lg lg:text-2xl font-bold text-primary">+91-8010200666</div>
+                  <div className="text-xs md:text-sm text-muted-foreground hidden sm:block">Monday - Friday, 9:00 AM - 6:00 PM</div>
                 </div>
               </div>
             </div>
