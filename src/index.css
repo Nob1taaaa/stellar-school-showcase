@@ -50,7 +50,6 @@
 
     /* Beautiful Golden & White Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(45 100% 51%) 0%, hsl(48 100% 67%) 30%, hsl(50 100% 75%) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(15 100% 85%) 0%, hsl(35 100% 88%) 25%, hsl(45 100% 90%) 50%, hsl(320 60% 85%) 75%, hsl(25 90% 82%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(42 100% 50%) 0%, hsl(48 100% 67%) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(45 20% 98%) 100%);
     --gradient-card: linear-gradient(145deg, hsla(0 0% 100% / 1) 0%, hsla(45 20% 98% / 0.95) 100%);
@@ -186,14 +185,6 @@
 
   .accent-gradient {
     background: var(--gradient-accent);
-  }
-
-  .warm-gradient {
-    background: var(--gradient-warm);
-  }
-
-  .bg-gradient-warm {
-    background: var(--gradient-warm);
   }
 
   .button-gradient {
