@@ -96,11 +96,15 @@ const GyandeepHero = () => {
           {/* Image Section */}
           <div className="relative animate-fade-in animate-delay-200 order-1 md:order-2">
             <div className="relative">
-              <img 
-                src="/lovable-uploads/759d8b35-7caa-44ea-a405-bbd7d9d07a26.png" 
-                alt="Gyandeep Public School Campus" 
-                className="w-full h-48 sm:h-64 md:h-80 lg:h-96 xl:h-auto object-cover rounded-3xl shadow-hero"
-              />
+              <div className="blob-card">
+                <div className="blob-bg"></div>
+                <div className="blob"></div>
+                <img 
+                  src="/lovable-uploads/759d8b35-7caa-44ea-a405-bbd7d9d07a26.png" 
+                  alt="Gyandeep Public School Campus" 
+                  className="w-full h-full object-cover rounded-lg relative z-10"
+                />
+              </div>
               {/* Contact Info Card */}
               <div className="absolute top-2 sm:top-3 md:top-4 lg:top-6 right-2 sm:right-3 md:right-4 lg:right-6 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 shadow-card">
                 <div className="text-right">
