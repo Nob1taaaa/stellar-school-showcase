@@ -106,40 +106,7 @@ const NoticeBoard = () => {
             </div>
           </div>
 
-          {/* Mobile Horizontal Scroll for Notices */}
-          <div className="lg:hidden overflow-x-auto pb-4 mb-8">
-            <div className="flex space-x-4 w-max">
-              {notices.slice(1).map((notice, index) => (
-                <Card key={index} className="glass-card border-none hover:shadow-elegant smooth-transition interactive-card group w-80 flex-shrink-0">
-                  <CardHeader className="pb-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <Badge className={getPriorityColor(notice.priority)} variant="secondary">
-                        {getTypeIcon(notice.type)} {notice.type}
-                      </Badge>
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <Calendar className="w-4 h-4 mr-1" />
-                        {new Date(notice.date).toLocaleDateString()}
-                      </div>
-                    </div>
-                    <CardTitle className="group-hover:text-primary smooth-transition">
-                      {notice.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground mb-4 line-clamp-3">
-                      {notice.description}
-                    </p>
-                    <Button variant="outline" className="w-full group-hover:variant-hero smooth-transition">
-                      Read More
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          {/* Desktop Grid for Notices */}
-          <div className="hidden lg:grid lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {notices.slice(1).map((notice, index) => (
               <Card key={index} className="glass-card border-none hover:shadow-elegant smooth-transition group">
                 <CardHeader className="pb-4">
@@ -168,33 +135,7 @@ const NoticeBoard = () => {
             ))}
           </div>
 
-          
-          {/* Mobile Horizontal Scroll for Quick Stats */}
-          <div className="lg:hidden overflow-x-auto pb-4 mb-8">
-            <div className="flex space-x-4 w-max">
-              <div className="glass-card p-6 rounded-xl text-center interactive-card w-48 flex-shrink-0">
-                <div className="text-2xl font-bold text-primary mb-2">15+</div>
-                <p className="text-sm text-muted-foreground">Active Notices</p>
-              </div>
-              <div className="glass-card p-6 rounded-xl text-center interactive-card w-48 flex-shrink-0">
-                <div className="text-2xl font-bold text-accent mb-2">5</div>
-                <p className="text-sm text-muted-foreground">This Week</p>
-              </div>
-              <div className="glass-card p-6 rounded-xl text-center interactive-card w-48 flex-shrink-0">
-                <div className="text-2xl font-bold text-success mb-2">98%</div>
-                <p className="text-sm text-muted-foreground">Read Rate</p>
-              </div>
-              <div className="glass-card p-6 rounded-xl text-center interactive-card w-48 flex-shrink-0">
-                <div className="flex items-center justify-center mb-2">
-                  <TrendingUp className="w-6 h-6 text-accent" />
-                </div>
-                <p className="text-sm text-muted-foreground">Updated Daily</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Desktop Grid for Quick Stats */}
-          <div className="hidden lg:grid lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <div className="glass-card p-6 rounded-xl text-center">
               <div className="text-2xl font-bold text-primary mb-2">15+</div>
               <p className="text-sm text-muted-foreground">Active Notices</p>

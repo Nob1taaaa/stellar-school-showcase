@@ -54,21 +54,23 @@ const Navigation = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <div className="flex items-center space-x-2 sm:space-x-4">
-              <div className="h-12 sm:h-16 md:h-20">
+              <div className="h-12 sm:h-16 md:h-20 flex-shrink-0">
                 <img
                   src={schoolLogo}
                   alt="Gyandeep Public School Logo"
                   className="h-full w-auto object-contain"
                 />
               </div>
-              <div className="hidden sm:block">
-                <h1 className="text-xl sm:text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent">Gyandeep Public School</h1>
-                <p className="text-xs sm:text-sm text-foreground/70 font-medium">Dharsauna, Cholapur, Varanasi-221101</p>
-                <p className="text-xs text-foreground/60 hidden md:block font-medium">Affiliated to CBSE (10+2) New Delhi | School Code: 71458</p>
-              </div>
-              <div className="sm:hidden">
-                <h1 className="text-lg font-bold bg-gradient-hero bg-clip-text text-transparent">Gyandeep</h1>
-                <p className="text-xs text-foreground/70 font-medium">Public School</p>
+              <div className="min-w-0 flex-1">
+                <h1 className="text-sm sm:text-lg md:text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent truncate">
+                  Gyandeep Public School
+                </h1>
+                <p className="text-xs sm:text-sm text-foreground/70 font-medium hidden sm:block truncate">
+                  Dharsauna, Cholapur, Varanasi-221101
+                </p>
+                <p className="text-xs text-foreground/60 hidden lg:block font-medium truncate">
+                  Affiliated to CBSE (10+2) New Delhi | School Code: 71458
+                </p>
               </div>
             </div>
 

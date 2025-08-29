@@ -10,7 +10,7 @@ const Hero = () => {
         <img
           src={heroImage}
           alt="Elite Academy Campus"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 hero-gradient opacity-80"></div>
       </div>

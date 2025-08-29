@@ -85,67 +85,7 @@ const Programs = () => {
           </div>
 
           {/* Programs Grid */}
-          {/* Mobile Horizontal Scroll */}
-          <div className="lg:hidden overflow-x-auto pb-4 mb-8">
-            <div className="flex space-x-4 w-max">
-              {programs.map((program, index) => {
-                const Icon = program.icon;
-                return (
-                  <Card key={index} className="bg-white border-none shadow-card interactive-card group animate-on-scroll w-80 flex-shrink-0" style={{animationDelay: `${index * 0.1}s`}}>
-                    <CardContent className="p-6 sm:p-8">
-                      {/* Header */}
-                      <div className="flex items-center justify-between mb-4 sm:mb-6">
-                        <Badge className="button-gradient text-white border-0">{program.badge}</Badge>
-                        <div className="w-12 h-12 sm:w-14 sm:h-14 bg-blue-primary/10 rounded-2xl flex items-center justify-center group-hover:scale-110 smooth-transition">
-                          <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-blue-primary" />
-                        </div>
-                      </div>
-
-                      {/* Title */}
-                      <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-blue-primary smooth-transition">
-                        {program.title}
-                      </h3>
-
-                      {/* Description */}
-                      <p className="text-muted-foreground mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
-                        {program.description}
-                      </p>
-
-                      {/* Features */}
-                      <div className="flex flex-wrap gap-2 mb-4 sm:mb-6">
-                        {program.features.map((feature) => (
-                          <Badge key={feature} variant="outline" className="text-xs sm:text-sm border-blue-primary/30 text-blue-primary">
-                            {feature}
-                          </Badge>
-                        ))}
-                      </div>
-
-                      {/* Stats */}
-                      <div className="grid grid-cols-2 gap-4 mb-6">
-                        <div className="text-center p-3 bg-blue-primary/5 rounded-xl">
-                          <Users className="w-4 h-4 text-blue-primary mx-auto mb-1" />
-                          <div className="text-sm font-medium text-blue-primary">{program.age}</div>
-                        </div>
-                        <div className="text-center p-3 bg-accent/5 rounded-xl">
-                          <Calendar className="w-4 h-4 text-accent mx-auto mb-1" />
-                          <div className="text-sm font-medium text-accent">{program.duration}</div>
-                        </div>
-                      </div>
-
-                      {/* CTA */}
-                      <Button className="w-full bg-blue-primary hover:bg-blue-deep text-white rounded-2xl">
-                        <BookOpen className="w-4 h-4 mr-2" />
-                        Learn More
-                      </Button>
-                    </CardContent>
-                  </Card>
-                );
-              })}
-            </div>
-          </div>
-          
-          {/* Desktop Grid */}
-          <div className="hidden lg:grid lg:grid-cols-2 gap-6 sm:gap-8 mb-16 sm:mb-20 md:mb-24">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 mb-16 sm:mb-20 md:mb-24">
             {programs.map((program, index) => {
               const Icon = program.icon;
               return (
@@ -209,26 +149,7 @@ const Programs = () => {
                 Additional programs designed to enhance creativity, mental abilities, and overall personality development.
               </p>
               
-              {/* Mobile Horizontal Scroll for Special Programs */}
-              <div className="lg:hidden overflow-x-auto pb-4 mb-4">
-                <div className="flex space-x-4 w-max">
-                  {specialPrograms.map((program, index) => {
-                    const Icon = program.icon;
-                    return (
-                      <div key={index} className="text-center p-4 hover:bg-accent/5 rounded-xl smooth-transition group w-60 flex-shrink-0">
-                        <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 smooth-transition">
-                          <Icon className="w-6 h-6 text-accent" />
-                        </div>
-                        <h4 className="text-lg font-bold text-foreground mb-2">{program.title}</h4>
-                        <p className="text-sm text-muted-foreground">{program.description}</p>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-              
-              {/* Desktop Grid for Special Programs */}
-              <div className="hidden lg:grid lg:grid-cols-4 gap-6">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {specialPrograms.map((program, index) => {
                   const Icon = program.icon;
                   return (

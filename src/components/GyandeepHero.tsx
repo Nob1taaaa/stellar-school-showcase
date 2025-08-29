@@ -85,13 +85,13 @@ const GyandeepHero = () => {
               <img 
                 src="/lovable-uploads/759d8b35-7caa-44ea-a405-bbd7d9d07a26.png" 
                 alt="Gyandeep Public School Campus" 
-                className="w-full rounded-3xl shadow-hero"
+                className="w-full h-64 sm:h-80 md:h-96 lg:h-auto object-cover rounded-3xl shadow-hero"
               />
               {/* Contact Info Card */}
-              <div className="absolute top-6 right-6 bg-white rounded-2xl p-4 shadow-card">
+              <div className="absolute top-2 sm:top-4 md:top-6 right-2 sm:right-4 md:right-6 bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 md:p-4 shadow-card">
                 <div className="text-right">
-                  <div className="text-2xl font-bold text-primary">+91-8010200666</div>
-                  <div className="text-sm text-muted-foreground">Monday - Friday, 9:00 AM - 6:00 PM</div>
+                  <div className="text-sm sm:text-lg md:text-2xl font-bold text-primary">+91-8010200666</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground hidden sm:block">Monday - Friday, 9:00 AM - 6:00 PM</div>
                 </div>
               </div>
             </div>

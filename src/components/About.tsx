@@ -82,29 +82,7 @@ const About = () => {
           </div>
 
           {/* Values Grid */}
-          {/* Mobile Horizontal Scroll */}
-          <div className="lg:hidden overflow-x-auto pb-4">
-            <div className="flex space-x-4 w-max">
-              {values.map((value, index) => {
-                const Icon = value.icon;
-                return (
-                  <div
-                    key={index}
-                    className="text-center p-6 glass-card rounded-xl hover:shadow-elegant smooth-transition w-72 flex-shrink-0"
-                  >
-                    <div className="w-16 h-16 accent-gradient rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Icon className="w-8 h-8 text-accent-foreground" />
-                    </div>
-                    <h4 className="text-xl font-bold text-foreground mb-3">{value.title}</h4>
-                    <p className="text-muted-foreground leading-relaxed">{value.description}</p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          
-          {/* Desktop Grid */}
-          <div className="hidden lg:grid lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
