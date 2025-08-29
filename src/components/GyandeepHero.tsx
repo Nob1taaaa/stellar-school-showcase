@@ -3,7 +3,7 @@ import { ArrowRight, Users, Award, BookOpen } from "lucide-react";
 
 const GyandeepHero = () => {
   return (
-    <section className="min-h-screen bg-gradient-hero relative overflow-hidden">
+    <section className="min-h-screen bg-gradient-hero relative overflow-hidden" style={{marginTop: '0px'}}>
       {/* Decorative Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full"></div>
@@ -12,8 +12,8 @@ const GyandeepHero = () => {
         <div className="absolute bottom-20 right-40 w-24 h-24 bg-white/10 rounded-lg rotate-45"></div>
       </div>
 
-      <div className="container mx-auto px-6 pt-20 pb-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center min-h-[80vh]">
+      <div className="container mx-auto px-4 md:px-6 pt-28 md:pt-32 lg:pt-36 pb-16 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[70vh]">
           {/* Content Card */}
           <div className="bg-white rounded-3xl p-6 md:p-8 lg:p-12 shadow-hero animate-fade-in">
             <div className="mb-8">

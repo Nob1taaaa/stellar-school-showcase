@@ -19,7 +19,7 @@ const Navigation = () => {
   return (
     <>
       {/* Top Header */}
-      <div className="bg-gradient-hero text-primary-foreground py-3 text-sm shadow-golden">
+      <div className="bg-gradient-hero text-primary-foreground py-2 md:py-3 text-sm shadow-golden">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
             <div className="flex items-center space-x-2 sm:space-x-4">
@@ -49,7 +49,7 @@ const Navigation = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="fixed top-12 md:top-14 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-golden-accent/20 shadow-golden">
+      <nav className="fixed top-10 md:top-12 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-golden-accent/20 shadow-golden">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
