@@ -520,6 +520,49 @@
 }
 
 @layer components {
+  /* Notice Board animated cards */
+  .nb-anim .card {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    border-radius: 14px;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  }
+  .nb-anim .bg {
+    position: absolute;
+    inset: 8px;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(24px);
+    border-radius: 10px;
+    overflow: hidden;
+    outline: 2px solid white;
+    display: flex;
+    flex-direction: column;
+  }
+  .nb-anim .blob {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: var(--nb-blob-color, #ff0000);
+    opacity: 0.9;
+    filter: blur(16px);
+    animation: blob-bounce 5s infinite ease;
+    transform: translate(-50%, -50%);
+  }
+  .nb-anim .card:hover .blob {
+    animation-duration: 3.5s;
+    opacity: 1;
+  }
   .card-container {
     position: relative;
     width: 100%;
