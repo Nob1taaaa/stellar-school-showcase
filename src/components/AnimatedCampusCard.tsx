@@ -28,7 +28,7 @@ const AnimatedCampusCard = ({ image, title, description, category }: AnimatedCam
         </div>
         <div className="card">
           <div className="relative w-full h-full">
-            <img src={image} alt={title} className="absolute inset-0 w-full h-full object-cover" />
+            <img src={image} alt={title} className="absolute inset-0 w-full h-full object-cover object-center" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
             <div className="absolute bottom-4 left-4 right-4">
               {category ? (
