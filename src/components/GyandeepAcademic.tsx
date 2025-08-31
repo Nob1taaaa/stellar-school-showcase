@@ -253,8 +253,22 @@ const GyandeepAcademic = () => {
                 return (
                   <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll w-64 flex-shrink-0" style={{animationDelay: `${index * 0.1}s`}}>
                     <CardContent className="mobile-card-padding text-center">
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-accent rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 smooth-transition">
-                        <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent-foreground" />
+                      <div className="relative">
+                        <div className="rcg-outer" style={{ transform: 'scale(0.45)', top: 4, right: 4 }}>
+                          <div className="rcg-dot" />
+                          <div className="rcg-card">
+                            <div className="rcg-ray" />
+                            <div className="rcg-text">A+</div>
+                            <div>Quality</div>
+                            <div className="rcg-line rcg-topl" />
+                            <div className="rcg-line rcg-leftl" />
+                            <div className="rcg-line rcg-bottoml" />
+                            <div className="rcg-line rcg-rightl" />
+                          </div>
+                        </div>
+                        <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-accent rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 smooth-transition">
+                          <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent-foreground" />
+                        </div>
                       </div>
                       <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-accent smooth-transition">
                         {facility.title}
@@ -274,8 +288,22 @@ const GyandeepAcademic = () => {
               return (
                 <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
                   <CardContent className="mobile-card-padding text-center">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-accent rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 smooth-transition">
-                      <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent-foreground" />
+                    <div className="relative">
+                      <div className="rcg-outer" style={{ transform: 'scale(0.55)', top: 6, right: 6 }}>
+                        <div className="rcg-dot" />
+                        <div className="rcg-card">
+                          <div className="rcg-ray" />
+                          <div className="rcg-text">A+</div>
+                          <div>Quality</div>
+                          <div className="rcg-line rcg-topl" />
+                          <div className="rcg-line rcg-leftl" />
+                          <div className="rcg-line rcg-bottoml" />
+                          <div className="rcg-line rcg-rightl" />
+                        </div>
+                      </div>
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-accent rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 smooth-transition">
+                        <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent-foreground" />
+                      </div>
                     </div>
                     <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-accent smooth-transition">
                       {facility.title}
