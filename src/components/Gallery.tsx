@@ -196,9 +196,15 @@ const Gallery = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-16 sm:mb-20">
             {galleryStats.map((stat, index) => {
               const Icon = stat.icon;
+              const borders = [
+                "1px inset rgba(197, 190, 184, 1)",
+                "1px solid rgba(0, 75, 211, 1)",
+                "1px solid rgba(240, 0, 225, 1)",
+                "1px solid rgba(251, 3, 6, 1)",
+              ];
               return (
                 <Card key={index} className="glass-card border-none text-center animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
-                  <CardContent className="mobile-card-padding">
+                  <CardContent className="mobile-card-padding" style={{ border: borders[index % borders.length] }}>
                     <div className="w-12 h-12 sm:w-16 sm:h-16 saffron-gradient rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
                       <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
@@ -211,7 +217,7 @@ const Gallery = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="glass-card rounded-2xl sm:rounded-3xl p-8 sm:p-10 md:p-12 text-center animate-on-scroll">
+          <div className="glass-card rounded-2xl sm:rounded-3xl p-8 sm:p-10 md:p-12 text-center animate-on-scroll" style={{ border: "1px solid rgba(241, 0, 0, 0.3)" }}>
             <div className="max-w-3xl mx-auto">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 sm:mb-6">
                 Experience Gyandeep Public School
