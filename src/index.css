@@ -233,6 +233,10 @@
   }
 
   /* Enhanced Animations */
+  @keyframes fade-in {
+    0% { opacity: 0; transform: translateY(2rem); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
   .animate-on-scroll {
     @apply opacity-0 translate-y-8;
     animation: fade-in 0.8s ease-out forwards;
@@ -329,6 +333,7 @@
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.35);
     contain: paint;
+    isolation: isolate;
   }
   .cute-border::before {
     content: "";
