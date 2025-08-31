@@ -147,6 +147,10 @@ const Gallery = () => {
                     alt={photo.title}
                     className="w-full h-48 sm:h-56 object-cover group-hover:scale-110 smooth-transition"
                   />
+                  <div className="rcg-glass-card">
+                    <span className="rcg-glass" />
+                    <div className="rcg-glass-content"><span className="sr-only">HOVER ME</span></div>
+                  </div>
                   {(photo.category === "Campus Life" || photo.category === "School Culture") && (
                     <div className="rcg-outer">
                       <div className="rcg-dot" />
