@@ -130,6 +130,18 @@ const SchoolLife = () => {
                     className="w-full h-80 sm:h-96 object-cover"
                   />
                 </div>
+                <div className="rcg-outer" style={{ transform: 'scale(0.6)', top: 10, right: 10 }}>
+                  <div className="rcg-dot" />
+                  <div className="rcg-card">
+                    <div className="rcg-ray" />
+                    <div className="rcg-text">750k</div>
+                    <div>Views</div>
+                    <div className="rcg-line rcg-topl" />
+                    <div className="rcg-line rcg-leftl" />
+                    <div className="rcg-line rcg-bottoml" />
+                    <div className="rcg-line rcg-rightl" />
+                  </div>
+                </div>
                 <div className="absolute top-4 left-4">
                   <Badge className="bg-accent text-accent-foreground">
                     <Star className="w-4 h-4 mr-2" />
