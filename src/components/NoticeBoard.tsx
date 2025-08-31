@@ -61,6 +61,46 @@ const NoticeBoard = () => {
     }
   };
 
+  const getTitleColor = (type: string) => {
+    switch (type) {
+      case "Event": return "rgba(85, 108, 183, 1)";
+      case "Meeting": return "rgba(145, 49, 179, 1)";
+      case "Holiday": return "rgba(72, 172, 52, 1)";
+      case "Academic": return "rgba(167, 21, 21, 1)";
+      default: return undefined;
+    }
+  };
+
+  const getButtonStyle = (type: string): React.CSSProperties => {
+    const bgMap: Record<string, string> = {
+      Event: "rgba(190, 197, 211, 1)",
+      Meeting: "rgba(183, 192, 199, 1)",
+      Holiday: "rgba(191, 193, 197, 1)",
+      Academic: "rgba(197, 197, 197, 1)",
+    };
+    const colorMap: Record<string, string> = {
+      Event: "rgba(59, 27, 27, 1)",
+      Meeting: "rgb(29, 25, 25)",
+      Holiday: "rgb(29, 25, 25)",
+      Academic: "rgb(29, 25, 25)",
+    };
+    return {
+      backgroundColor: bgMap[type] || "rgba(190,197,211,1)",
+      color: colorMap[type] || "rgb(29,25,25)",
+      border: "1px solid rgba(44, 44, 37, 1)",
+    };
+  };
+
+  const getBlobColor = (type: string) => {
+    switch (type) {
+      case "Event": return "linear-gradient(135deg, #ff7a18, #ffd166)";
+      case "Meeting": return "linear-gradient(135deg, #3b82f6, #22d3ee)";
+      case "Holiday": return "linear-gradient(135deg, #22c55e, #a3e635)";
+      case "Academic": return "linear-gradient(135deg, #a855f7, #60a5fa)";
+      default: return "linear-gradient(135deg, #fb7185, #f472b6)";
+    }
+  };
+
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
@@ -108,30 +148,29 @@ const NoticeBoard = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {notices.slice(1).map((notice, index) => (
-              <Card key={index} className="glass-card border-none hover:shadow-elegant smooth-transition group">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <Badge className={getPriorityColor(notice.priority)} variant="secondary">
-                      {getTypeIcon(notice.type)} {notice.type}
-                    </Badge>
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Calendar className="w-4 h-4 mr-1" />
-                      {new Date(notice.date).toLocaleDateString()}
+              <div key={index} className="nb-anim">
+                <div className="card">
+                  <div className="bg">
+                    <div className="flex items-center justify-between mb-3 px-4 pt-4">
+                      <Badge className={getPriorityColor(notice.priority)} variant="secondary">
+                        {getTypeIcon(notice.type)} {notice.type}
+                      </Badge>
+                      <div className="flex items-center text-sm text-muted-foreground">
+                        <Calendar className="w-4 h-4 mr-1" />
+                        {new Date(notice.date).toLocaleDateString()}
+                      </div>
+                    </div>
+                    <div className="px-4">
+                      <h4 className="text-lg font-bold mb-2" style={{ color: getTitleColor(notice.type) }}>{notice.title}</h4>
+                      <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{notice.description}</p>
+                    </div>
+                    <div className="px-4 pb-4 mt-auto">
+                      <Button variant="outline" className="w-full font-semibold" style={getButtonStyle(notice.type)}>Read More</Button>
                     </div>
                   </div>
-                  <CardTitle className="group-hover:text-primary smooth-transition">
-                    {notice.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4 line-clamp-3">
-                    {notice.description}
-                  </p>
-                  <Button variant="outline" className="w-full group-hover:variant-hero smooth-transition">
-                    Read More
-                  </Button>
-                </CardContent>
-              </Card>
+                  <div className="blob" style={{ background: getBlobColor(notice.type) }} />
+                </div>
+              </div>
             ))}
           </div>
 

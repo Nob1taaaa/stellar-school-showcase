@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Users, Award, Star, Clock, Flag, Heart, Target, 
+import {
+  Users, Award, Star, Clock, Flag, Heart, Target,
   Calendar, Trophy, Sunrise, BookOpen, Shield
 } from "lucide-react";
+import AnimatedCampusCard from "@/components/AnimatedCampusCard";
 import assemblyImage from "/lovable-uploads/5793a2d7-39eb-47f1-8378-cf6688e3fc63.png";
-import campusImage from "/lovable-uploads/8b4b7aed-88f9-4ea8-9a81-19b5e3c9137b.png";
+const campusImage = "https://cdn.builder.io/api/v1/image/assets%2F56e1d9932d634c60acef602bc721d4a0%2Fec12e1bf173342c6b8191f6204c302c7?format=webp&width=800";
 import groundsImage from "/lovable-uploads/a01561ee-2798-4641-8400-95961985d26a.png";
 
 const SchoolLife = () => {
@@ -122,12 +123,22 @@ const SchoolLife = () => {
                 </Button>
               </div>
               <div className="relative">
-                <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-hero">
+                <div className="pleasant-photo shadow-hero">
                   <img
                     src={assemblyImage}
                     alt="Gyandeep Public School Morning Assembly"
                     className="w-full h-80 sm:h-96 object-cover"
                   />
+                </div>
+                <div className="rcg-outer" style={{ transform: 'scale(0.6)', top: 10, right: 10 }}>
+                  <div className="rcg-dot" />
+                  <div className="rcg-card">
+                    <div className="rcg-ray" />
+                    <div className="rcg-line rcg-topl" />
+                    <div className="rcg-line rcg-leftl" />
+                    <div className="rcg-line rcg-bottoml" />
+                    <div className="rcg-line rcg-rightl" />
+                  </div>
                 </div>
                 <div className="absolute top-4 left-4">
                   <Badge className="bg-accent text-accent-foreground">
@@ -179,20 +190,13 @@ const SchoolLife = () => {
           </div>
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 mb-16 sm:mb-20">
             {campusHighlights.map((highlight, index) => (
-              <Card key={index} className="glass-card border-none overflow-hidden interactive-card group animate-on-scroll" style={{animationDelay: `${index * 0.2}s`}}>
-                <div className="relative">
-                  <img
-                    src={highlight.image}
-                    alt={highlight.title}
-                    className="w-full h-64 sm:h-80 object-cover group-hover:scale-105 smooth-transition"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6">
-                    <h4 className="text-xl sm:text-2xl font-bold text-white mb-2">{highlight.title}</h4>
-                    <p className="text-white/90 text-sm sm:text-base">{highlight.description}</p>
-                  </div>
-                </div>
-              </Card>
+              <div key={index} className="flex justify-center items-stretch">
+                <AnimatedCampusCard
+                  image={highlight.image}
+                  title={highlight.title}
+                  description={highlight.description}
+                />
+              </div>
             ))}
           </div>
 

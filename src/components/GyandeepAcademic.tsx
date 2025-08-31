@@ -97,6 +97,18 @@ const GyandeepAcademic = () => {
     { period: "1st December to Last March", time: "8:30 AM to 1:40 PM", season: "Winter" }
   ];
 
+  const getSeasonBlobColor = (season: string) => {
+    switch (season) {
+      case "Summer":
+        return "linear-gradient(135deg, #ffd166, #ff7a18)";
+      case "Winter":
+        return "linear-gradient(135deg, #60a5fa, #a855f7)";
+      case "Regular":
+      default:
+        return "linear-gradient(135deg, #22d3ee, #3b82f6)";
+    }
+  };
+
   return (
     <section id="academic" className="py-16 sm:py-20 md:py-24">
       <div className="container mx-auto px-4">
@@ -116,12 +128,12 @@ const GyandeepAcademic = () => {
           {/* Academic Programs */}
           <div className="block lg:grid lg:grid-cols-2 gap-6 sm:gap-8 mb-16 sm:mb-20 md:mb-24">
             {/* Mobile Horizontal Scroll */}
-            <div className="lg:hidden overflow-x-auto pb-4 mb-8">
+            <div className="lg:hidden overflow-x-auto pb-4 mb-8 snap-x snap-mandatory">
               <div className="flex space-x-4 w-max">
                 {academicPrograms.map((program, index) => {
                   const Icon = program.icon;
                   return (
-                    <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll w-80 flex-shrink-0" style={{animationDelay: `${index * 0.1}s`}}>
+                    <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll w-80 flex-shrink-0 snap-center" style={{animationDelay: `${index * 0.1}s`}}>
                       <CardHeader className="pb-4">
                         <div className="flex items-center justify-between mb-3 sm:mb-4">
                           <Badge className="bg-gradient-accent text-accent-foreground">{program.badge}</Badge>
@@ -200,61 +212,79 @@ const GyandeepAcademic = () => {
             </div>
           </div>
 
-          {/* Modern Teaching Methods */}
-          <div className="glass-card rounded-2xl sm:rounded-3xl p-8 sm:p-10 md:p-12 mb-16 sm:mb-20 md:mb-24 relative overflow-hidden animate-on-scroll">
-            <div className="absolute inset-0 bg-gradient-accent opacity-5"></div>
-            <div className="relative z-10 grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
-              <div>
-                <Badge variant="outline" className="mb-4 sm:mb-6 text-base sm:text-lg px-4 py-2">Modern Learning</Badge>
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 sm:mb-6">
-                  Latest Teaching Techniques
-                </h3>
-                <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed mb-6 sm:mb-8">
-                  We use cutting-edge educational technology including Educom smart classes, graphic animation, 
-                  simulations, 3D images, and video clips in addition to traditional chalk and talk methods.
-                </p>
-                <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
-                  <div className="text-center p-3 sm:p-4 bg-primary/10 rounded-xl">
-                    <div className="text-xl sm:text-2xl font-bold text-primary mb-1">30+</div>
-                    <div className="text-xs sm:text-sm text-muted-foreground">Activities</div>
-                  </div>
-                  <div className="text-center p-3 sm:p-4 bg-accent/10 rounded-xl">
-                    <div className="text-xl sm:text-2xl font-bold text-accent mb-1">Smart</div>
-                    <div className="text-xs sm:text-sm text-muted-foreground">Classes</div>
-                  </div>
-                </div>
-                <Button variant="hero" size="lg" className="text-base sm:text-lg">
-                  Explore Our Methods
-                </Button>
-              </div>
-              <div className="relative">
-                <img
-                  src={programsImage}
-                  alt="Modern Teaching at Gyandeep"
-                  className="w-full h-80 sm:h-96 object-cover rounded-xl sm:rounded-2xl shadow-elegant"
-                />
-              </div>
-            </div>
-          </div>
 
           {/* Modern Facilities */}
+          <div className="text-center mb-2">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">Modern Learning Facilities</h3>
+          </div>
           <div className="text-center mb-12 sm:mb-16">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">Modern Learning Facilities</h3>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               State-of-the-art facilities that blend traditional teaching with modern technology.
             </p>
           </div>
 
           {/* Mobile Horizontal Scroll for Facilities */}
-          <div className="lg:hidden overflow-x-auto pb-4 mb-8">
+          <div className="lg:hidden overflow-x-auto pb-4 mb-8 snap-x snap-mandatory">
             <div className="flex space-x-4 w-max">
               {modernFacilities.map((facility, index) => {
                 const Icon = facility.icon;
                 return (
-                  <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll w-64 flex-shrink-0" style={{animationDelay: `${index * 0.1}s`}}>
+                  <div key={index} className="cute-border facility-anim facility-shimmer w-64 flex-shrink-0 animate-on-scroll snap-center" style={{animationDelay: `${index * 0.1}s`}}>
+                    <Card className="glass-card border-none interactive-card group rounded-2xl">
+                      <CardContent className="mobile-card-padding text-center">
+                        <div className="relative">
+                          <div className="rcg-outer" style={{ transform: 'scale(0.45)', top: 4, right: 4 }}>
+                            <div className="rcg-dot" />
+                            <div className="rcg-card">
+                              <div className="rcg-ray" />
+                              <div className="rcg-text">A+</div>
+                              <div>Quality</div>
+                              <div className="rcg-line rcg-topl" />
+                              <div className="rcg-line rcg-leftl" />
+                              <div className="rcg-line rcg-bottoml" />
+                              <div className="rcg-line rcg-rightl" />
+                            </div>
+                          </div>
+                          <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-accent rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 smooth-transition">
+                            <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent-foreground" />
+                          </div>
+                        </div>
+                        <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-accent smooth-transition">
+                          {facility.title}
+                        </h4>
+                        <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{facility.description}</p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Desktop Grid for Facilities */}
+          <div className="hidden lg:grid lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-16 sm:mb-20">
+            {modernFacilities.map((facility, index) => {
+              const Icon = facility.icon;
+              return (
+                <div key={index} className="cute-border facility-anim facility-shimmer animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
+                  <Card className="glass-card border-none interactive-card group rounded-2xl">
                     <CardContent className="mobile-card-padding text-center">
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-accent rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 smooth-transition">
-                        <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent-foreground" />
+                      <div className="relative">
+                        <div className="rcg-outer" style={{ transform: 'scale(0.55)', top: 6, right: 6 }}>
+                          <div className="rcg-dot" />
+                          <div className="rcg-card">
+                            <div className="rcg-ray" />
+                            <div className="rcg-text">A+</div>
+                            <div>Quality</div>
+                            <div className="rcg-line rcg-topl" />
+                            <div className="rcg-line rcg-leftl" />
+                            <div className="rcg-line rcg-bottoml" />
+                            <div className="rcg-line rcg-rightl" />
+                          </div>
+                        </div>
+                        <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-accent rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 smooth-transition">
+                          <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent-foreground" />
+                        </div>
                       </div>
                       <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-accent smooth-transition">
                         {facility.title}
@@ -262,27 +292,7 @@ const GyandeepAcademic = () => {
                       <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{facility.description}</p>
                     </CardContent>
                   </Card>
-                );
-              })}
-            </div>
-          </div>
-          
-          {/* Desktop Grid for Facilities */}
-          <div className="hidden lg:grid lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-16 sm:mb-20">
-            {modernFacilities.map((facility, index) => {
-              const Icon = facility.icon;
-              return (
-                <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
-                  <CardContent className="mobile-card-padding text-center">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-accent rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 smooth-transition">
-                      <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent-foreground" />
-                    </div>
-                    <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-accent smooth-transition">
-                      {facility.title}
-                    </h4>
-                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{facility.description}</p>
-                  </CardContent>
-                </Card>
+                </div>
               );
             })}
           </div>
@@ -319,16 +329,47 @@ const GyandeepAcademic = () => {
 
           <div className="grid md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-16 sm:mb-20">
             {schoolTimings.map((timing, index) => (
-              <Card key={index} className="glass-card border-none text-center animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
-                <CardContent className="mobile-card-padding">
-                  <Badge variant="outline" className="mb-3 sm:mb-4">{timing.season}</Badge>
-                  <h4 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3">{timing.period}</h4>
-                  <div className="flex items-center justify-center text-accent font-semibold text-base sm:text-lg">
-                    <Clock className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                    {timing.time}
+              <div key={index} className="nb-anim animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
+                <div className="card">
+                  <div className="bg">
+                    <div className="mobile-card-padding text-center">
+                      <Badge
+                        variant="outline"
+                        className="mb-3 sm:mb-4"
+                        style={{
+                          color:
+                            timing.season === "Summer"
+                              ? "rgba(214, 25, 25, 1)"
+                              : timing.season === "Winter"
+                              ? "rgba(51, 125, 195, 1)"
+                              : "rgba(55, 149, 123, 1)",
+                          border: timing.season === "Winter" ? undefined : "1px solid rgba(38, 58, 99, 1)",
+                        }}
+                      >
+                        {timing.season}
+                      </Badge>
+                      <h4
+                        className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3"
+                        style={{
+                          color:
+                            timing.season === "Summer"
+                              ? "rgba(70, 22, 22, 1)"
+                              : timing.season === "Winter"
+                              ? "rgba(194, 42, 121, 1)"
+                              : "rgba(47, 138, 90, 1)",
+                        }}
+                      >
+                        {timing.period}
+                      </h4>
+                      <div className="flex items-center justify-center text-accent font-semibold text-base sm:text-lg">
+                        <Clock className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                        {timing.time}
+                      </div>
+                    </div>
                   </div>
-                </CardContent>
-              </Card>
+                  <div className="blob" style={{ background: getSeasonBlobColor(timing.season) }} />
+                </div>
+              </div>
             ))}
           </div>
 

@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
+import {
   Camera, Play, Download, ExternalLink, Image as ImageIcon, Video,
   Award, Trophy, Star, Users, Calendar, BookOpen
 } from "lucide-react";
+import AnimatedCampusCard from "@/components/AnimatedCampusCard";
 
 const Gallery = () => {
   const realPhotos = [
@@ -45,6 +46,8 @@ const Gallery = () => {
 
   const categories = ["All", "School Culture", "Campus Life", "Infrastructure", "Campus Beauty", "Events", "Achievements"];
 
+  const campusPhoto = realPhotos.find(p => p.title === "Beautiful Campus & Sports Facilities");
+
   return (
     <section id="gallery" className="py-16 sm:py-20 md:py-24 bg-gradient-subtle">
       <div className="container mx-auto px-4">
@@ -64,6 +67,17 @@ const Gallery = () => {
             </p>
           </div>
 
+          {campusPhoto ? (
+            <div className="flex justify-center mb-12 sm:mb-16">
+              <AnimatedCampusCard
+                image={campusPhoto.image}
+                title={campusPhoto.title}
+                description={campusPhoto.description}
+                category={campusPhoto.category}
+              />
+            </div>
+          ) : null}
+
           {/* Featured Photos */}
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 mb-16 sm:mb-20 md:mb-24">
             {realPhotos.filter(photo => photo.featured).map((photo, index) => (
@@ -74,6 +88,22 @@ const Gallery = () => {
                     alt={photo.title}
                     className="w-full h-64 sm:h-80 md:h-96 object-cover group-hover:scale-105 smooth-transition"
                   />
+                  <div className="rcg-glass-card">
+                    <span className="rcg-glass" />
+                    <div className="rcg-glass-content"><span className="sr-only">HOVER ME</span></div>
+                  </div>
+                  {(photo.category === "Campus Life" || photo.category === "School Culture") && (
+                    <div className="rcg-outer">
+                      <div className="rcg-dot" />
+                      <div className="rcg-card">
+                        <div className="rcg-ray" />
+                        <div className="rcg-line rcg-topl" />
+                        <div className="rcg-line rcg-leftl" />
+                        <div className="rcg-line rcg-bottoml" />
+                        <div className="rcg-line rcg-rightl" />
+                      </div>
+                    </div>
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                   <div className="absolute top-4 left-4">
                     <Badge className="saffron-gradient text-white">
@@ -117,6 +147,22 @@ const Gallery = () => {
                     alt={photo.title}
                     className="w-full h-48 sm:h-56 object-cover group-hover:scale-110 smooth-transition"
                   />
+                  <div className="rcg-glass-card">
+                    <span className="rcg-glass" />
+                    <div className="rcg-glass-content"><span className="sr-only">HOVER ME</span></div>
+                  </div>
+                  {(photo.category === "Campus Life" || photo.category === "School Culture") && (
+                    <div className="rcg-outer">
+                      <div className="rcg-dot" />
+                      <div className="rcg-card">
+                        <div className="rcg-ray" />
+                        <div className="rcg-line rcg-topl" />
+                        <div className="rcg-line rcg-leftl" />
+                        <div className="rcg-line rcg-bottoml" />
+                        <div className="rcg-line rcg-rightl" />
+                      </div>
+                    </div>
+                  )}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 smooth-transition flex items-center justify-center">
                     <Button
                       variant="outline"
@@ -154,14 +200,22 @@ const Gallery = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-16 sm:mb-20">
             {galleryStats.map((stat, index) => {
               const Icon = stat.icon;
+              const borders = [
+                "1px inset rgba(197, 190, 184, 1)",
+                "1px solid rgba(0, 75, 211, 1)",
+                "1px solid rgba(240, 0, 225, 1)",
+                "1px solid rgba(251, 3, 6, 1)",
+              ];
               return (
                 <Card key={index} className="glass-card border-none text-center animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
-                  <CardContent className="mobile-card-padding">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 saffron-gradient rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <CardContent className="mobile-card-padding" style={{ border: borders[index % borders.length], padding: '0 24px 24px' }}>
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 saffron-gradient rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4" style={{ color: 'rgba(27, 64, 136, 1)' }}>
                       <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
                     <div className="text-2xl sm:text-3xl font-bold text-orange-vibrant mb-1 sm:mb-2">{stat.number}</div>
-                    <p className="text-muted-foreground font-medium text-sm sm:text-base">{stat.text}</p>
+                    <p className="text-muted-foreground font-medium text-sm sm:text-base flex items-center justify-center gap-2">
+                      <Icon className="w-4 h-4" /> {stat.text}
+                    </p>
                   </CardContent>
                 </Card>
               );
@@ -169,7 +223,7 @@ const Gallery = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="glass-card rounded-2xl sm:rounded-3xl p-8 sm:p-10 md:p-12 text-center animate-on-scroll">
+          <div className="glass-card rounded-2xl sm:rounded-3xl p-8 sm:p-10 md:p-12 text-center animate-on-scroll" style={{ border: "1px solid rgba(241, 0, 0, 0.3)" }}>
             <div className="max-w-3xl mx-auto">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 sm:mb-6">
                 Experience Gyandeep Public School

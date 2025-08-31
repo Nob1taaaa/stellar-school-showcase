@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./rcg-overlay.css";
 
 /* Elite Academic Design System - Unparalleled Beauty */
 
@@ -232,9 +233,16 @@
   }
 
   /* Enhanced Animations */
+  @keyframes fade-in {
+    0% { opacity: 0; transform: translateY(2rem); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
   .animate-on-scroll {
     @apply opacity-0 translate-y-8;
     animation: fade-in 0.8s ease-out forwards;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 
   .animate-delay-100 {
@@ -317,6 +325,104 @@
   
   .interactive-card:hover {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 30px rgba(255, 193, 7, 0.2);
+  }
+
+  /* Cute animated gradient border wrapper for cards */
+  .cute-border {
+    position: relative;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    contain: paint;
+    isolation: isolate;
+  }
+  .cute-border::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    background: conic-gradient(from 0deg, hsl(45 100% 51%), hsl(275 85% 70%), hsl(217 91% 60%), hsl(42 100% 50%), hsl(45 100% 51%));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+    animation: cute-spin 6s linear infinite;
+    z-index: 0;
+  }
+  .cute-border > * {
+    position: relative;
+    border-radius: inherit;
+    z-index: 1;
+    background-clip: padding-box;
+  }
+  .cute-border:hover::before {
+    animation-duration: 3s;
+    filter: drop-shadow(0 0 12px hsla(45, 100%, 51%, 0.45));
+  }
+  @keyframes cute-spin {
+    to { transform: rotate(360deg); }
+  }
+
+  /* Pleasant float animation for facility cards */
+  .facility-anim {
+    animation: floaty 6.5s ease-in-out infinite;
+    transform-origin: center;
+    will-change: transform;
+  }
+  .facility-anim:nth-child(2n) { animation-duration: 7.5s; animation-delay: .4s; }
+  .facility-anim:nth-child(3n) { animation-duration: 8.5s; animation-delay: .8s; }
+  .facility-anim:hover { transform: translateY(-6px) rotate(-0.5deg); }
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  /* Shimmer overlay for facility cards */
+  .facility-shimmer {
+    position: relative;
+  }
+  .facility-shimmer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.35) 15%, transparent 30%);
+    transform: translateX(-150%);
+    animation: shimmer-move 4.5s ease-in-out infinite;
+    pointer-events: none;
+    will-change: transform, opacity;
+  }
+  @keyframes shimmer-move {
+    0% { transform: translateX(-150%); opacity: .0; }
+    10% { opacity: .6; }
+    60% { transform: translateX(150%); opacity: .0; }
+    100% { transform: translateX(150%); opacity: .0; }
+  }
+
+  /* Pleasant photo animation for Morning Assembly */
+  .pleasant-photo {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .pleasant-photo::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: conic-gradient(from 0deg, hsla(48,100%,67%,.35), hsla(217,91%,60%,.25), hsla(275,85%,70%,.3), hsla(48,100%,67%,.35));
+    animation: cute-spin 12s linear infinite;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+    padding: 2px;
+  }
+  .pleasant-photo img { display:block; width:100%; height:100%; object-fit:cover; border-radius:inherit; }
+  .pleasant-photo { animation: floaty 7s ease-in-out infinite; will-change: transform; }
+
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .facility-anim, .pleasant-photo, .animate-on-scroll { animation: none !important; opacity: 1 !important; transform: none !important; }
+    .facility-shimmer::after { animation: none !important; }
   }
 
   /* 3D Card Effects */
@@ -516,5 +622,142 @@
     .blob-card {
       height: 450px;
     }
+  }
+}
+
+@layer components {
+  /* Notice Board animated cards */
+  .nb-anim .card {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    border-radius: 14px;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  }
+  .nb-anim .bg {
+    position: absolute;
+    inset: 8px;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(24px);
+    border-radius: 10px;
+    overflow: hidden;
+    outline: 2px solid white;
+    display: flex;
+    flex-direction: column;
+  }
+  .nb-anim .blob {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: var(--nb-blob-color, #ff0000);
+    opacity: 0.9;
+    filter: blur(16px);
+    animation: blob-bounce 5s infinite ease;
+    transform: translate(-50%, -50%);
+  }
+  .nb-anim .card:hover .blob {
+    animation-duration: 3.5s;
+    opacity: 1;
+  }
+  .card-container {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border-radius: 1em;
+    margin: 0 2em;
+  }
+  .card-border {
+    position: absolute;
+    inset: 0;
+    background: #0009;
+    border-radius: inherit;
+    box-shadow: inset 0 0 60px rgba(255, 200, 50, 0.35), 0 0 80px rgba(0, 160, 255, 0.2);
+  }
+  .card {
+    position: absolute;
+    inset: 0.125em;
+    border-radius: 0.875em;
+    background: #111215;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    overflow: hidden;
+  }
+  .backdrop {
+    position: absolute;
+    inset: -100%;
+    background: radial-gradient(circle at 50% 50%, #0000 0, #0000 20%, #111111aa 50%);
+    background-size: 3px 3px;
+    z-index: -1;
+  }
+  .spin {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+  }
+  .spin-blur {
+    filter: blur(10em) url(#unopaq);
+  }
+  .spin-intense {
+    inset: -0.35em;
+    filter: blur(2em) url(#unopaq2);
+    border-radius: 0.75em;
+  }
+  .spin-inside {
+    inset: -2px;
+    border-radius: inherit;
+    filter: blur(12px) url(#unopaq3);
+    z-index: 0;
+  }
+  .spin::before {
+    content: "";
+    position: absolute;
+    inset: -60%;
+    animation: speen 3.5s linear infinite;
+  }
+  .spin-blur::before {
+    background: linear-gradient(-45deg, #ff7a18, #0000 46% 54%, #00c2ff);
+  }
+  .spin-intense::before {
+    background: linear-gradient(-45deg, #ffd166, #0000 35% 65%, #6aa9ff);
+  }
+  .spin-inside::before {
+    background: linear-gradient(-45deg, #ffe29a, #0000 35% 65%, #aee3ff);
+  }
+  @keyframes speen {
+    0% { rotate: 10deg; }
+    50% { rotate: 190deg; }
+    100% { rotate: 370deg; }
+  }
+
+  @keyframes glow-pulse2 {
+    0%, 100% { opacity: 0.15; }
+    50% { opacity: 0.5; }
+  }
+
+  .card::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    pointer-events: none;
+    background: radial-gradient(120% 80% at 50% 50%, rgba(255, 193, 7, 0.35) 0%, rgba(255, 193, 7, 0.0) 60%),
+                radial-gradient(120% 80% at 50% 50%, rgba(0, 174, 255, 0.25) 0%, rgba(0, 174, 255, 0) 70%);
+    animation: glow-pulse2 2.2s ease-in-out infinite;
+    mix-blend-mode: screen;
+    z-index: 1;
   }
 }

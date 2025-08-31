@@ -75,17 +75,19 @@ const Chatbot = () => {
       <div className="fixed bottom-6 right-6 z-50">
         <Button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-16 h-16 rounded-full bg-gradient-to-r from-primary to-accent shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 border-2 border-white/20"
+          className="w-16 h-16 rounded-full bg-gradient-to-r from-primary to-accent shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 border-2 border-white/20 flex items-center justify-center"
         >
           {isOpen ? (
             <X className="w-6 h-6 text-primary-foreground" />
           ) : (
-            <div className="relative">
-              <img 
-                src="/lovable-uploads/06790a85-251d-4190-b057-98a49dbc2040.png" 
-                alt="Gyandeep School Logo"
-                className="w-10 h-10 rounded-full object-cover"
-              />
+            <div className="relative flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-white/50 bg-white flex items-center justify-center">
+                <img
+                  src="/lovable-uploads/06790a85-251d-4190-b057-98a49dbc2040.png"
+                  alt="Gyandeep School Logo"
+                  className="w-11 h-11 object-contain p-1"
+                />
+              </div>
               <div className="absolute -top-1 -right-1 w-4 h-4 bg-accent rounded-full animate-pulse"></div>
             </div>
           )}
@@ -98,11 +100,13 @@ const Chatbot = () => {
           <Card className="shadow-2xl border-none bg-white/95 backdrop-blur-lg animate-scale-in">
             <CardHeader className="bg-gradient-to-r from-primary to-accent text-primary-foreground rounded-t-lg p-4">
               <div className="flex items-center space-x-3">
-                <img 
-                  src="/lovable-uploads/06790a85-251d-4190-b057-98a49dbc2040.png" 
-                  alt="Gyandeep School Logo"
-                  className="w-8 h-8 rounded-full object-cover border-2 border-white/30"
-                />
+                <div className="w-9 h-9 rounded-full overflow-hidden bg-white border-2 border-white/40 flex items-center justify-center">
+                  <img
+                    src="/lovable-uploads/06790a85-251d-4190-b057-98a49dbc2040.png"
+                    alt="Gyandeep School Logo"
+                    className="w-8 h-8 object-contain p-0.5"
+                  />
+                </div>
                 <div>
                   <CardTitle className="text-lg font-bold">Gyandeep Assistant</CardTitle>
                   <p className="text-xs opacity-90">Online • Ready to help</p>
