@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./rcg-overlay.css";
 
 /* Elite Academic Design System - Unparalleled Beauty */
 
