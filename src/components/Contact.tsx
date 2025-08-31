@@ -75,9 +75,15 @@ const Contact = () => {
             <div className="space-y-6">
               {contactInfo.map((info, index) => {
                 const Icon = info.icon;
+                const borders = [
+                  "1px solid rgba(31, 82, 185, 1)",
+                  "1px solid rgba(36, 9, 245, 0.38)",
+                  "1px solid rgba(165, 33, 51, 1)",
+                  "1px solid rgba(72, 120, 209, 1)",
+                ];
                 return (
                   <Card key={index} className="glass-card border-none hover:shadow-elegant smooth-transition">
-                    <CardContent className="p-6">
+                    <CardContent className="p-6" style={{ border: borders[index % borders.length] }}>
                       <div className="flex items-start space-x-4">
                         <div className="w-12 h-12 bg-gradient-hero rounded-2xl flex items-center justify-center flex-shrink-0">
                           <Icon className="w-6 h-6 text-primary-foreground" />
@@ -118,7 +124,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="glass-card rounded-2xl p-8">
+            <div className="glass-card rounded-2xl p-8" style={{ border: "1px solid rgba(245, 11, 109, 0.3)" }}>
               <h3 className="text-2xl font-bold text-foreground mb-6">Send us a Message</h3>
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
