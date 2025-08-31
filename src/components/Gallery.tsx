@@ -88,6 +88,20 @@ const Gallery = () => {
                     alt={photo.title}
                     className="w-full h-64 sm:h-80 md:h-96 object-cover group-hover:scale-105 smooth-transition"
                   />
+                  {(photo.category === "Campus Life" || photo.category === "School Culture") && (
+                    <div className="rcg-outer">
+                      <div className="rcg-dot" />
+                      <div className="rcg-card">
+                        <div className="rcg-ray" />
+                        <div className="rcg-text">750k</div>
+                        <div>Views</div>
+                        <div className="rcg-line rcg-topl" />
+                        <div className="rcg-line rcg-leftl" />
+                        <div className="rcg-line rcg-bottoml" />
+                        <div className="rcg-line rcg-rightl" />
+                      </div>
+                    </div>
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                   <div className="absolute top-4 left-4">
                     <Badge className="saffron-gradient text-white">
