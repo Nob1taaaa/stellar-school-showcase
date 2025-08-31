@@ -224,7 +224,7 @@ const GyandeepAcademic = () => {
           </div>
 
           {/* Mobile Horizontal Scroll for Facilities */}
-          <div className="lg:hidden overflow-x-auto pb-4 mb-8">
+          <div className="lg:hidden overflow-x-auto pb-4 mb-8 snap-x snap-mandatory">
             <div className="flex space-x-4 w-max">
               {modernFacilities.map((facility, index) => {
                 const Icon = facility.icon;
