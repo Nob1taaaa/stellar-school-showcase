@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 import AnimatedCampusCard from "@/components/AnimatedCampusCard";
 import assemblyImage from "/lovable-uploads/5793a2d7-39eb-47f1-8378-cf6688e3fc63.png";
-import campusImage from "/lovable-uploads/8b4b7aed-88f9-4ea8-9a81-19b5e3c9137b.png";
+const campusImage = "https://cdn.builder.io/api/v1/image/assets%2F56e1d9932d634c60acef602bc721d4a0%2Fec12e1bf173342c6b8191f6204c302c7?format=webp&width=800";
 import groundsImage from "/lovable-uploads/a01561ee-2798-4641-8400-95961985d26a.png";
 
 const SchoolLife = () => {
