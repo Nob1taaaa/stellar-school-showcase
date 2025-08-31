@@ -320,6 +320,37 @@
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 30px rgba(255, 193, 7, 0.2);
   }
 
+  /* Cute animated gradient border wrapper for cards */
+  .cute-border {
+    position: relative;
+    border-radius: 16px;
+  }
+  .cute-border::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    background: conic-gradient(from 0deg, hsl(45 100% 51%), hsl(275 85% 70%), hsl(217 91% 60%), hsl(42 100% 50%), hsl(45 100% 51%));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    animation: cute-spin 6s linear infinite;
+    z-index: 0;
+  }
+  .cute-border > * {
+    position: relative;
+    border-radius: inherit;
+    z-index: 1;
+  }
+  .cute-border:hover::before {
+    animation-duration: 3s;
+    filter: drop-shadow(0 0 12px hsla(45, 100%, 51%, 0.45));
+  }
+  @keyframes cute-spin {
+    to { transform: rotate(360deg); }
+  }
+
   /* 3D Card Effects */
   .card-3d-parent {
     width: 100%;
