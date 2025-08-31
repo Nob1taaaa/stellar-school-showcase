@@ -214,8 +214,10 @@ const GyandeepAcademic = () => {
 
 
           {/* Modern Facilities */}
+          <div className="text-3xl sm:text-4xl font-bold tracking-tight leading-tight mb-4" style={{ margin: '0 0 16px 200px' }}>
+            Modern Learning Facilities
+          </div>
           <div className="text-center mb-12 sm:mb-16">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">Modern Learning Facilities</h3>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               State-of-the-art facilities that blend traditional teaching with modern technology.
             </p>
@@ -227,10 +229,48 @@ const GyandeepAcademic = () => {
               {modernFacilities.map((facility, index) => {
                 const Icon = facility.icon;
                 return (
-                  <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll w-64 flex-shrink-0" style={{animationDelay: `${index * 0.1}s`}}>
+                  <div key={index} className="cute-border w-64 flex-shrink-0 animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
+                    <Card className="glass-card border-none interactive-card group rounded-2xl">
+                      <CardContent className="mobile-card-padding text-center">
+                        <div className="relative">
+                          <div className="rcg-outer" style={{ transform: 'scale(0.45)', top: 4, right: 4 }}>
+                            <div className="rcg-dot" />
+                            <div className="rcg-card">
+                              <div className="rcg-ray" />
+                              <div className="rcg-text">A+</div>
+                              <div>Quality</div>
+                              <div className="rcg-line rcg-topl" />
+                              <div className="rcg-line rcg-leftl" />
+                              <div className="rcg-line rcg-bottoml" />
+                              <div className="rcg-line rcg-rightl" />
+                            </div>
+                          </div>
+                          <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-accent rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 smooth-transition">
+                            <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent-foreground" />
+                          </div>
+                        </div>
+                        <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-accent smooth-transition">
+                          {facility.title}
+                        </h4>
+                        <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{facility.description}</p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Desktop Grid for Facilities */}
+          <div className="hidden lg:grid lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-16 sm:mb-20">
+            {modernFacilities.map((facility, index) => {
+              const Icon = facility.icon;
+              return (
+                <div key={index} className="cute-border animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
+                  <Card className="glass-card border-none interactive-card group rounded-2xl">
                     <CardContent className="mobile-card-padding text-center">
                       <div className="relative">
-                        <div className="rcg-outer" style={{ transform: 'scale(0.45)', top: 4, right: 4 }}>
+                        <div className="rcg-outer" style={{ transform: 'scale(0.55)', top: 6, right: 6 }}>
                           <div className="rcg-dot" />
                           <div className="rcg-card">
                             <div className="rcg-ray" />
@@ -252,41 +292,7 @@ const GyandeepAcademic = () => {
                       <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{facility.description}</p>
                     </CardContent>
                   </Card>
-                );
-              })}
-            </div>
-          </div>
-          
-          {/* Desktop Grid for Facilities */}
-          <div className="hidden lg:grid lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-16 sm:mb-20">
-            {modernFacilities.map((facility, index) => {
-              const Icon = facility.icon;
-              return (
-                <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
-                  <CardContent className="mobile-card-padding text-center">
-                    <div className="relative">
-                      <div className="rcg-outer" style={{ transform: 'scale(0.55)', top: 6, right: 6 }}>
-                        <div className="rcg-dot" />
-                        <div className="rcg-card">
-                          <div className="rcg-ray" />
-                          <div className="rcg-text">A+</div>
-                          <div>Quality</div>
-                          <div className="rcg-line rcg-topl" />
-                          <div className="rcg-line rcg-leftl" />
-                          <div className="rcg-line rcg-bottoml" />
-                          <div className="rcg-line rcg-rightl" />
-                        </div>
-                      </div>
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-accent rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 smooth-transition">
-                        <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent-foreground" />
-                      </div>
-                    </div>
-                    <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-accent smooth-transition">
-                      {facility.title}
-                    </h4>
-                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{facility.description}</p>
-                  </CardContent>
-                </Card>
+                </div>
               );
             })}
           </div>
