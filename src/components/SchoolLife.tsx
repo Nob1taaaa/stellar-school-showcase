@@ -180,30 +180,13 @@ const SchoolLife = () => {
           </div>
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 mb-16 sm:mb-20">
             {campusHighlights.map((highlight, index) => (
-              index === 0 ? (
-                <div key={index} className="flex justify-center items-stretch">
-                  <AnimatedCampusCard
-                    image={highlight.image}
-                    title={highlight.title}
-                    description={highlight.description}
-                  />
-                </div>
-              ) : (
-                <Card key={index} className="glass-card border-none overflow-hidden interactive-card group animate-on-scroll" style={{animationDelay: `${index * 0.2}s`}}>
-                  <div className="relative">
-                    <img
-                      src={highlight.image}
-                      alt={highlight.title}
-                      className="w-full h-64 sm:h-80 object-cover group-hover:scale-105 smooth-transition"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6">
-                      <h4 className="text-xl sm:text-2xl font-bold text-white mb-2">{highlight.title}</h4>
-                      <p className="text-white/90 text-sm sm:text-base">{highlight.description}</p>
-                    </div>
-                  </div>
-                </Card>
-              )
+              <div key={index} className="flex justify-center items-stretch">
+                <AnimatedCampusCard
+                  image={highlight.image}
+                  title={highlight.title}
+                  description={highlight.description}
+                />
+              </div>
             ))}
           </div>
 
