@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
+import {
   Camera, Play, Download, ExternalLink, Image as ImageIcon, Video,
   Award, Trophy, Star, Users, Calendar, BookOpen
 } from "lucide-react";
+import AnimatedCampusCard from "@/components/AnimatedCampusCard";
 
 const Gallery = () => {
   const realPhotos = [
@@ -45,6 +46,8 @@ const Gallery = () => {
 
   const categories = ["All", "School Culture", "Campus Life", "Infrastructure", "Campus Beauty", "Events", "Achievements"];
 
+  const campusPhoto = realPhotos.find(p => p.title === "Beautiful Campus & Sports Facilities");
+
   return (
     <section id="gallery" className="py-16 sm:py-20 md:py-24 bg-gradient-subtle">
       <div className="container mx-auto px-4">
@@ -63,6 +66,17 @@ const Gallery = () => {
               of Gyandeep Public School.
             </p>
           </div>
+
+          {campusPhoto ? (
+            <div className="flex justify-center mb-12 sm:mb-16">
+              <AnimatedCampusCard
+                image={campusPhoto.image}
+                title={campusPhoto.title}
+                description={campusPhoto.description}
+                category={campusPhoto.category}
+              />
+            </div>
+          ) : null}
 
           {/* Featured Photos */}
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 mb-16 sm:mb-20 md:mb-24">
