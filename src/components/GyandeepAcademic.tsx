@@ -97,6 +97,18 @@ const GyandeepAcademic = () => {
     { period: "1st December to Last March", time: "8:30 AM to 1:40 PM", season: "Winter" }
   ];
 
+  const getSeasonBlobColor = (season: string) => {
+    switch (season) {
+      case "Summer":
+        return "linear-gradient(135deg, #ffd166, #ff7a18)";
+      case "Winter":
+        return "linear-gradient(135deg, #60a5fa, #a855f7)";
+      case "Regular":
+      default:
+        return "linear-gradient(135deg, #22d3ee, #3b82f6)";
+    }
+  };
+
   return (
     <section id="academic" className="py-16 sm:py-20 md:py-24">
       <div className="container mx-auto px-4">
@@ -347,16 +359,21 @@ const GyandeepAcademic = () => {
 
           <div className="grid md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-16 sm:mb-20">
             {schoolTimings.map((timing, index) => (
-              <Card key={index} className="glass-card border-none text-center animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
-                <CardContent className="mobile-card-padding">
-                  <Badge variant="outline" className="mb-3 sm:mb-4">{timing.season}</Badge>
-                  <h4 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3">{timing.period}</h4>
-                  <div className="flex items-center justify-center text-accent font-semibold text-base sm:text-lg">
-                    <Clock className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                    {timing.time}
+              <div key={index} className="nb-anim animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
+                <div className="card">
+                  <div className="bg">
+                    <div className="mobile-card-padding text-center">
+                      <Badge variant="outline" className="mb-3 sm:mb-4">{timing.season}</Badge>
+                      <h4 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3">{timing.period}</h4>
+                      <div className="flex items-center justify-center text-accent font-semibold text-base sm:text-lg">
+                        <Clock className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                        {timing.time}
+                      </div>
+                    </div>
                   </div>
-                </CardContent>
-              </Card>
+                  <div className="blob" style={{ background: getSeasonBlobColor(timing.season) }} />
+                </div>
+              </div>
             ))}
           </div>
 
