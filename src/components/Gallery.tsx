@@ -93,8 +93,6 @@ const Gallery = () => {
                       <div className="rcg-dot" />
                       <div className="rcg-card">
                         <div className="rcg-ray" />
-                        <div className="rcg-text">750k</div>
-                        <div>Views</div>
                         <div className="rcg-line rcg-topl" />
                         <div className="rcg-line rcg-leftl" />
                         <div className="rcg-line rcg-bottoml" />
@@ -150,8 +148,6 @@ const Gallery = () => {
                       <div className="rcg-dot" />
                       <div className="rcg-card">
                         <div className="rcg-ray" />
-                        <div className="rcg-text">750k</div>
-                        <div>Views</div>
                         <div className="rcg-line rcg-topl" />
                         <div className="rcg-line rcg-leftl" />
                         <div className="rcg-line rcg-bottoml" />
