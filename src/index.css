@@ -522,15 +522,16 @@
 @layer components {
   .card-container {
     position: relative;
-    width: 400px;
-    height: 300px;
+    width: 100%;
+    max-width: 640px;
+    height: 420px;
     border-radius: 1em;
     margin: 0 2em;
   }
   .card-border {
     position: absolute;
     inset: 0;
-    background: #0005;
+    background: #0007;
     border-radius: inherit;
   }
   .card {
@@ -557,33 +558,33 @@
     overflow: hidden;
   }
   .spin-blur {
-    filter: blur(3em) url(#unopaq);
+    filter: blur(6em) url(#unopaq);
   }
   .spin-intense {
-    inset: -0.125em;
-    filter: blur(0.5em) url(#unopaq2);
+    inset: -0.25em;
+    filter: blur(1.25em) url(#unopaq2);
     border-radius: 0.75em;
   }
   .spin-inside {
     inset: -2px;
     border-radius: inherit;
-    filter: blur(2px) url(#unopaq3);
+    filter: blur(6px) url(#unopaq3);
     z-index: 0;
   }
   .spin::before {
     content: "";
     position: absolute;
-    inset: -30%;
-    animation: speen 8s cubic-bezier(0.56, 0.15, 0.28, 0.86) infinite;
+    inset: -40%;
+    animation: speen 6s ease-in-out infinite;
   }
   .spin-blur::before {
-    background: linear-gradient(-45deg, #f50, #0000 46% 54%, #05f);
+    background: linear-gradient(-45deg, #ff7a18, #0000 46% 54%, #00c2ff);
   }
   .spin-intense::before {
-    background: linear-gradient(-45deg, #f95, #0000 35% 65%, #59f);
+    background: linear-gradient(-45deg, #ffd166, #0000 35% 65%, #6aa9ff);
   }
   .spin-inside::before {
-    background: linear-gradient(-45deg, #fc9, #0000 35% 65%, #9cf);
+    background: linear-gradient(-45deg, #ffe29a, #0000 35% 65%, #aee3ff);
   }
   @keyframes speen {
     0% { rotate: 10deg; }
