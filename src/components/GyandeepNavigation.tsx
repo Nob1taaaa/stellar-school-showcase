@@ -49,7 +49,7 @@ const Navigation = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="fixed top-10 md:top-12 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-golden-accent/20 shadow-golden">
+      <nav className="sticky top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-golden-accent/20 shadow-golden">
         <div className="container mx-auto px-4" style={{ border: '1px solid rgba(113, 138, 120, 1)' }}>
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
