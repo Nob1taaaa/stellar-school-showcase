@@ -212,42 +212,6 @@ const GyandeepAcademic = () => {
             </div>
           </div>
 
-          {/* Modern Teaching Methods */}
-          <div className="glass-card rounded-2xl sm:rounded-3xl p-8 sm:p-10 md:p-12 mb-16 sm:mb-20 md:mb-24 relative overflow-hidden animate-on-scroll">
-            <div className="absolute inset-0 bg-gradient-accent opacity-5"></div>
-            <div className="relative z-10 grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
-              <div>
-                <Badge variant="outline" className="mb-4 sm:mb-6 text-base sm:text-lg px-4 py-2">Modern Learning</Badge>
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 sm:mb-6">
-                  Latest Teaching Techniques
-                </h3>
-                <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed mb-6 sm:mb-8">
-                  We use cutting-edge educational technology including Educom smart classes, graphic animation, 
-                  simulations, 3D images, and video clips in addition to traditional chalk and talk methods.
-                </p>
-                <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
-                  <div className="text-center p-3 sm:p-4 bg-primary/10 rounded-xl">
-                    <div className="text-xl sm:text-2xl font-bold text-primary mb-1">30+</div>
-                    <div className="text-xs sm:text-sm text-muted-foreground">Activities</div>
-                  </div>
-                  <div className="text-center p-3 sm:p-4 bg-accent/10 rounded-xl">
-                    <div className="text-xl sm:text-2xl font-bold text-accent mb-1">Smart</div>
-                    <div className="text-xs sm:text-sm text-muted-foreground">Classes</div>
-                  </div>
-                </div>
-                <Button variant="hero" size="lg" className="text-base sm:text-lg">
-                  Explore Our Methods
-                </Button>
-              </div>
-              <div className="relative">
-                <img
-                  src={programsImage}
-                  alt="Modern Teaching at Gyandeep"
-                  className="w-full h-80 sm:h-96 object-cover rounded-xl sm:rounded-2xl shadow-elegant"
-                />
-              </div>
-            </div>
-          </div>
 
           {/* Modern Facilities */}
           <div className="text-center mb-12 sm:mb-16">
