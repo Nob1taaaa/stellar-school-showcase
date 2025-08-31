@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Users, Award, Star, Clock, Flag, Heart, Target, 
+import {
+  Users, Award, Star, Clock, Flag, Heart, Target,
   Calendar, Trophy, Sunrise, BookOpen, Shield
 } from "lucide-react";
+import AnimatedCampusCard from "@/components/AnimatedCampusCard";
 import assemblyImage from "/lovable-uploads/5793a2d7-39eb-47f1-8378-cf6688e3fc63.png";
 import campusImage from "/lovable-uploads/8b4b7aed-88f9-4ea8-9a81-19b5e3c9137b.png";
 import groundsImage from "/lovable-uploads/a01561ee-2798-4641-8400-95961985d26a.png";
@@ -179,20 +180,30 @@ const SchoolLife = () => {
           </div>
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 mb-16 sm:mb-20">
             {campusHighlights.map((highlight, index) => (
-              <Card key={index} className="glass-card border-none overflow-hidden interactive-card group animate-on-scroll" style={{animationDelay: `${index * 0.2}s`}}>
-                <div className="relative">
-                  <img
-                    src={highlight.image}
-                    alt={highlight.title}
-                    className="w-full h-64 sm:h-80 object-cover group-hover:scale-105 smooth-transition"
+              index === 0 ? (
+                <div key={index} className="flex justify-center items-stretch">
+                  <AnimatedCampusCard
+                    image={highlight.image}
+                    title={highlight.title}
+                    description={highlight.description}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6">
-                    <h4 className="text-xl sm:text-2xl font-bold text-white mb-2">{highlight.title}</h4>
-                    <p className="text-white/90 text-sm sm:text-base">{highlight.description}</p>
-                  </div>
                 </div>
-              </Card>
+              ) : (
+                <Card key={index} className="glass-card border-none overflow-hidden interactive-card group animate-on-scroll" style={{animationDelay: `${index * 0.2}s`}}>
+                  <div className="relative">
+                    <img
+                      src={highlight.image}
+                      alt={highlight.title}
+                      className="w-full h-64 sm:h-80 object-cover group-hover:scale-105 smooth-transition"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6">
+                      <h4 className="text-xl sm:text-2xl font-bold text-white mb-2">{highlight.title}</h4>
+                      <p className="text-white/90 text-sm sm:text-base">{highlight.description}</p>
+                    </div>
+                  </div>
+                </Card>
+              )
             ))}
           </div>
 
