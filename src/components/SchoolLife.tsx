@@ -128,14 +128,13 @@ const SchoolLife = () => {
                     src={assemblyImage}
                     alt="Gyandeep Public School Morning Assembly"
                     className="w-full h-80 sm:h-96 object-cover"
+                    style={{ border: "1px outset rgba(6, 89, 255, 1)" }}
                   />
                 </div>
                 <div className="rcg-outer" style={{ transform: 'scale(0.6)', top: 10, right: 10 }}>
                   <div className="rcg-dot" />
                   <div className="rcg-card">
                     <div className="rcg-ray" />
-                    <div className="rcg-text">750k</div>
-                    <div>Views</div>
                     <div className="rcg-line rcg-topl" />
                     <div className="rcg-line rcg-leftl" />
                     <div className="rcg-line rcg-bottoml" />
