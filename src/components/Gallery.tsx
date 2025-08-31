@@ -145,6 +145,20 @@ const Gallery = () => {
                     alt={photo.title}
                     className="w-full h-48 sm:h-56 object-cover group-hover:scale-110 smooth-transition"
                   />
+                  {(photo.category === "Campus Life" || photo.category === "School Culture") && (
+                    <div className="rcg-outer">
+                      <div className="rcg-dot" />
+                      <div className="rcg-card">
+                        <div className="rcg-ray" />
+                        <div className="rcg-text">750k</div>
+                        <div>Views</div>
+                        <div className="rcg-line rcg-topl" />
+                        <div className="rcg-line rcg-leftl" />
+                        <div className="rcg-line rcg-bottoml" />
+                        <div className="rcg-line rcg-rightl" />
+                      </div>
+                    </div>
+                  )}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 smooth-transition flex items-center justify-center">
                     <Button
                       variant="outline"
