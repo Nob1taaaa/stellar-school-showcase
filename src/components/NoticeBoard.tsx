@@ -73,14 +73,20 @@ const NoticeBoard = () => {
 
   const getButtonStyle = (type: string): React.CSSProperties => {
     const bgMap: Record<string, string> = {
-      Event: "rgba(38, 41, 49, 1)",
-      Meeting: "rgba(29, 33, 41, 1)",
-      Holiday: "rgba(27, 30, 37, 1)",
-      Academic: "rgba(49, 52, 41, 1)",
+      Event: "rgba(190, 197, 211, 1)",
+      Meeting: "rgba(183, 192, 199, 1)",
+      Holiday: "rgba(191, 193, 197, 1)",
+      Academic: "rgba(197, 197, 197, 1)",
+    };
+    const colorMap: Record<string, string> = {
+      Event: "rgba(59, 27, 27, 1)",
+      Meeting: "rgb(29, 25, 25)",
+      Holiday: "rgb(29, 25, 25)",
+      Academic: "rgb(29, 25, 25)",
     };
     return {
-      backgroundColor: bgMap[type] || "rgba(38,41,49,1)",
-      color: "rgba(29, 25, 25, 1)",
+      backgroundColor: bgMap[type] || "rgba(190,197,211,1)",
+      color: colorMap[type] || "rgb(29,25,25)",
       border: "1px solid rgba(44, 44, 37, 1)",
     };
   };
