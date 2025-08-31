@@ -229,7 +229,7 @@ const GyandeepAcademic = () => {
               {modernFacilities.map((facility, index) => {
                 const Icon = facility.icon;
                 return (
-                  <div key={index} className="cute-border facility-anim facility-shimmer w-64 flex-shrink-0 animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
+                  <div key={index} className="cute-border facility-anim facility-shimmer w-64 flex-shrink-0 animate-on-scroll snap-center" style={{animationDelay: `${index * 0.1}s`}}>
                     <Card className="glass-card border-none interactive-card group rounded-2xl">
                       <CardContent className="mobile-card-padding text-center">
                         <div className="relative">
