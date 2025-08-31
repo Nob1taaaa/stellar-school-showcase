@@ -99,10 +99,11 @@ const GyandeepHero = () => {
               <div className="blob-card">
                 <div className="blob-bg"></div>
                 <div className="blob"></div>
-                <img 
-                  src="/lovable-uploads/759d8b35-7caa-44ea-a405-bbd7d9d07a26.png" 
-                  alt="Gyandeep Public School Campus" 
+                <img
+                  src="/lovable-uploads/759d8b35-7caa-44ea-a405-bbd7d9d07a26.png"
+                  alt="Gyandeep Public School Campus"
                   className="w-full h-full object-cover rounded-lg relative z-10"
+                  style={{ border: '1px solid rgba(60, 104, 113, 1)' }}
                 />
               </div>
               {/* Contact Info Card */}
