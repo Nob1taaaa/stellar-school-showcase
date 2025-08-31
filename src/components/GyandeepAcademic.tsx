@@ -128,7 +128,7 @@ const GyandeepAcademic = () => {
           {/* Academic Programs */}
           <div className="block lg:grid lg:grid-cols-2 gap-6 sm:gap-8 mb-16 sm:mb-20 md:mb-24">
             {/* Mobile Horizontal Scroll */}
-            <div className="lg:hidden overflow-x-auto pb-4 mb-8">
+            <div className="lg:hidden overflow-x-auto pb-4 mb-8 snap-x snap-mandatory">
               <div className="flex space-x-4 w-max">
                 {academicPrograms.map((program, index) => {
                   const Icon = program.icon;
