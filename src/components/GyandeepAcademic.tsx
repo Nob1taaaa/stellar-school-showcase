@@ -214,8 +214,8 @@ const GyandeepAcademic = () => {
 
 
           {/* Modern Facilities */}
-          <div className="text-3xl sm:text-4xl font-bold tracking-tight leading-tight mb-4" style={{ margin: '0 0 16px 200px' }}>
-            Modern Learning Facilities
+          <div className="text-center mb-2">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">Modern Learning Facilities</h3>
           </div>
           <div className="text-center mb-12 sm:mb-16">
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -229,7 +229,7 @@ const GyandeepAcademic = () => {
               {modernFacilities.map((facility, index) => {
                 const Icon = facility.icon;
                 return (
-                  <div key={index} className="cute-border w-64 flex-shrink-0 animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
+                  <div key={index} className="cute-border facility-anim facility-shimmer w-64 flex-shrink-0 animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
                     <Card className="glass-card border-none interactive-card group rounded-2xl">
                       <CardContent className="mobile-card-padding text-center">
                         <div className="relative">
@@ -266,7 +266,7 @@ const GyandeepAcademic = () => {
             {modernFacilities.map((facility, index) => {
               const Icon = facility.icon;
               return (
-                <div key={index} className="cute-border animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
+                <div key={index} className="cute-border facility-anim facility-shimmer animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
                   <Card className="glass-card border-none interactive-card group rounded-2xl">
                     <CardContent className="mobile-card-padding text-center">
                       <div className="relative">

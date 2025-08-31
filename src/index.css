@@ -351,6 +351,59 @@
     to { transform: rotate(360deg); }
   }
 
+  /* Pleasant float animation for facility cards */
+  .facility-anim {
+    animation: floaty 6.5s ease-in-out infinite;
+    transform-origin: center;
+  }
+  .facility-anim:nth-child(2n) { animation-duration: 7.5s; animation-delay: .4s; }
+  .facility-anim:nth-child(3n) { animation-duration: 8.5s; animation-delay: .8s; }
+  .facility-anim:hover { transform: translateY(-6px) rotate(-0.5deg); }
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  /* Shimmer overlay for facility cards */
+  .facility-shimmer {
+    position: relative;
+  }
+  .facility-shimmer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.35) 15%, transparent 30%);
+    transform: translateX(-150%);
+    animation: shimmer-move 4.5s ease-in-out infinite;
+    pointer-events: none;
+  }
+  @keyframes shimmer-move {
+    0% { transform: translateX(-150%); }
+    60% { transform: translateX(150%); }
+    100% { transform: translateX(150%); }
+  }
+
+  /* Pleasant photo animation for Morning Assembly */
+  .pleasant-photo {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .pleasant-photo::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: conic-gradient(from 0deg, hsla(48,100%,67%,.35), hsla(217,91%,60%,.25), hsla(275,85%,70%,.3), hsla(48,100%,67%,.35));
+    animation: cute-spin 12s linear infinite;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+    padding: 2px;
+  }
+  .pleasant-photo img { display:block; width:100%; height:100%; object-fit:cover; border-radius:inherit; }
+  .pleasant-photo { animation: floaty 7s ease-in-out infinite; }
+
   /* 3D Card Effects */
   .card-3d-parent {
     width: 100%;

@@ -123,12 +123,11 @@ const SchoolLife = () => {
                 </Button>
               </div>
               <div className="relative">
-                <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-hero">
+                <div className="pleasant-photo shadow-hero">
                   <img
                     src={assemblyImage}
                     alt="Gyandeep Public School Morning Assembly"
                     className="w-full h-80 sm:h-96 object-cover"
-                    style={{ border: "1px outset rgba(6, 89, 255, 1)" }}
                   />
                 </div>
                 <div className="rcg-outer" style={{ transform: 'scale(0.6)', top: 10, right: 10 }}>
