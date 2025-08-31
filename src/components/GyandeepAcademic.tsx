@@ -363,8 +363,34 @@ const GyandeepAcademic = () => {
                 <div className="card">
                   <div className="bg">
                     <div className="mobile-card-padding text-center">
-                      <Badge variant="outline" className="mb-3 sm:mb-4">{timing.season}</Badge>
-                      <h4 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3">{timing.period}</h4>
+                      <Badge
+                        variant="outline"
+                        className="mb-3 sm:mb-4"
+                        style={{
+                          color:
+                            timing.season === "Summer"
+                              ? "rgba(214, 25, 25, 1)"
+                              : timing.season === "Winter"
+                              ? "rgba(51, 125, 195, 1)"
+                              : "rgba(55, 149, 123, 1)",
+                          border: timing.season === "Winter" ? undefined : "1px solid rgba(38, 58, 99, 1)",
+                        }}
+                      >
+                        {timing.season}
+                      </Badge>
+                      <h4
+                        className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3"
+                        style={{
+                          color:
+                            timing.season === "Summer"
+                              ? "rgba(70, 22, 22, 1)"
+                              : timing.season === "Winter"
+                              ? "rgba(194, 42, 121, 1)"
+                              : "rgba(47, 138, 90, 1)",
+                        }}
+                      >
+                        {timing.period}
+                      </h4>
                       <div className="flex items-center justify-center text-accent font-semibold text-base sm:text-lg">
                         <Clock className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                         {timing.time}
