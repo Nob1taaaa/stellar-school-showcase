@@ -61,6 +61,30 @@ const NoticeBoard = () => {
     }
   };
 
+  const getTitleColor = (type: string) => {
+    switch (type) {
+      case "Event": return "rgba(85, 108, 183, 1)";
+      case "Meeting": return "rgba(145, 49, 179, 1)";
+      case "Holiday": return "rgba(72, 172, 52, 1)";
+      case "Academic": return "rgba(167, 21, 21, 1)";
+      default: return undefined;
+    }
+  };
+
+  const getButtonStyle = (type: string): React.CSSProperties => {
+    const bgMap: Record<string, string> = {
+      Event: "rgba(38, 41, 49, 1)",
+      Meeting: "rgba(29, 33, 41, 1)",
+      Holiday: "rgba(27, 30, 37, 1)",
+      Academic: "rgba(49, 52, 41, 1)",
+    };
+    return {
+      backgroundColor: bgMap[type] || "rgba(38,41,49,1)",
+      color: "rgba(29, 25, 25, 1)",
+      border: "1px solid rgba(44, 44, 37, 1)",
+    };
+  };
+
   const getBlobColor = (type: string) => {
     switch (type) {
       case "Event": return "linear-gradient(135deg, #ff7a18, #ffd166)";
@@ -131,11 +155,11 @@ const NoticeBoard = () => {
                       </div>
                     </div>
                     <div className="px-4">
-                      <h4 className="text-lg font-bold text-foreground mb-2">{notice.title}</h4>
+                      <h4 className="text-lg font-bold mb-2" style={{ color: getTitleColor(notice.type) }}>{notice.title}</h4>
                       <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{notice.description}</p>
                     </div>
                     <div className="px-4 pb-4 mt-auto">
-                      <Button variant="outline" className="w-full text-foreground border-foreground hover:bg-foreground hover:text-background font-semibold">Read More</Button>
+                      <Button variant="outline" className="w-full font-semibold" style={getButtonStyle(notice.type)}>Read More</Button>
                     </div>
                   </div>
                   <div className="blob" style={{ background: getBlobColor(notice.type) }} />
