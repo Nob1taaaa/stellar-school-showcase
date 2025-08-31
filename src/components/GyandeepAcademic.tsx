@@ -133,7 +133,7 @@ const GyandeepAcademic = () => {
                 {academicPrograms.map((program, index) => {
                   const Icon = program.icon;
                   return (
-                    <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll w-80 flex-shrink-0" style={{animationDelay: `${index * 0.1}s`}}>
+                    <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll w-80 flex-shrink-0 snap-center" style={{animationDelay: `${index * 0.1}s`}}>
                       <CardHeader className="pb-4">
                         <div className="flex items-center justify-between mb-3 sm:mb-4">
                           <Badge className="bg-gradient-accent text-accent-foreground">{program.badge}</Badge>
