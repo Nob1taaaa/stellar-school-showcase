@@ -208,12 +208,14 @@ const Gallery = () => {
               ];
               return (
                 <Card key={index} className="glass-card border-none text-center animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
-                  <CardContent className="mobile-card-padding" style={{ border: borders[index % borders.length] }}>
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 saffron-gradient rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <CardContent className="mobile-card-padding" style={{ border: borders[index % borders.length], padding: '0 24px 24px' }}>
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 saffron-gradient rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4" style={{ color: 'rgba(27, 64, 136, 1)' }}>
                       <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
                     <div className="text-2xl sm:text-3xl font-bold text-orange-vibrant mb-1 sm:mb-2">{stat.number}</div>
-                    <p className="text-muted-foreground font-medium text-sm sm:text-base">{stat.text}</p>
+                    <p className="text-muted-foreground font-medium text-sm sm:text-base flex items-center justify-center gap-2">
+                      <Icon className="w-4 h-4" /> {stat.text}
+                    </p>
                   </CardContent>
                 </Card>
               );
