@@ -236,6 +236,9 @@
   .animate-on-scroll {
     @apply opacity-0 translate-y-8;
     animation: fade-in 0.8s ease-out forwards;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 
   .animate-delay-100 {
@@ -324,6 +327,8 @@
   .cute-border {
     position: relative;
     border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    contain: paint;
   }
   .cute-border::before {
     content: "";
@@ -335,6 +340,7 @@
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
             mask-composite: exclude;
+    pointer-events: none;
     animation: cute-spin 6s linear infinite;
     z-index: 0;
   }
@@ -342,6 +348,7 @@
     position: relative;
     border-radius: inherit;
     z-index: 1;
+    background-clip: padding-box;
   }
   .cute-border:hover::before {
     animation-duration: 3s;
@@ -355,6 +362,7 @@
   .facility-anim {
     animation: floaty 6.5s ease-in-out infinite;
     transform-origin: center;
+    will-change: transform;
   }
   .facility-anim:nth-child(2n) { animation-duration: 7.5s; animation-delay: .4s; }
   .facility-anim:nth-child(3n) { animation-duration: 8.5s; animation-delay: .8s; }
@@ -377,11 +385,13 @@
     transform: translateX(-150%);
     animation: shimmer-move 4.5s ease-in-out infinite;
     pointer-events: none;
+    will-change: transform, opacity;
   }
   @keyframes shimmer-move {
-    0% { transform: translateX(-150%); }
-    60% { transform: translateX(150%); }
-    100% { transform: translateX(150%); }
+    0% { transform: translateX(-150%); opacity: .0; }
+    10% { opacity: .6; }
+    60% { transform: translateX(150%); opacity: .0; }
+    100% { transform: translateX(150%); opacity: .0; }
   }
 
   /* Pleasant photo animation for Morning Assembly */
@@ -402,7 +412,13 @@
     padding: 2px;
   }
   .pleasant-photo img { display:block; width:100%; height:100%; object-fit:cover; border-radius:inherit; }
-  .pleasant-photo { animation: floaty 7s ease-in-out infinite; }
+  .pleasant-photo { animation: floaty 7s ease-in-out infinite; will-change: transform; }
+
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .facility-anim, .pleasant-photo, .animate-on-scroll { animation: none !important; opacity: 1 !important; transform: none !important; }
+    .facility-shimmer::after { animation: none !important; }
+  }
 
   /* 3D Card Effects */
   .card-3d-parent {
