@@ -135,7 +135,7 @@ const NoticeBoard = () => {
                       <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{notice.description}</p>
                     </div>
                     <div className="px-4 pb-4 mt-auto">
-                      <Button variant="outline" className="w-full">Read More</Button>
+                      <Button variant="outline" className="w-full text-foreground border-foreground hover:bg-foreground hover:text-background font-semibold">Read More</Button>
                     </div>
                   </div>
                   <div className="blob" style={{ background: getBlobColor(notice.type) }} />
