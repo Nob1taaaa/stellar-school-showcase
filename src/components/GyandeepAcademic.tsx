@@ -132,52 +132,7 @@ const GyandeepAcademic = () => {
                 {academicPrograms.map((program, index) => {
                   const Icon = program.icon;
                   return (
-                    <div key={index} className="cute-border facility-anim facility-shimmer w-80 flex-shrink-0 snap-center animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
-                      <Card className="glass-card border-none interactive-card group h-full backdrop-blur-xl bg-white/80">
-                      <CardHeader className="pb-4">
-                        <div className="flex items-center justify-between mb-3 sm:mb-4">
-                          <Badge className="bg-gradient-accent text-accent-foreground">{program.badge}</Badge>
-                          <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-hero rounded-2xl flex items-center justify-center group-hover:scale-110 smooth-transition">
-                            <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary-foreground" />
-                          </div>
-                        </div>
-                        <div className="text-sm text-accent font-medium mb-2">{program.category}</div>
-                        <CardTitle className="text-xl sm:text-2xl group-hover:text-primary smooth-transition">
-                          {program.title}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent className="space-y-4 sm:space-y-6">
-                        <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-                          {program.description}
-                        </p>
-                        
-                        <div className="flex flex-wrap gap-2">
-                          {program.features.map((feature, idx) => (
-                            <Badge key={idx} variant="outline" className="text-xs sm:text-sm">
-                              {feature}
-                            </Badge>
-                          ))}
-                        </div>
-                        
-                        <div className="flex items-center text-sm text-muted-foreground pt-2 border-t border-border">
-                          <Clock className="w-4 h-4 mr-2" />
-                          {program.timing}
-                        </div>
-                      </CardContent>
-                      </Card>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-            
-            {/* Desktop Grid */}
-            <div className="hidden lg:grid lg:grid-cols-2 gap-6 sm:gap-8">
-              {academicPrograms.map((program, index) => {
-                const Icon = program.icon;
-                return (
-                  <div key={index} className="cute-border facility-anim facility-shimmer animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
-                    <Card className="glass-card border-none interactive-card group h-full backdrop-blur-xl bg-white/80">
+                    <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll w-80 flex-shrink-0 snap-center" style={{animationDelay: `${index * 0.1}s`}}>
                       <CardHeader className="pb-4">
                         <div className="flex items-center justify-between mb-3 sm:mb-4">
                           <Badge className="bg-gradient-accent text-accent-foreground">{program.badge}</Badge>
@@ -209,7 +164,48 @@ const GyandeepAcademic = () => {
                         </div>
                       </CardContent>
                     </Card>
-                  </div>
+                  );
+                })}
+              </div>
+            </div>
+            
+            {/* Desktop Grid */}
+            <div className="hidden lg:contents">
+              {academicPrograms.map((program, index) => {
+              const Icon = program.icon;
+              return (
+                <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
+                  <CardHeader className="pb-4">
+                    <div className="flex items-center justify-between mb-3 sm:mb-4">
+                      <Badge className="bg-gradient-accent text-accent-foreground">{program.badge}</Badge>
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-hero rounded-2xl flex items-center justify-center group-hover:scale-110 smooth-transition">
+                        <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary-foreground" />
+                      </div>
+                    </div>
+                    <div className="text-sm text-accent font-medium mb-2">{program.category}</div>
+                    <CardTitle className="text-xl sm:text-2xl group-hover:text-primary smooth-transition">
+                      {program.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4 sm:space-y-6">
+                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                      {program.description}
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2">
+                      {program.features.map((feature, idx) => (
+                        <Badge key={idx} variant="outline" className="text-xs sm:text-sm">
+                          {feature}
+                        </Badge>
+                      ))}
+                    </div>
+                    
+                    <div className="flex items-center text-sm text-muted-foreground pt-2 border-t border-border">
+                      <Clock className="w-4 h-4 mr-2" />
+                      {program.timing}
+                    </div>
+                  </CardContent>
+                </Card>
                 );
               })}
             </div>
