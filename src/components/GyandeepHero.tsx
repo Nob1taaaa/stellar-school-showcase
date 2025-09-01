@@ -93,7 +93,7 @@ const GyandeepHero = () => {
 
           {/* Image Section */}
           <div className="relative animate-fade-in animate-delay-200 order-1 md:order-2 -mt-2 sm:-mt-4">
-            <div className="relative">
+            <div className="relative hero-anim-border">
               <div className="blob-card">
                 <div className="blob-bg"></div>
                 <div className="blob"></div>
@@ -101,7 +101,6 @@ const GyandeepHero = () => {
                   src="/lovable-uploads/759d8b35-7caa-44ea-a405-bbd7d9d07a26.png"
                   alt="Gyandeep Public School Campus"
                   className="w-full h-full object-cover rounded-lg relative z-10"
-                  style={{ border: '1px solid rgba(60, 104, 113, 1)' }}
                 />
               </div>
               {/* Contact Info Card */}
