@@ -86,8 +86,7 @@ const SchoolLife = () => {
               A Day in the Life at <span className="text-gradient">Gyandeep</span>
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
-              Experience the vibrant school culture where 1500 students come together every day for 
-              learning, growth, and character development.
+              Experience vibrant school culture where 1500 students learn and grow together daily.
             </p>
           </div>
 
@@ -102,9 +101,7 @@ const SchoolLife = () => {
                   Morning Assembly
                 </h3>
                 <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed mb-6 sm:mb-8">
-                  Every day begins with our inspiring morning assembly where all 1500 students gather 
-                  in perfect discipline. Students in crisp white uniforms participate in prayers, 
-                  national anthem, and receive important announcements from the school leadership.
+                  Daily morning assembly where 1500 students gather for prayers, national anthem, and announcements.
                 </p>
                 <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
                   <div className="text-center p-3 sm:p-4 bg-primary/10 rounded-xl">

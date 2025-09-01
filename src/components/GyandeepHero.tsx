@@ -46,9 +46,7 @@ const GyandeepHero = () => {
                   </div>
 
                   <p className="text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed mb-4 md:mb-6 lg:mb-8">
-                    Excellence in education through innovative teaching methods, 
-                    personalized attention, and holistic development for every child 
-                    at Gyandeep Public School, Varanasi.
+                    Excellence in education through innovative teaching and holistic development.
                   </p>
                 </div>
 

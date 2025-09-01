@@ -120,8 +120,7 @@ const GyandeepAcademic = () => {
               Comprehensive <span className="text-gradient">Education System</span>
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
-              From nursery to 10th grade with 30+ activities for holistic development using latest 
-              teaching techniques and modern educational tools.
+              From nursery to 10th grade with modern teaching techniques and comprehensive development.
             </p>
           </div>
 
