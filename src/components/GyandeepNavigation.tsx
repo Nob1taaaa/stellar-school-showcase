@@ -19,9 +19,9 @@ const Navigation = () => {
   return (
     <>
       {/* Top Header */}
-      <div className="bg-gradient-hero text-primary-foreground py-2 md:py-3 text-sm shadow-golden pt-[env(safe-area-inset-top)]">
+      <div className="bg-gradient-hero text-primary-foreground py-0.5 md:py-1 text-[11px] sm:text-xs shadow-golden pt-[env(safe-area-inset-top)]">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-0 md:space-y-0">
             <div className="flex items-center space-x-2 sm:space-x-4">
               <div className="flex items-center space-x-1 sm:space-x-2">
                 <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
@@ -50,19 +50,19 @@ const Navigation = () => {
 
       {/* Main Navigation */}
       <nav className="sticky top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-golden-accent/20 shadow-golden">
-        <div className="container mx-auto px-4" style={{ border: '1px solid rgba(113, 138, 120, 1)' }}>
-          <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-10 md:h-20">
             {/* Logo */}
             <div className="flex items-center space-x-2 sm:space-x-4">
-              <div className="h-10 sm:h-12 md:h-16 lg:h-20 flex-shrink-0">
+              <div className="h-7 sm:h-9 md:h-12 lg:h-14 flex-shrink-0">
                 <img
                   src={schoolLogo}
                   alt="Gyandeep Public School Logo"
                   className="h-full w-auto object-contain"
                 />
               </div>
-              <div className="min-w-0 flex-1">
-                <h1 className="text-xs sm:text-sm md:text-lg lg:text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent truncate">
+              <div className="hidden md:block min-w-0 flex-1">
+                <h1 className="text-xs sm:text-sm md:text-lg lg:text-2xl font-bold text-red-600 truncate">
                   Gyandeep Public School
                 </h1>
                 <p className="text-xs md:text-sm text-foreground/70 font-medium hidden md:block truncate">

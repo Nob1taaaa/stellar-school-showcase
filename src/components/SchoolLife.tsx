@@ -92,7 +92,6 @@ const SchoolLife = () => {
 
           {/* Featured Morning Assembly */}
           <div className="glass-card rounded-2xl sm:rounded-3xl p-8 sm:p-10 md:p-12 mb-16 sm:mb-20 md:mb-24 relative overflow-hidden animate-on-scroll">
-            <div className="absolute inset-0 bg-gradient-hero opacity-5"></div>
             <div className="relative z-10 grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
               <div>
                 <Badge variant="outline" className="mb-4 sm:mb-6 text-base sm:text-lg px-4 py-2">Daily Tradition</Badge>
@@ -159,7 +158,7 @@ const SchoolLife = () => {
             {dailyActivities.map((activity, index) => {
               const Icon = activity.icon;
               return (
-                <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
+                <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll anim-border-flow rounded-2xl overflow-hidden" style={{animationDelay: `${index * 0.1}s`}}>
                   <CardContent className="mobile-card-padding">
                     <div className="flex items-center justify-between mb-4 sm:mb-6">
                       <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-accent rounded-2xl flex items-center justify-center group-hover:scale-110 smooth-transition">
@@ -197,32 +196,6 @@ const SchoolLife = () => {
             ))}
           </div>
 
-          {/* School Values */}
-          <div className="text-center mb-12 sm:mb-16">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">Values We Instill</h3>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Through daily assemblies and school activities, we build character and instill lifelong values.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
-            {schoolValues.map((value, index) => {
-              const Icon = value.icon;
-              return (
-                <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
-                  <CardContent className="mobile-card-padding text-center">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-hero rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 smooth-transition">
-                      <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary-foreground" />
-                    </div>
-                    <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-primary smooth-transition">
-                      {value.title}
-                    </h4>
-                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{value.description}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
         </div>
       </div>
     </section>

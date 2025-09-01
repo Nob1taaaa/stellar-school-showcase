@@ -59,7 +59,7 @@
     /* Enhanced Golden Shadows */
     --shadow-elegant: 0 25px 80px hsla(45 100% 51% / 0.2);
     --shadow-glow: 0 0 50px hsla(48 100% 67% / 0.5);
-    --shadow-card: 0 15px 60px hsla(45 100% 15% / 0.12);
+    --shadow-card: 0 8px 28px hsla(45 100% 15% / 0.08);
     --shadow-hero: 0 40px 120px hsla(45 100% 51% / 0.3);
     --shadow-button: 0 12px 40px hsla(48 100% 67% / 0.4);
     --shadow-golden: 0 0 50px hsla(45 100% 51% / 0.5);
@@ -165,7 +165,11 @@
   body {
     @apply bg-background text-foreground font-body;
     font-feature-settings: 'rlig' 1, 'calt' 1;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+    -webkit-overflow-scrolling: touch;
   }
+  html { overflow-x: hidden; }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading font-bold;
@@ -271,6 +275,9 @@
 
   .interactive-card {
     @apply smooth-transition hover:-translate-y-1 hover:shadow-hero hover:border-accent/30;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 
   /* Mobile Touch Improvements */
@@ -419,10 +426,151 @@
   .pleasant-photo img { display:block; width:100%; height:100%; object-fit:cover; border-radius:inherit; }
   .pleasant-photo { animation: floaty 7s ease-in-out infinite; will-change: transform; }
 
+  /* Animated gradient border for cards (cute) */
+  .anim-border { position: relative; border-radius: 14px; isolation: isolate; border: 1px solid transparent; --ab-size: 2px; }
+  @media (min-width: 640px) { .anim-border { --ab-size: 3px; } }
+  @media (min-width: 1024px) { .anim-border { --ab-size: 4px; } }
+  .anim-border::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: var(--ab-size);
+    background: conic-gradient(from 0deg, hsl(var(--golden-secondary)), hsl(var(--accent)), hsl(217 91% 60%), hsl(var(--primary)), hsl(var(--golden-secondary)));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+    animation: cute-spin 8s linear infinite;
+    filter: drop-shadow(0 0 12px hsla(48,100%,67%,0.28));
+    z-index: 0;
+  }
+  .anim-border:hover::before { animation-duration: 5s; filter: drop-shadow(0 0 16px hsla(45,100%,51%,0.35)); }
+  .anim-border > * { position: relative; z-index: 1; }
+  @media (prefers-reduced-motion: reduce) { .anim-border::before { animation: none; } }
+
+  /* Prevent tiny overflow artifacts on small screens */
+  @media (max-width: 640px) { .anim-border, .anim-border-flow, .cute-border, .pleasant-photo, .contact-anim-border { overflow: hidden; } }
+
+  /* Animated gradient text (used in Contact Gyandeep) */
+  .animated-gradient-text {
+    background: linear-gradient(90deg, hsl(var(--golden-secondary)), hsl(var(--accent)), hsl(217 91% 60%), hsl(275 85% 70%), hsl(var(--golden-secondary)));
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-text-shift 6s ease-in-out infinite alternate;
+  }
+  @keyframes gradient-text-shift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+
+  /* Flowing gradient border for Daily Activities */
+  .anim-border-flow { position: relative; border-radius: 14px; isolation: isolate; border: 1px solid transparent; --ab-size: 2px; }
+  @media (max-width: 640px) { .anim-border-flow { --ab-size: 3px; } }
+  @media (min-width: 640px) { .anim-border-flow { --ab-size: 3px; } }
+  @media (min-width: 1024px) { .anim-border-flow { --ab-size: 4px; } }
+  .anim-border-flow::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: var(--ab-size);
+    background: linear-gradient(90deg, hsl(var(--golden-secondary)), hsl(var(--accent)), hsl(217 91% 60%), hsl(275 85% 70%), hsl(var(--golden-secondary)));
+    background-size: 300% 100%;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+    animation: border-flow 5.5s linear infinite;
+    filter: drop-shadow(0 0 12px hsla(48,100%,67%,0.32));
+    z-index: 0;
+  }
+  .anim-border-flow:hover::before { animation-duration: 3s; filter: drop-shadow(0 0 16px hsla(45,100%,51%,0.42)); }
+  .anim-border-flow > * { position: relative; z-index: 1; border-radius: inherit; }
+  @keyframes border-flow { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
+  @media (prefers-reduced-motion: reduce) { .anim-border-flow::before { animation: none; } }
+
+  /* Contact section animated pastel border */
+  .contact-anim-border { position: relative; border-radius: 16px; border: 1px solid transparent; isolation: isolate; }
+  .contact-anim-border::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 3px; /* thicker border for better visibility */
+    background: linear-gradient(120deg,
+      hsl(50 100% 75%),
+      hsl(42 100% 50%),
+      hsl(217 91% 60%),
+      hsl(275 85% 70%),
+      hsl(50 100% 75%)
+    );
+    background-size: 300% 100%;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+    animation: contact-border-flow 10s ease infinite;
+    filter: drop-shadow(0 0 10px hsla(48,100%,67%,0.22));
+    z-index: 0;
+  }
+  .contact-anim-border > * { position: relative; z-index: 1; border-radius: inherit; }
+  .contact-anim-border:hover::before { animation-duration: 6s; }
+  @keyframes contact-border-flow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+  @media (prefers-reduced-motion: reduce) { .contact-anim-border::before { animation: none; } }
+
+  /* Hero image animated bold border */
+  .hero-anim-border { position: relative; border-radius: 18px; isolation: isolate; }
+  .hero-anim-border::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: inherit;
+    padding: 4px; /* bold */
+    background: linear-gradient(120deg,
+      hsl(50 100% 75%),
+      hsl(42 100% 50%),
+      hsl(217 91% 60%),
+      hsl(275 85% 70%),
+      hsl(50 100% 75%)
+    );
+    background-size: 300% 100%;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+    pointer-events: none;
+    animation: hero-border-flow 9s ease-in-out infinite;
+    filter: drop-shadow(0 0 14px hsla(48,100%,67%,0.28));
+    z-index: 0;
+  }
+  .hero-anim-border > * { position: relative; z-index: 1; border-radius: inherit; overflow: hidden; }
+  @keyframes hero-border-flow { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
+  @media (max-width: 640px) {
+    .hero-anim-border { margin-left: 6px; margin-right: 6px; }
+    .hero-anim-border::before { inset: 0; padding: 3px; filter: none; }
+  }
+
   /* Respect reduced motion */
   @media (prefers-reduced-motion: reduce) {
     .facility-anim, .pleasant-photo, .animate-on-scroll { animation: none !important; opacity: 1 !important; transform: none !important; }
     .facility-shimmer::after { animation: none !important; }
+  }
+
+  /* Contact section mobile overflow + alignment fix */
+  @media (max-width: 640px) {
+    #contact { overflow-x: clip; }
+    #contact .cute-border::before { inset: 0; padding: 1.75px; }
+    #contact .contact-anim-border { margin-left: 8px; margin-right: 8px; max-width: calc(100% - 16px); }
+    #contact .contact-anim-border::before { inset: 0; padding: 2px; filter: none; }
+    #contact .glass-card { margin-left: 2px; margin-right: 2px; }
   }
 
   /* 3D Card Effects */
@@ -551,7 +699,7 @@
     width: 100%;
     height: 300px;
     border-radius: 14px;
-    z-index: 1111;
+    z-index: 1;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -583,9 +731,12 @@
     height: 150px;
     border-radius: 50%;
     background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
-    opacity: 0.8;
+    opacity: 0.35;
     filter: blur(12px);
-    animation: blob-bounce 5s infinite ease;
+    animation: blob-bounce 6s ease-in-out infinite;
+  }
+  @media (max-width: 640px) {
+    .blob { opacity: 0.22; filter: blur(14px); }
   }
 
   @keyframes blob-bounce {

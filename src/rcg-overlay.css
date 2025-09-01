@@ -14,6 +14,9 @@
     pointer-events: none;
     z-index: 10;
   }
+  @media (max-width: 640px) {
+    .rcg-outer { display: none; }
+  }
   .rcg-dot {
     width: 5px;
     aspect-ratio: 1;

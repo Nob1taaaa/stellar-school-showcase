@@ -5,15 +5,15 @@ const GyandeepHero = () => {
   return (
     <section className="min-h-screen bg-gradient-hero relative overflow-hidden" style={{marginTop: '0px'}}>
       {/* Decorative Elements */}
-      <div className="absolute inset-0">
+      <div className="hidden md:block absolute inset-0">
         <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full"></div>
         <div className="absolute top-40 right-20 w-20 h-20 bg-orange-vibrant/20 rounded-lg rotate-12"></div>
         <div className="absolute bottom-40 left-20 w-16 h-16 bg-purple-vibrant/30 rounded-full shadow-purple glow-effect"></div>
         <div className="absolute bottom-20 right-40 w-24 h-24 bg-white/10 rounded-lg rotate-45"></div>
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 pt-28 md:pt-32 lg:pt-36 pb-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center min-h-[70vh]">
+      <div className="container mx-auto px-4 md:px-6 pt-4 sm:pt-8 md:pt-16 lg:pt-20 pb-12 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:gap-12 items-center min-h-[60vh]">
           {/* Content Card */}
           <div className="card-3d-parent order-2 md:order-1">
             <div className="card-3d bg-white rounded-3xl shadow-hero animate-fade-in">
@@ -27,7 +27,7 @@ const GyandeepHero = () => {
                   <Award className="w-5 h-5 text-white" />
                 </span>
               </div>
-              <div className="card-3d-content p-4 md:p-6 lg:p-8 xl:p-12">
+              <div className="card-3d-content p-3 sm:p-4 md:p-6 lg:p-8 xl:p-12">
                 <div className="mb-8">
                   <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-foreground leading-tight mb-4 md:mb-6">
                     Nurturing minds,
@@ -92,8 +92,8 @@ const GyandeepHero = () => {
           </div>
 
           {/* Image Section */}
-          <div className="relative animate-fade-in animate-delay-200 order-1 md:order-2">
-            <div className="relative">
+          <div className="relative animate-fade-in animate-delay-200 order-1 md:order-2 -mt-2 sm:-mt-4">
+            <div className="relative hero-anim-border">
               <div className="blob-card">
                 <div className="blob-bg"></div>
                 <div className="blob"></div>
@@ -101,7 +101,6 @@ const GyandeepHero = () => {
                   src="/lovable-uploads/759d8b35-7caa-44ea-a405-bbd7d9d07a26.png"
                   alt="Gyandeep Public School Campus"
                   className="w-full h-full object-cover rounded-lg relative z-10"
-                  style={{ border: '1px solid rgba(60, 104, 113, 1)' }}
                 />
               </div>
               {/* Contact Info Card */}

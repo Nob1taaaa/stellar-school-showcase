@@ -72,7 +72,7 @@ const Contact = () => {
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-6 text-lg px-6 py-2">Get in Touch</Badge>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Contact <span className="text-gradient">Gyandeep</span>
+              Contact <span className="animated-gradient-text">Gyandeep</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Connect with us for admissions, inquiries, or to schedule a campus visit.
@@ -86,7 +86,7 @@ const Contact = () => {
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
               return (
-                <div key={index} className="cute-border facility-anim facility-shimmer">
+                <div key={index} className="contact-anim-border animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
                   <Card className="glass-card border-none interactive-card group">
                     <CardContent className="p-6">
                       <div className="flex items-center space-x-4">
@@ -110,7 +110,7 @@ const Contact = () => {
             })}
 
               {/* Social Media */}
-              <div className="cute-border facility-shimmer">
+              <div className="contact-anim-border animate-on-scroll">
                 <div className="glass-card border-none p-6 text-center">
                   <div className="w-12 h-12 bg-gradient-hero rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Users className="w-6 h-6 text-primary-foreground" />
@@ -136,7 +136,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-        <div className="cute-border facility-shimmer">
+        <div className="contact-anim-border animate-on-scroll">
           <div className="glass-card rounded-2xl p-8 border-none">
             <div className="text-center mb-6">
               <div className="w-16 h-16 bg-gradient-hero rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -166,7 +166,7 @@ const Contact = () => {
           </div>
 
           {/* Map Section */}
-          <div className="cute-border facility-shimmer">
+          <div className="contact-anim-border animate-on-scroll">
             <div className="glass-card rounded-2xl p-8 border-none">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-gradient-accent rounded-2xl flex items-center justify-center mx-auto mb-4">
