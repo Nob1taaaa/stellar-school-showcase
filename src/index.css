@@ -420,24 +420,26 @@
   .pleasant-photo { animation: floaty 7s ease-in-out infinite; will-change: transform; }
 
   /* Animated gradient border for cards (cute) */
-  .anim-border { position: relative; border-radius: 14px; isolation: isolate; }
+  .anim-border { position: relative; border-radius: 14px; isolation: isolate; border: 1px solid transparent; --ab-size: 2px; }
+  @media (min-width: 640px) { .anim-border { --ab-size: 3px; } }
+  @media (min-width: 1024px) { .anim-border { --ab-size: 4px; } }
   .anim-border::before {
     content: "";
     position: absolute;
     inset: -2px;
     border-radius: inherit;
-    padding: 2px;
+    padding: var(--ab-size);
     background: conic-gradient(from 0deg, hsl(var(--golden-secondary)), hsl(var(--accent)), hsl(217 91% 60%), hsl(var(--primary)), hsl(var(--golden-secondary)));
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
             mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
             mask-composite: exclude;
     pointer-events: none;
-    animation: cute-spin 6s linear infinite;
-    filter: drop-shadow(0 0 10px hsla(48,100%,67%,0.25));
+    animation: cute-spin 8s linear infinite;
+    filter: drop-shadow(0 0 12px hsla(48,100%,67%,0.28));
     z-index: 0;
   }
-  .anim-border:hover::before { animation-duration: 3.5s; filter: drop-shadow(0 0 14px hsla(45,100%,51%,0.35)); }
+  .anim-border:hover::before { animation-duration: 5s; filter: drop-shadow(0 0 16px hsla(45,100%,51%,0.35)); }
   .anim-border > * { position: relative; z-index: 1; }
   @media (prefers-reduced-motion: reduce) { .anim-border::before { animation: none; } }
 
