@@ -13,7 +13,7 @@ const GyandeepHero = () => {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 pt-8 sm:pt-12 md:pt-20 lg:pt-24 pb-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center min-h-[70vh]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:gap-12 items-center min-h-[60vh]">
           {/* Content Card */}
           <div className="card-3d-parent order-2 md:order-1">
             <div className="card-3d bg-white rounded-3xl shadow-hero animate-fade-in">
@@ -27,7 +27,7 @@ const GyandeepHero = () => {
                   <Award className="w-5 h-5 text-white" />
                 </span>
               </div>
-              <div className="card-3d-content p-4 md:p-6 lg:p-8 xl:p-12">
+              <div className="card-3d-content p-3 sm:p-4 md:p-6 lg:p-8 xl:p-12">
                 <div className="mb-8">
                   <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-foreground leading-tight mb-4 md:mb-6">
                     Nurturing minds,
@@ -92,7 +92,7 @@ const GyandeepHero = () => {
           </div>
 
           {/* Image Section */}
-          <div className="relative animate-fade-in animate-delay-200 order-1 md:order-2">
+          <div className="relative animate-fade-in animate-delay-200 order-1 md:order-2 -mt-2 sm:-mt-4">
             <div className="relative">
               <div className="blob-card">
                 <div className="blob-bg"></div>
