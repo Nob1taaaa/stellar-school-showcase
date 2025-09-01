@@ -1,44 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import {
-  BookOpen, Users, Award, Star, Clock, Trophy, Target,
-  Palette, Music, Microscope, Gamepad2, Monitor, Calculator
-} from "lucide-react";
+import { BookOpen, Users, Award, Star, Clock, Trophy, Target, Palette, Music } from "lucide-react";
 
 const GyandeepAcademic = () => {
-  const modernFacilities = [
-    {
-      icon: Monitor,
-      title: "Educom Smart Classes",
-      description: "Latest teaching tools with graphic animation, simulations, and 3D images"
-    },
-    {
-      icon: Calculator,
-      title: "Abacus Classes",
-      description: "Mental math development and cognitive skill enhancement"
-    },
-    {
-      icon: Microscope,
-      title: "Science Laboratory",
-      description: "Fully equipped lab for hands-on practical learning"
-    },
-    {
-      icon: Palette,
-      title: "Art & Craft Studio",
-      description: "Creative expression through various artistic mediums"
-    },
-    {
-      icon: Music,
-      title: "Music & Dance",
-      description: "Cultural development through performing arts"
-    },
-    {
-      icon: Gamepad2,
-      title: "Sports Facilities",
-      description: "Physical fitness and team building activities"
-    }
-  ];
-
   const cocurricular = [
     { name: "Quiz Competitions", icon: Trophy },
     { name: "Debate Competitions", icon: Users },
@@ -72,28 +36,10 @@ const GyandeepAcademic = () => {
     <section id="academic" className="py-16 sm:py-20 md:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-12 sm:mb-16 md:mb-20">
-            <Badge variant="secondary" className="mb-4 sm:mb-6 text-base sm:text-lg px-4 sm:px-6 py-2">Academic Excellence</Badge>
-            <h2 className="mobile-section-title font-bold text-foreground mb-6 sm:mb-8 animate-fade-in">
-              Comprehensive <span className="text-gradient">Education System</span>
-            </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
-              From nursery to 10th grade with modern teaching techniques and comprehensive development.
-            </p>
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <Badge variant="secondary" className="mb-0 text-base sm:text-lg px-4 sm:px-6 py-2">Academic Excellence</Badge>
           </div>
 
-          {/* Modern Facilities */}
-          <div className="text-center mb-2">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">Modern Learning Facilities</h3>
-          </div>
-          <div className="text-center mb-12 sm:mb-16">
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              State-of-the-art facilities that blend traditional teaching with modern technology.
-            </p>
-          </div>
-
-          {/* Co-curricular Activities */}
           <div className="glass-card rounded-2xl sm:rounded-3xl p-8 sm:p-10 md:p-12 mb-16 sm:mb-20 animate-on-scroll">
             <div className="text-center mb-8 sm:mb-12">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">Co-curricular Activities</h3>
@@ -115,7 +61,6 @@ const GyandeepAcademic = () => {
             </div>
           </div>
 
-          {/* School Timings */}
           <div className="text-center mb-8 sm:mb-12">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">School Timings</h3>
             <p className="text-base sm:text-lg text-muted-foreground">
@@ -169,7 +114,6 @@ const GyandeepAcademic = () => {
             ))}
           </div>
 
-          {/* CTA Section */}
           <div className="text-center">
             <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-3 sm:mb-4">
               Ready to Join Our Academic Excellence?
