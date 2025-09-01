@@ -165,7 +165,11 @@
   body {
     @apply bg-background text-foreground font-body;
     font-feature-settings: 'rlig' 1, 'calt' 1;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+    -webkit-overflow-scrolling: touch;
   }
+  html { overflow-x: hidden; }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading font-bold;
@@ -271,6 +275,9 @@
 
   .interactive-card {
     @apply smooth-transition hover:-translate-y-1 hover:shadow-hero hover:border-accent/30;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 
   /* Mobile Touch Improvements */
@@ -442,6 +449,9 @@
   .anim-border:hover::before { animation-duration: 5s; filter: drop-shadow(0 0 16px hsla(45,100%,51%,0.35)); }
   .anim-border > * { position: relative; z-index: 1; }
   @media (prefers-reduced-motion: reduce) { .anim-border::before { animation: none; } }
+
+  /* Prevent tiny overflow artifacts on small screens */
+  @media (max-width: 640px) { .anim-border, .anim-border-flow, .cute-border, .pleasant-photo { overflow: hidden; } }
 
   /* Flowing gradient border for Daily Activities */
   .anim-border-flow { position: relative; border-radius: 14px; isolation: isolate; border: 1px solid transparent; --ab-size: 2px; }
