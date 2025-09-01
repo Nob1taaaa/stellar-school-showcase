@@ -7,62 +7,62 @@
 
 @layer base {
   :root {
-    /* Enhanced Vibrant Color Scheme */
-    --background: 220 100% 96; /* Pure bright white background */
-    --foreground: 220 100% 7; /* Deep navy for text */
+    /* Beautiful Soft & Cute Color Scheme */
+    --background: 320 20% 98; /* Soft lavender white */
+    --foreground: 260 30% 15; /* Deep purple navy */
 
-    --card: 255 255 255; /* Pure white cards */
-    --card-foreground: 220 100% 15; /* Dark navy text on cards */
+    --card: 320 50% 99; /* Soft pink-white cards */
+    --card-foreground: 260 30% 20; /* Dark purple text */
 
-    --popover: 255 255 255;
-    --popover-foreground: 220 100% 15;
+    --popover: 320 50% 99;
+    --popover-foreground: 260 30% 20;
 
-    --primary: 45 100% 51; /* Beautiful golden yellow */
-    --primary-foreground: 0 0% 20; /* Dark text on yellow */
-    --primary-glow: 48 100% 67; /* Lighter golden glow */
+    --primary: 300 100% 75; /* Beautiful soft pink */
+    --primary-foreground: 320 20% 98; /* Light text on pink */
+    --primary-glow: 310 100% 85; /* Lighter pink glow */
 
-    --secondary: 0 0% 100; /* Pure white */
-    --secondary-foreground: 0 0% 20; /* Dark text on white */
+    --secondary: 200 100% 90; /* Soft sky blue */
+    --secondary-foreground: 260 30% 20; /* Dark text on blue */
 
-    --muted: 45 20% 98; /* Very light yellow tint */
-    --muted-foreground: 0 0% 40; /* Medium gray text */
+    --muted: 320 30% 96; /* Very light pink tint */
+    --muted-foreground: 260 15% 45; /* Medium purple text */
 
-    --accent: 42 100% 50; /* Rich golden accent */
-    --accent-foreground: 0 0% 20; /* Dark text on golden */
-    --accent-glow: 50 100% 70; /* Bright golden glow */
+    --accent: 280 100% 80; /* Soft lavender accent */
+    --accent-foreground: 260 30% 15; /* Dark text on lavender */
+    --accent-glow: 290 100% 88; /* Bright lavender glow */
 
-    --success: 120 100% 40;
-    --success-foreground: 255 255 255;
+    --success: 150 60% 60; /* Soft mint green */
+    --success-foreground: 320 20% 98;
 
-    --destructive: 0 100% 60;
-    --destructive-foreground: 255 255 255;
+    --destructive: 350 70% 70; /* Soft coral */
+    --destructive-foreground: 320 20% 98;
 
-    --border: 220 60% 90;
-    --input: 255 255 255;
-    --ring: 220 100% 50;
+    --border: 320 25% 88;
+    --input: 320 50% 99;
+    --ring: 300 100% 75;
 
-    /* Golden & White Enhanced Colors */
-    --golden-primary: 45 100% 51; /* Beautiful golden yellow */
-    --golden-secondary: 48 100% 67; /* Lighter golden */
-    --golden-deep: 42 100% 35; /* Deep golden */
-    --golden-accent: 42 100% 50; /* Rich golden accent */
-    --golden-light: 50 100% 75; /* Light golden */
-    --white-pure: 0 0% 100; /* Pure white */
+    /* Cute Pastel Enhanced Colors */
+    --golden-primary: 300 100% 75; /* Soft pink */
+    --golden-secondary: 280 100% 80; /* Soft lavender */
+    --golden-deep: 320 80% 65; /* Deeper pink */
+    --golden-accent: 200 100% 80; /* Soft blue */
+    --golden-light: 310 100% 88; /* Light pink */
+    --white-pure: 320 20% 98; /* Soft white */
 
-    /* Beautiful Golden & White Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(45 100% 51%) 0%, hsl(48 100% 67%) 30%, hsl(50 100% 75%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(42 100% 50%) 0%, hsl(48 100% 67%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(45 20% 98%) 100%);
-    --gradient-card: linear-gradient(145deg, hsla(0 0% 100% / 1) 0%, hsla(45 20% 98% / 0.95) 100%);
-    --gradient-button: linear-gradient(135deg, hsl(45 100% 51%) 0%, hsl(48 100% 67%) 100%);
+    /* Beautiful Pastel Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(300 100% 75%) 0%, hsl(280 100% 80%) 30%, hsl(200 100% 85%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(280 100% 80%) 0%, hsl(200 100% 80%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(320 20% 98%) 0%, hsl(320 30% 96%) 100%);
+    --gradient-card: linear-gradient(145deg, hsla(320 50% 99% / 1) 0%, hsla(320 30% 96% / 0.95) 100%);
+    --gradient-button: linear-gradient(135deg, hsl(300 100% 75%) 0%, hsl(280 100% 80%) 100%);
 
-    /* Enhanced Golden Shadows */
-    --shadow-elegant: 0 25px 80px hsla(45 100% 51% / 0.2);
-    --shadow-glow: 0 0 50px hsla(48 100% 67% / 0.5);
-    --shadow-card: 0 8px 28px hsla(45 100% 15% / 0.08);
-    --shadow-hero: 0 40px 120px hsla(45 100% 51% / 0.3);
-    --shadow-button: 0 12px 40px hsla(48 100% 67% / 0.4);
-    --shadow-golden: 0 0 50px hsla(45 100% 51% / 0.5);
+    /* Enhanced Soft Shadows */
+    --shadow-elegant: 0 25px 80px hsla(300 100% 75% / 0.15);
+    --shadow-glow: 0 0 50px hsla(280 100% 80% / 0.3);
+    --shadow-card: 0 8px 28px hsla(300 80% 65% / 0.08);
+    --shadow-hero: 0 40px 120px hsla(300 100% 75% / 0.2);
+    --shadow-button: 0 12px 40px hsla(280 100% 80% / 0.25);
+    --shadow-golden: 0 0 50px hsla(300 100% 75% / 0.3);
 
     /* Typography */
     --font-heading: 'Inter', system-ui, sans-serif;
@@ -348,7 +348,7 @@
     inset: -2px;
     border-radius: inherit;
     padding: 2px;
-    background: conic-gradient(from 0deg, hsl(45 100% 51%), hsl(275 85% 70%), hsl(217 91% 60%), hsl(42 100% 50%), hsl(45 100% 51%));
+    background: conic-gradient(from 0deg, hsl(300 100% 75%), hsl(280 100% 80%), hsl(200 100% 80%), hsl(320 80% 65%), hsl(300 100% 75%));
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
             mask-composite: exclude;
@@ -364,7 +364,7 @@
   }
   .cute-border:hover::before {
     animation-duration: 3s;
-    filter: drop-shadow(0 0 12px hsla(45, 100%, 51%, 0.45));
+    filter: drop-shadow(0 0 12px hsla(300, 100%, 75%, 0.35));
   }
   @keyframes cute-spin {
     to { transform: rotate(360deg); }
@@ -417,7 +417,7 @@
     position: absolute;
     inset: -2px;
     border-radius: inherit;
-    background: conic-gradient(from 0deg, hsla(48,100%,67%,.35), hsla(217,91%,60%,.25), hsla(275,85%,70%,.3), hsla(48,100%,67%,.35));
+    background: conic-gradient(from 0deg, hsla(280,100%,80%,.35), hsla(200,100%,80%,.25), hsla(300,100%,75%,.3), hsla(280,100%,80%,.35));
     animation: cute-spin 12s linear infinite;
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor; mask-composite: exclude;
@@ -436,17 +436,17 @@
     inset: -2px;
     border-radius: inherit;
     padding: var(--ab-size);
-    background: conic-gradient(from 0deg, hsl(var(--golden-secondary)), hsl(var(--accent)), hsl(217 91% 60%), hsl(var(--primary)), hsl(var(--golden-secondary)));
+    background: conic-gradient(from 0deg, hsl(var(--golden-secondary)), hsl(var(--accent)), hsl(200 100% 80%), hsl(var(--primary)), hsl(var(--golden-secondary)));
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
             mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
             mask-composite: exclude;
     pointer-events: none;
     animation: cute-spin 8s linear infinite;
-    filter: drop-shadow(0 0 12px hsla(48,100%,67%,0.28));
+    filter: drop-shadow(0 0 12px hsla(280,100%,80%,0.28));
     z-index: 0;
   }
-  .anim-border:hover::before { animation-duration: 5s; filter: drop-shadow(0 0 16px hsla(45,100%,51%,0.35)); }
+  .anim-border:hover::before { animation-duration: 5s; filter: drop-shadow(0 0 16px hsla(300,100%,75%,0.35)); }
   .anim-border > * { position: relative; z-index: 1; }
   @media (prefers-reduced-motion: reduce) { .anim-border::before { animation: none; } }
 
@@ -455,7 +455,7 @@
 
   /* Animated gradient text (used in Contact Gyandeep) */
   .animated-gradient-text {
-    background: linear-gradient(90deg, hsl(var(--golden-secondary)), hsl(var(--accent)), hsl(217 91% 60%), hsl(275 85% 70%), hsl(var(--golden-secondary)));
+    background: linear-gradient(90deg, hsl(var(--golden-secondary)), hsl(var(--accent)), hsl(200 100% 80%), hsl(300 100% 75%), hsl(var(--golden-secondary)));
     background-size: 200% 100%;
     -webkit-background-clip: text;
             background-clip: text;
@@ -478,7 +478,7 @@
     inset: -2px;
     border-radius: inherit;
     padding: var(--ab-size);
-    background: linear-gradient(90deg, hsl(var(--golden-secondary)), hsl(var(--accent)), hsl(217 91% 60%), hsl(275 85% 70%), hsl(var(--golden-secondary)));
+    background: linear-gradient(90deg, hsl(var(--golden-secondary)), hsl(var(--accent)), hsl(200 100% 80%), hsl(300 100% 75%), hsl(var(--golden-secondary)));
     background-size: 300% 100%;
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
             mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
@@ -486,10 +486,10 @@
             mask-composite: exclude;
     pointer-events: none;
     animation: border-flow 5.5s linear infinite;
-    filter: drop-shadow(0 0 12px hsla(48,100%,67%,0.32));
+    filter: drop-shadow(0 0 12px hsla(280,100%,80%,0.32));
     z-index: 0;
   }
-  .anim-border-flow:hover::before { animation-duration: 3s; filter: drop-shadow(0 0 16px hsla(45,100%,51%,0.42)); }
+  .anim-border-flow:hover::before { animation-duration: 3s; filter: drop-shadow(0 0 16px hsla(300,100%,75%,0.42)); }
   .anim-border-flow > * { position: relative; z-index: 1; border-radius: inherit; }
   @keyframes border-flow { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
   @media (prefers-reduced-motion: reduce) { .anim-border-flow::before { animation: none; } }
