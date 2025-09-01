@@ -127,12 +127,12 @@ const GyandeepAcademic = () => {
           {/* Academic Programs */}
           <div className="block lg:grid lg:grid-cols-2 gap-6 sm:gap-8 mb-16 sm:mb-20 md:mb-24">
             {/* Mobile Horizontal Scroll */}
-            <div className="lg:hidden overflow-x-auto pb-4 mb-8 snap-x snap-mandatory">
-              <div className="flex space-x-4 w-max">
+            <div className="lg:hidden grid grid-cols-1 gap-4 mb-8">
+              <div className="contents">
                 {academicPrograms.map((program, index) => {
                   const Icon = program.icon;
                   return (
-                    <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll w-80 flex-shrink-0 snap-center" style={{animationDelay: `${index * 0.1}s`}}>
+                    <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll w-full" style={{animationDelay: `${index * 0.1}s`}}>
                       <CardHeader className="pb-4">
                         <div className="flex items-center justify-between mb-3 sm:mb-4">
                           <Badge className="bg-gradient-accent text-accent-foreground">{program.badge}</Badge>
@@ -223,12 +223,12 @@ const GyandeepAcademic = () => {
           </div>
 
           {/* Mobile Horizontal Scroll for Facilities */}
-          <div className="lg:hidden overflow-x-auto pb-4 mb-8 snap-x snap-mandatory">
-            <div className="flex space-x-4 w-max">
+          <div className="lg:hidden grid grid-cols-1 gap-4 mb-8">
+            <div className="contents">
               {modernFacilities.map((facility, index) => {
                 const Icon = facility.icon;
                 return (
-                  <div key={index} className="cute-border facility-anim facility-shimmer w-64 flex-shrink-0 animate-on-scroll snap-center" style={{animationDelay: `${index * 0.1}s`}}>
+                  <div key={index} className="cute-border facility-anim facility-shimmer w-full animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
                     <Card className="glass-card border-none interactive-card group rounded-2xl">
                       <CardContent className="mobile-card-padding text-center">
                         <div className="relative">
