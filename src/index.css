@@ -536,6 +536,8 @@
   @media (max-width: 640px) {
     #contact { overflow-x: clip; }
     #contact .cute-border::before { inset: 0; padding: 1.5px; }
+    #contact .contact-anim-border::before { inset: 0; padding: 1.5px; }
+    #contact .contact-anim-border { margin-left: 4px; margin-right: 4px; }
     #contact .glass-card { margin-left: 2px; margin-right: 2px; }
   }
 
