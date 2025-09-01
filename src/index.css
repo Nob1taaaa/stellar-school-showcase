@@ -526,6 +526,37 @@
   }
   @media (prefers-reduced-motion: reduce) { .contact-anim-border::before { animation: none; } }
 
+  /* Hero image animated bold border */
+  .hero-anim-border { position: relative; border-radius: 18px; isolation: isolate; }
+  .hero-anim-border::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: inherit;
+    padding: 4px; /* bold */
+    background: linear-gradient(120deg,
+      hsl(50 100% 75%),
+      hsl(42 100% 50%),
+      hsl(217 91% 60%),
+      hsl(275 85% 70%),
+      hsl(50 100% 75%)
+    );
+    background-size: 300% 100%;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+    pointer-events: none;
+    animation: hero-border-flow 9s ease-in-out infinite;
+    filter: drop-shadow(0 0 14px hsla(48,100%,67%,0.28));
+    z-index: 0;
+  }
+  .hero-anim-border > * { position: relative; z-index: 1; border-radius: inherit; overflow: hidden; }
+  @keyframes hero-border-flow { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
+  @media (max-width: 640px) {
+    .hero-anim-border { margin-left: 6px; margin-right: 6px; }
+    .hero-anim-border::before { inset: 0; padding: 3px; filter: none; }
+  }
+
   /* Respect reduced motion */
   @media (prefers-reduced-motion: reduce) {
     .facility-anim, .pleasant-photo, .animate-on-scroll { animation: none !important; opacity: 1 !important; transform: none !important; }
