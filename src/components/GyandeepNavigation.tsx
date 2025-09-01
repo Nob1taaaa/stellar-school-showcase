@@ -50,7 +50,7 @@ const Navigation = () => {
 
       {/* Main Navigation */}
       <nav className="sticky top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-golden-accent/20 shadow-golden">
-        <div className="container mx-auto px-4" style={{ border: '1px solid rgba(113, 138, 120, 1)' }}>
+        <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-10 md:h-20">
             {/* Logo */}
             <div className="flex items-center space-x-2 sm:space-x-4">
@@ -61,7 +61,7 @@ const Navigation = () => {
                   className="h-full w-auto object-contain"
                 />
               </div>
-              <div className="min-w-0 flex-1">
+              <div className="hidden md:block min-w-0 flex-1">
                 <h1 className="text-xs sm:text-sm md:text-lg lg:text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent truncate">
                   Gyandeep Public School
                 </h1>
