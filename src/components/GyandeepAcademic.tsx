@@ -222,79 +222,7 @@ const GyandeepAcademic = () => {
             </p>
           </div>
 
-          {/* Mobile Horizontal Scroll for Facilities */}
-          <div className="lg:hidden grid grid-cols-1 gap-4 mb-8">
-            <div className="contents">
-              {modernFacilities.map((facility, index) => {
-                const Icon = facility.icon;
-                return (
-                  <div key={index} className="cute-border facility-anim facility-shimmer w-full animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
-                    <Card className="glass-card border-none interactive-card group rounded-2xl">
-                      <CardContent className="mobile-card-padding text-center">
-                        <div className="relative">
-                          <div className="rcg-outer" style={{ transform: 'scale(0.45)', top: 4, right: 4 }}>
-                            <div className="rcg-dot" />
-                            <div className="rcg-card">
-                              <div className="rcg-ray" />
-                              <div className="rcg-text">A+</div>
-                              <div>Quality</div>
-                              <div className="rcg-line rcg-topl" />
-                              <div className="rcg-line rcg-leftl" />
-                              <div className="rcg-line rcg-bottoml" />
-                              <div className="rcg-line rcg-rightl" />
-                            </div>
-                          </div>
-                          <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-accent rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 smooth-transition">
-                            <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent-foreground" />
-                          </div>
-                        </div>
-                        <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-accent smooth-transition">
-                          {facility.title}
-                        </h4>
-                        <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{facility.description}</p>
-                      </CardContent>
-                    </Card>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
 
-          {/* Desktop Grid for Facilities */}
-          <div className="hidden lg:grid lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-16 sm:mb-20">
-            {modernFacilities.map((facility, index) => {
-              const Icon = facility.icon;
-              return (
-                <div key={index} className="cute-border facility-anim facility-shimmer animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
-                  <Card className="glass-card border-none interactive-card group rounded-2xl">
-                    <CardContent className="mobile-card-padding text-center">
-                      <div className="relative">
-                        <div className="rcg-outer" style={{ transform: 'scale(0.55)', top: 6, right: 6 }}>
-                          <div className="rcg-dot" />
-                          <div className="rcg-card">
-                            <div className="rcg-ray" />
-                            <div className="rcg-text">A+</div>
-                            <div>Quality</div>
-                            <div className="rcg-line rcg-topl" />
-                            <div className="rcg-line rcg-leftl" />
-                            <div className="rcg-line rcg-bottoml" />
-                            <div className="rcg-line rcg-rightl" />
-                          </div>
-                        </div>
-                        <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-accent rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 smooth-transition">
-                          <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent-foreground" />
-                        </div>
-                      </div>
-                      <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-accent smooth-transition">
-                        {facility.title}
-                      </h4>
-                      <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{facility.description}</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              );
-            })}
-          </div>
 
           {/* Co-curricular Activities */}
           <div className="glass-card rounded-2xl sm:rounded-3xl p-8 sm:p-10 md:p-12 mb-16 sm:mb-20 animate-on-scroll">
