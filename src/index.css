@@ -485,6 +485,13 @@
     .facility-shimmer::after { animation: none !important; }
   }
 
+  /* Contact section mobile overflow + alignment fix */
+  @media (max-width: 640px) {
+    #contact { overflow-x: clip; }
+    #contact .cute-border::before { inset: 0; padding: 1.5px; }
+    #contact .glass-card { margin-left: 2px; margin-right: 2px; }
+  }
+
   /* 3D Card Effects */
   .card-3d-parent {
     width: 100%;
