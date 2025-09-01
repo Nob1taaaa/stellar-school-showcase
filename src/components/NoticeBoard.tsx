@@ -119,32 +119,6 @@ const NoticeBoard = () => {
             </p>
           </div>
 
-          {/* Featured Notice */}
-          <div className="glass-card rounded-2xl p-8 mb-12 relative overflow-hidden border border-accent/20">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-accent opacity-10 rounded-full -translate-y-16 translate-x-16"></div>
-            <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-4">
-                <Badge className={getPriorityColor("high")}>🚨 Important</Badge>
-                <span className="text-sm text-muted-foreground">Latest Update</span>
-              </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                {notices[0].title}
-              </h3>
-              <p className="text-lg text-muted-foreground mb-6">
-                {notices[0].description}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="hero" size="lg">
-                  <Download className="w-5 h-5 mr-2" />
-                  Download Application Form
-                </Button>
-                <Button variant="outline" size="lg">
-                  <ExternalLink className="w-5 h-5 mr-2" />
-                  View Details
-                </Button>
-              </div>
-            </div>
-          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {notices.slice(1).map((notice, index) => (
@@ -195,24 +169,6 @@ const NoticeBoard = () => {
             </div>
           </div>
 
-          {/* CTA */}
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Don't miss any important updates!
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Subscribe to our notifications to receive instant updates about school announcements.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg">
-                <Bell className="w-5 h-5 mr-2" />
-                Subscribe to Notifications
-              </Button>
-              <Button variant="outline" size="lg">
-                View All Notices
-              </Button>
-            </div>
-          </div>
         </div>
       </div>
     </section>
