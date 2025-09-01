@@ -51,10 +51,10 @@ const Navigation = () => {
       {/* Main Navigation */}
       <nav className="sticky top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-golden-accent/20 shadow-golden">
         <div className="container mx-auto px-4" style={{ border: '1px solid rgba(113, 138, 120, 1)' }}>
-          <div className="flex items-center justify-between h-16 md:h-20">
+          <div className="flex items-center justify-between h-16 md:h-20 lg:h-24">
             {/* Logo */}
-            <div className="flex items-center space-x-2 sm:space-x-4">
-              <div className="h-10 sm:h-12 md:h-16 lg:h-20 flex-shrink-0">
+            <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-4 min-w-0 flex-1 mr-4">
+              <div className="h-8 sm:h-10 md:h-12 lg:h-16 xl:h-18 flex-shrink-0">
                 <img
                   src={schoolLogo}
                   alt="Gyandeep Public School Logo"
@@ -62,34 +62,34 @@ const Navigation = () => {
                 />
               </div>
               <div className="min-w-0 flex-1">
-                <h1 className="text-xs sm:text-sm md:text-lg lg:text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent truncate">
+                <h1 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent truncate leading-tight">
                   Gyandeep Public School
                 </h1>
-                <p className="text-xs md:text-sm text-foreground/70 font-medium hidden md:block truncate">
+                <p className="text-xs sm:text-xs md:text-sm lg:text-base text-foreground/70 font-medium hidden sm:block truncate leading-tight mt-0.5">
                   Dharsauna, Cholapur, Varanasi-221101
                 </p>
-                <p className="text-xs text-foreground/60 hidden xl:block font-medium truncate">
+                <p className="text-xs lg:text-sm text-foreground/60 hidden lg:block font-medium truncate leading-tight">
                   Affiliated to CBSE (10+2) New Delhi | School Code: 71458
                 </p>
               </div>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden xl:flex items-center space-x-6 lg:space-x-8">
+            <div className="hidden xl:flex items-center space-x-4 lg:space-x-6 xl:space-x-8 flex-shrink-0">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-foreground hover:text-primary smooth-transition font-semibold relative group text-lg"
+                  className="text-foreground hover:text-primary smooth-transition font-semibold relative group text-sm lg:text-base xl:text-lg whitespace-nowrap"
                 >
                   {item.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-1 bg-gradient-hero group-hover:w-full smooth-transition rounded-full shadow-golden"></span>
                 </a>
               ))}
-              <Button variant="default" size="lg" className="bg-gradient-hero text-primary-foreground font-semibold shadow-golden hover:shadow-glow px-4 lg:px-6 py-2 lg:py-3">
-                <Download className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                <span className="hidden sm:inline">Admission Form</span>
-                <span className="sm:hidden">Apply</span>
+              <Button variant="default" size="lg" className="bg-gradient-hero text-primary-foreground font-semibold shadow-golden hover:shadow-glow px-3 lg:px-4 xl:px-6 py-2 lg:py-3 text-sm lg:text-base whitespace-nowrap">
+                <Download className="w-3 h-3 lg:w-4 lg:h-4 mr-1 lg:mr-2" />
+                <span className="hidden lg:inline">Admission Form</span>
+                <span className="lg:hidden">Apply</span>
               </Button>
             </div>
 

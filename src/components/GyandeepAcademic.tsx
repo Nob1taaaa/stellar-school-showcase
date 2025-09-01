@@ -132,7 +132,8 @@ const GyandeepAcademic = () => {
                 {academicPrograms.map((program, index) => {
                   const Icon = program.icon;
                   return (
-                    <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll w-80 flex-shrink-0 snap-center" style={{animationDelay: `${index * 0.1}s`}}>
+                    <div key={index} className="cute-border facility-anim facility-shimmer w-80 flex-shrink-0 snap-center animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
+                      <Card className="glass-card border-none interactive-card group h-full backdrop-blur-xl bg-white/80">
                       <CardHeader className="pb-4">
                         <div className="flex items-center justify-between mb-3 sm:mb-4">
                           <Badge className="bg-gradient-accent text-accent-foreground">{program.badge}</Badge>
@@ -163,7 +164,8 @@ const GyandeepAcademic = () => {
                           {program.timing}
                         </div>
                       </CardContent>
-                    </Card>
+                      </Card>
+                    </div>
                   );
                 })}
               </div>
@@ -174,7 +176,8 @@ const GyandeepAcademic = () => {
               {academicPrograms.map((program, index) => {
               const Icon = program.icon;
               return (
-                <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
+                <div key={index} className="cute-border facility-anim facility-shimmer animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
+                  <Card className="glass-card border-none interactive-card group h-full backdrop-blur-xl bg-white/80">
                   <CardHeader className="pb-4">
                     <div className="flex items-center justify-between mb-3 sm:mb-4">
                       <Badge className="bg-gradient-accent text-accent-foreground">{program.badge}</Badge>
@@ -205,7 +208,8 @@ const GyandeepAcademic = () => {
                       {program.timing}
                     </div>
                   </CardContent>
-                </Card>
+                  </Card>
+                </div>
                 );
               })}
             </div>
