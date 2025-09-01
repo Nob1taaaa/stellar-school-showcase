@@ -62,7 +62,7 @@ const Navigation = () => {
                 />
               </div>
               <div className="hidden md:block min-w-0 flex-1">
-                <h1 className="text-xs sm:text-sm md:text-lg lg:text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent truncate">
+                <h1 className="text-xs sm:text-sm md:text-lg lg:text-2xl font-bold text-red-600 truncate">
                   Gyandeep Public School
                 </h1>
                 <p className="text-xs md:text-sm text-foreground/70 font-medium hidden md:block truncate">
