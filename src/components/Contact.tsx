@@ -3,7 +3,18 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, Youtube, Send, Users } from "lucide-react";
+import { 
+  MapPin, 
+  Phone, 
+  Mail, 
+  Clock, 
+  Facebook, 
+  Twitter, 
+  Instagram, 
+  Youtube, 
+  Send, 
+  Users 
+} from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
