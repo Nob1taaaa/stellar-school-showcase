@@ -469,6 +469,7 @@
 
   /* Flowing gradient border for Daily Activities */
   .anim-border-flow { position: relative; border-radius: 14px; isolation: isolate; border: 1px solid transparent; --ab-size: 2px; }
+  @media (max-width: 640px) { .anim-border-flow { --ab-size: 3px; } }
   @media (min-width: 640px) { .anim-border-flow { --ab-size: 3px; } }
   @media (min-width: 1024px) { .anim-border-flow { --ab-size: 4px; } }
   .anim-border-flow::before {
@@ -477,19 +478,19 @@
     inset: -2px;
     border-radius: inherit;
     padding: var(--ab-size);
-    background: linear-gradient(90deg, hsl(var(--golden-secondary)), hsl(var(--accent)), hsl(217 91% 60%), hsl(var(--primary)), hsl(var(--golden-secondary)));
+    background: linear-gradient(90deg, hsl(var(--golden-secondary)), hsl(var(--accent)), hsl(217 91% 60%), hsl(275 85% 70%), hsl(var(--golden-secondary)));
     background-size: 300% 100%;
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
             mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
             mask-composite: exclude;
     pointer-events: none;
-    animation: border-flow 6s linear infinite;
-    filter: drop-shadow(0 0 10px hsla(48,100%,67%,0.25));
+    animation: border-flow 5.5s linear infinite;
+    filter: drop-shadow(0 0 12px hsla(48,100%,67%,0.32));
     z-index: 0;
   }
-  .anim-border-flow:hover::before { animation-duration: 3.5s; filter: drop-shadow(0 0 14px hsla(45,100%,51%,0.35)); }
-  .anim-border-flow > * { position: relative; z-index: 1; }
+  .anim-border-flow:hover::before { animation-duration: 3s; filter: drop-shadow(0 0 16px hsla(45,100%,51%,0.42)); }
+  .anim-border-flow > * { position: relative; z-index: 1; border-radius: inherit; }
   @keyframes border-flow { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
   @media (prefers-reduced-motion: reduce) { .anim-border-flow::before { animation: none; } }
 
