@@ -443,8 +443,8 @@
     width: min(45%, 180px);
     height: min(45%, 180px);
     border-radius: 50%;
-    background: var(--blob-gradient, linear-gradient(135deg, #ffb7de 0%, #a0e7e5 50%, #ffd8a8 100%));
-    opacity: .9;
+    background: var(--blob-gradient, linear-gradient(135deg, hsl(var(--golden-secondary)) 0%, hsl(var(--primary)) 50%, hsl(var(--accent)) 100%));
+    opacity: .7;
     filter: blur(16px);
     animation: blob-bounce 5s infinite ease;
     transform: translate(-100%, -100%);
