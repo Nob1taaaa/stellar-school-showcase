@@ -1,85 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  BookOpen, Users, Award, Star, Clock, Calendar, Trophy, Target,
-  Palette, Music, Microscope, Gamepad2, Monitor, Calculator, GraduationCap
-} from "lucide-react";
-import programsImage from "@/assets/gyandeep-activities.jpg";
+import { BookOpen, Users, Award, Star, Clock, Trophy, Target, Palette, Music } from "lucide-react";
 
 const GyandeepAcademic = () => {
-  const academicPrograms = [
-    {
-      category: "Early Years",
-      title: "Nursery & Pre-Primary",
-      icon: Star,
-      description: "Foundation building with play-based learning and essential skill development.",
-      features: ["Creative Learning", "Motor Skills", "Social Development", "Basic Literacy"],
-      timing: "7:30 AM - 11:30 AM (Summer)",
-      badge: "Age 3-5"
-    },
-    {
-      category: "Primary",
-      title: "Classes I to V",
-      icon: BookOpen,
-      description: "Comprehensive curriculum with focus on core subjects and extracurricular activities.",
-      features: ["Smart Classes", "Abacus Training", "Science Lab", "Art & Craft"],
-      timing: "7:45 AM - 1:00 PM (Regular)",
-      badge: "Age 6-10"
-    },
-    {
-      category: "Middle School",
-      title: "Classes VI to VIII",
-      icon: Monitor,
-      description: "Advanced learning with technology integration and skill-based education.",
-      features: ["Educom Smart Classes", "3D Learning", "Project Work", "Co-curricular"],
-      timing: "8:30 AM - 1:40 PM (Winter)",
-      badge: "Age 11-13"
-    },
-    {
-      category: "Secondary",
-      title: "Classes IX to X",
-      icon: GraduationCap,
-      description: "CBSE board preparation with comprehensive academic and practical training.",
-      features: ["Board Prep", "Practical Labs", "Career Guidance", "Competitions"],
-      timing: "Varies by Season",
-      badge: "Age 14-16"
-    }
-  ];
-
-  const modernFacilities = [
-    {
-      icon: Monitor,
-      title: "Educom Smart Classes",
-      description: "Latest teaching tools with graphic animation, simulations, and 3D images"
-    },
-    {
-      icon: Calculator,
-      title: "Abacus Classes",
-      description: "Mental math development and cognitive skill enhancement"
-    },
-    {
-      icon: Microscope,
-      title: "Science Laboratory",
-      description: "Fully equipped lab for hands-on practical learning"
-    },
-    {
-      icon: Palette,
-      title: "Art & Craft Studio",
-      description: "Creative expression through various artistic mediums"
-    },
-    {
-      icon: Music,
-      title: "Music & Dance",
-      description: "Cultural development through performing arts"
-    },
-    {
-      icon: Gamepad2,
-      title: "Sports Facilities",
-      description: "Physical fitness and team building activities"
-    }
-  ];
-
   const cocurricular = [
     { name: "Quiz Competitions", icon: Trophy },
     { name: "Debate Competitions", icon: Users },
@@ -113,118 +36,10 @@ const GyandeepAcademic = () => {
     <section id="academic" className="py-16 sm:py-20 md:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-12 sm:mb-16 md:mb-20">
-            <Badge variant="secondary" className="mb-4 sm:mb-6 text-base sm:text-lg px-4 sm:px-6 py-2">Academic Excellence</Badge>
-            <h2 className="mobile-section-title font-bold text-foreground mb-6 sm:mb-8 animate-fade-in">
-              Comprehensive <span className="text-gradient">Education System</span>
-            </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
-              From nursery to 10th grade with modern teaching techniques and comprehensive development.
-            </p>
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <Badge variant="secondary" className="mb-0 text-base sm:text-lg px-4 sm:px-6 py-2">Academic Excellence</Badge>
           </div>
 
-          {/* Academic Programs */}
-          <div className="block lg:grid lg:grid-cols-2 gap-6 sm:gap-8 mb-16 sm:mb-20 md:mb-24">
-            {/* Mobile Horizontal Scroll */}
-            <div className="lg:hidden grid grid-cols-1 gap-4 mb-8">
-              <div className="contents">
-                {academicPrograms.map((program, index) => {
-                  const Icon = program.icon;
-                  return (
-                    <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll w-full" style={{animationDelay: `${index * 0.1}s`}}>
-                      <CardHeader className="pb-4">
-                        <div className="flex items-center justify-between mb-3 sm:mb-4">
-                          <Badge className="bg-gradient-accent text-accent-foreground">{program.badge}</Badge>
-                          <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-hero rounded-2xl flex items-center justify-center group-hover:scale-110 smooth-transition">
-                            <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary-foreground" />
-                          </div>
-                        </div>
-                        <div className="text-sm text-accent font-medium mb-2">{program.category}</div>
-                        <CardTitle className="text-xl sm:text-2xl group-hover:text-primary smooth-transition">
-                          {program.title}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent className="space-y-4 sm:space-y-6">
-                        <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-                          {program.description}
-                        </p>
-                        
-                        <div className="flex flex-wrap gap-2">
-                          {program.features.map((feature, idx) => (
-                            <Badge key={idx} variant="outline" className="text-xs sm:text-sm">
-                              {feature}
-                            </Badge>
-                          ))}
-                        </div>
-                        
-                        <div className="flex items-center text-sm text-muted-foreground pt-2 border-t border-border">
-                          <Clock className="w-4 h-4 mr-2" />
-                          {program.timing}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
-              </div>
-            </div>
-            
-            {/* Desktop Grid */}
-            <div className="hidden lg:contents">
-              {academicPrograms.map((program, index) => {
-              const Icon = program.icon;
-              return (
-                <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
-                  <CardHeader className="pb-4">
-                    <div className="flex items-center justify-between mb-3 sm:mb-4">
-                      <Badge className="bg-gradient-accent text-accent-foreground">{program.badge}</Badge>
-                      <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-hero rounded-2xl flex items-center justify-center group-hover:scale-110 smooth-transition">
-                        <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary-foreground" />
-                      </div>
-                    </div>
-                    <div className="text-sm text-accent font-medium mb-2">{program.category}</div>
-                    <CardTitle className="text-xl sm:text-2xl group-hover:text-primary smooth-transition">
-                      {program.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4 sm:space-y-6">
-                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-                      {program.description}
-                    </p>
-                    
-                    <div className="flex flex-wrap gap-2">
-                      {program.features.map((feature, idx) => (
-                        <Badge key={idx} variant="outline" className="text-xs sm:text-sm">
-                          {feature}
-                        </Badge>
-                      ))}
-                    </div>
-                    
-                    <div className="flex items-center text-sm text-muted-foreground pt-2 border-t border-border">
-                      <Clock className="w-4 h-4 mr-2" />
-                      {program.timing}
-                    </div>
-                  </CardContent>
-                </Card>
-                );
-              })}
-            </div>
-          </div>
-
-
-          {/* Modern Facilities */}
-          <div className="text-center mb-2">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-tight">Modern Learning Facilities</h3>
-          </div>
-          <div className="text-center mb-12 sm:mb-16">
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              State-of-the-art facilities that blend traditional teaching with modern technology.
-            </p>
-          </div>
-
-
-
-          {/* Co-curricular Activities */}
           <div className="glass-card rounded-2xl sm:rounded-3xl p-8 sm:p-10 md:p-12 mb-16 sm:mb-20 animate-on-scroll">
             <div className="text-center mb-8 sm:mb-12">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">Co-curricular Activities</h3>
@@ -246,7 +61,6 @@ const GyandeepAcademic = () => {
             </div>
           </div>
 
-          {/* School Timings */}
           <div className="text-center mb-8 sm:mb-12">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">School Timings</h3>
             <p className="text-base sm:text-lg text-muted-foreground">
@@ -300,7 +114,6 @@ const GyandeepAcademic = () => {
             ))}
           </div>
 
-          {/* CTA Section */}
           <div className="text-center">
             <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-3 sm:mb-4">
               Ready to Join Our Academic Excellence?
