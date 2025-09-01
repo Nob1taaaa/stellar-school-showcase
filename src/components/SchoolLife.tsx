@@ -158,7 +158,7 @@ const SchoolLife = () => {
             {dailyActivities.map((activity, index) => {
               const Icon = activity.icon;
               return (
-                <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll" style={{animationDelay: `${index * 0.1}s`}}>
+                <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll anim-border" style={{animationDelay: `${index * 0.1}s`}}>
                   <CardContent className="mobile-card-padding">
                     <div className="flex items-center justify-between mb-4 sm:mb-6">
                       <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-accent rounded-2xl flex items-center justify-center group-hover:scale-110 smooth-transition">
