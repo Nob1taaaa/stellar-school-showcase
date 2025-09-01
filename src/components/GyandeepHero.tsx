@@ -12,7 +12,7 @@ const GyandeepHero = () => {
         <div className="absolute bottom-20 right-40 w-24 h-24 bg-white/10 rounded-lg rotate-45"></div>
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 pt-16 sm:pt-20 md:pt-24 lg:pt-28 pb-16 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 pt-8 sm:pt-12 md:pt-20 lg:pt-24 pb-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center min-h-[70vh]">
           {/* Content Card */}
           <div className="card-3d-parent order-2 md:order-1">
