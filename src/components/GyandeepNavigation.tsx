@@ -19,9 +19,9 @@ const Navigation = () => {
   return (
     <>
       {/* Top Header */}
-      <div className="bg-gradient-hero text-primary-foreground py-1 md:py-2 text-xs sm:text-sm shadow-golden pt-[env(safe-area-inset-top)]">
+      <div className="bg-gradient-hero text-primary-foreground py-0.5 md:py-1 text-[11px] sm:text-xs shadow-golden pt-[env(safe-area-inset-top)]">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-1 md:space-y-0">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-0 md:space-y-0">
             <div className="flex items-center space-x-2 sm:space-x-4">
               <div className="flex items-center space-x-1 sm:space-x-2">
                 <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
@@ -51,10 +51,10 @@ const Navigation = () => {
       {/* Main Navigation */}
       <nav className="sticky top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-golden-accent/20 shadow-golden">
         <div className="container mx-auto px-4" style={{ border: '1px solid rgba(113, 138, 120, 1)' }}>
-          <div className="flex items-center justify-between h-12 md:h-20">
+          <div className="flex items-center justify-between h-10 md:h-20">
             {/* Logo */}
             <div className="flex items-center space-x-2 sm:space-x-4">
-              <div className="h-8 sm:h-10 md:h-14 lg:h-16 flex-shrink-0">
+              <div className="h-7 sm:h-9 md:h-12 lg:h-14 flex-shrink-0">
                 <img
                   src={schoolLogo}
                   alt="Gyandeep Public School Logo"
