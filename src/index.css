@@ -291,72 +291,21 @@
     transition: var(--transition-spring);
   }
 
-  /* Super Cute Mobile-First Classes ✨ */
+  /* Mobile-First Responsive Classes */
   .mobile-hero-text {
-    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
-    background: var(--gradient-rainbow);
-    background-size: 300% 300%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: rainbow-shift 4s ease-in-out infinite;
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl;
   }
 
   .mobile-section-title {
-    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
-    position: relative;
-  }
-
-  .mobile-section-title::after {
-    content: '✨';
-    position: absolute;
-    top: -8px;
-    right: -15px;
-    font-size: 14px;
-    animation: sparkle 2s ease-in-out infinite;
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
   }
 
   .mobile-card-padding {
-    @apply p-3 sm:p-4 md:p-6 lg:p-8;
-    position: relative;
-  }
-
-  .mobile-card-padding::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: var(--gradient-rainbow);
-    background-size: 200% 100%;
-    animation: rainbow-shift 3s ease-in-out infinite;
-    border-radius: 10px 10px 0 0;
+    @apply p-4 sm:p-6 md:p-8;
   }
 
   .mobile-grid {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6;
-  }
-
-  /* Mobile Touch Magic ✨ */
-  @media (max-width: 768px) {
-    .mobile-hero-text {
-      @apply text-2xl;
-      line-height: 1.2;
-      margin-bottom: 1rem;
-    }
-    
-    .mobile-section-title {
-      @apply text-lg;
-      font-weight: 700;
-    }
-    
-    .mobile-card-padding {
-      @apply p-4;
-      border-radius: 16px;
-      background: var(--gradient-card);
-      box-shadow: var(--shadow-card);
-    }
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
   }
 
   /* Magical Enhanced Animations ✨ */
@@ -494,74 +443,13 @@
     transform: translateZ(0);
   }
 
-  /* Super Cute Mobile Touch Improvements ✨ */
+  /* Mobile Touch Improvements */
   .touch-target {
-    @apply min-h-[48px] min-w-[48px] flex items-center justify-center;
-    background: var(--gradient-sparkle);
-    background-size: 200% 200%;
-    border-radius: 12px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .touch-target::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, transparent 70%);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.6s ease;
-  }
-
-  .touch-target:active::before {
-    width: 200%;
-    height: 200%;
-  }
-
-  .touch-target:active {
-    transform: scale(0.95);
-    background-position: 100% 100%;
+    @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
   }
 
   .mobile-nav-item {
-    @apply py-4 px-6 text-base font-medium;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    margin: 4px 8px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .mobile-nav-item::before {
-    content: '🌟';
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%) scale(0);
-    transition: transform 0.3s ease;
-    font-size: 12px;
-  }
-
-  .mobile-nav-item:hover::before {
-    transform: translateY(-50%) scale(1);
-  }
-
-  .mobile-nav-item:hover {
-    background: var(--gradient-accent);
-    color: white;
-    transform: translateX(8px) scale(1.02);
-    box-shadow: var(--shadow-button);
-  }
-
-  .mobile-nav-item:active {
-    transform: translateX(8px) scale(0.98);
+    @apply py-4 px-6 text-lg font-medium smooth-transition;
   }
 
   /* Performance Optimizations */
@@ -645,114 +533,40 @@
     to { transform: rotate(360deg); }
   }
 
-  /* Super Cute Mobile Animations ✨ */
-  
-  /* Adorable floating animation for mobile cards */
-  .mobile-float {
-    animation: mobile-float 4s ease-in-out infinite;
+  /* Pleasant float animation for facility cards */
+  .facility-anim {
+    animation: floaty 6.5s ease-in-out infinite;
     transform-origin: center;
     will-change: transform;
   }
-  
-  .mobile-float:nth-child(2n) { 
-    animation-duration: 5s; 
-    animation-delay: 0.5s; 
-  }
-  
-  .mobile-float:nth-child(3n) { 
-    animation-duration: 6s; 
-    animation-delay: 1s; 
-  }
-  
-  @keyframes mobile-float {
-    0%, 100% { 
-      transform: translateY(0px) rotate(0deg);
-    }
-    25% {
-      transform: translateY(-6px) rotate(0.5deg);
-    }
-    50% { 
-      transform: translateY(-10px) rotate(-0.5deg);
-    }
-    75% {
-      transform: translateY(-4px) rotate(0.5deg);
-    }
+  .facility-anim:nth-child(2n) { animation-duration: 7.5s; animation-delay: .4s; }
+  .facility-anim:nth-child(3n) { animation-duration: 8.5s; animation-delay: .8s; }
+  .facility-anim:hover { transform: translateY(-6px) rotate(-0.5deg); }
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
   }
 
-  /* Cute mobile tap effects */
-  .mobile-tap-effect {
+  /* Shimmer overlay for facility cards */
+  .facility-shimmer {
     position: relative;
-    overflow: hidden;
-    transition: all 0.2s ease;
   }
-
-  .mobile-tap-effect::after {
-    content: '';
+  .facility-shimmer::after {
+    content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, transparent 70%);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.4s ease;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.35) 15%, transparent 30%);
+    transform: translateX(-150%);
+    animation: shimmer-move 4.5s ease-in-out infinite;
+    pointer-events: none;
+    will-change: transform, opacity;
   }
-
-  .mobile-tap-effect:active::after {
-    width: 300%;
-    height: 300%;
-  }
-
-  .mobile-tap-effect:active {
-    transform: scale(0.95);
-  }
-
-  /* Cute mobile card shimmer */
-  .mobile-shimmer {
-    position: relative;
-    background: var(--gradient-card);
-    overflow: hidden;
-  }
-  
-  .mobile-shimmer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-    animation: mobile-shimmer-slide 3s ease-in-out infinite;
-  }
-  
-  @keyframes mobile-shimmer-slide {
-    0% { 
-      left: -100%; 
-      opacity: 0; 
-    }
-    50% { 
-      left: 100%; 
-      opacity: 1; 
-    }
-    100% { 
-      left: 100%; 
-      opacity: 0; 
-    }
-  }
-
-  /* Cute mobile pulse for important elements */
-  .mobile-pulse {
-    animation: mobile-pulse 2s ease-in-out infinite;
-  }
-
-  @keyframes mobile-pulse {
-    0%, 100% {
-      box-shadow: 0 0 0 0 hsla(280 90% 70% / 0.5);
-    }
-    50% {
-      box-shadow: 0 0 0 15px hsla(280 90% 70% / 0);
-    }
+  @keyframes shimmer-move {
+    0% { transform: translateX(-150%); opacity: .0; }
+    10% { opacity: .6; }
+    60% { transform: translateX(150%); opacity: .0; }
+    100% { transform: translateX(150%); opacity: .0; }
   }
 
   /* Pleasant photo animation for Morning Assembly */
@@ -907,80 +721,19 @@
     .hero-anim-border::before { inset: -2px; padding: 4px; filter: drop-shadow(0 0 10px hsla(48,100%,67%,0.22)); }
   }
 
-  /* Super Cute Mobile Optimizations ✨ */
-  @media (max-width: 768px) {
-    body {
-      font-size: 14px;
-      line-height: 1.5;
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-    
-    /* Enhanced mobile tap targets */
-    .mobile-touch-enhanced {
-      min-height: 48px;
-      min-width: 48px;
-      padding: 12px;
-      border-radius: 12px;
-      background: var(--gradient-sparkle);
-      background-size: 200% 200%;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    .mobile-touch-enhanced:active {
-      transform: scale(0.95);
-      background-position: 100% 100%;
-    }
-    
-    /* Mobile-first animations */
-    .mobile-bounce {
-      animation: mobile-bounce 1s ease-in-out infinite;
-    }
-    
-    @keyframes mobile-bounce {
-      0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-      }
-      40% {
-        transform: translateY(-8px);
-      }
-      60% {
-        transform: translateY(-4px);
-      }
-    }
-    
-    /* Cute mobile cards */
-    .mobile-card {
-      background: var(--gradient-card);
-      border-radius: 16px;
-      padding: 16px;
-      margin: 8px;
-      box-shadow: var(--shadow-card);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .mobile-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: var(--gradient-rainbow);
-      background-size: 200% 100%;
-      animation: rainbow-shift 3s ease-in-out infinite;
-    }
-    
-    .mobile-card:active {
-      transform: scale(0.98);
-      box-shadow: var(--shadow-button);
-    }
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .facility-anim, .pleasant-photo, .animate-on-scroll { animation: none !important; opacity: 1 !important; transform: none !important; }
+    .facility-shimmer::after { animation: none !important; }
+  }
+
+  /* Contact section mobile overflow + alignment fix */
+  @media (max-width: 640px) {
+    #contact { overflow-x: clip; }
+    #contact .cute-border::before { inset: 0; padding: 1.75px; }
+    #contact .contact-anim-border { margin-left: 8px; margin-right: 8px; max-width: calc(100% - 16px); }
+    #contact .contact-anim-border::before { inset: 0; padding: 2px; filter: none; }
+    #contact .glass-card { margin-left: 2px; margin-right: 2px; }
   }
 
   /* 3D Card Effects */

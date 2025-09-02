@@ -6,38 +6,18 @@ import NoticeBoard from "@/components/NoticeBoard";
 import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
 import Chatbot from "@/components/Chatbot";
-import MobileFloatingButton from "@/components/MobileFloatingButton";
-import MobileCuteHeader from "@/components/MobileCuteHeader";
-import MobileProgressBar from "@/components/MobileProgressBar";
-import MobileCelebration from "@/components/MobileCelebration";
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative">
-      <MobileProgressBar />
-      <MobileCuteHeader />
+    <div className="min-h-screen">
       <GyandeepNavigation />
-      <div className="mobile-float">
-        <GyandeepHero />
-      </div>
-      <div className="mobile-float mobile-shimmer">
-        <GyandeepAcademic />
-      </div>
-      <div className="mobile-float">
-        <SchoolLife />
-      </div>
-      <div className="mobile-float mobile-shimmer">
-        <NoticeBoard />
-      </div>
-      <div className="mobile-float">
-        <Gallery />
-      </div>
-      <div className="mobile-float mobile-shimmer">
-        <Contact />
-      </div>
+      <GyandeepHero />
+      <GyandeepAcademic />
+      <SchoolLife />
+      <NoticeBoard />
+      <Gallery />
+      <Contact />
       <Chatbot />
-      <MobileFloatingButton />
-      <MobileCelebration />
     </div>
   );
 };
