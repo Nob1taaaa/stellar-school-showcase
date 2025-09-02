@@ -49,20 +49,25 @@
     --golden-light: 220 100% 75; /* Light blue */
     --white-pure: 210 25% 98; /* Clean white */
 
-    /* Beautiful Educational Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(215 100% 50%) 0%, hsl(150 50% 60%) 30%, hsl(260 60% 70%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(260 60% 65%) 0%, hsl(150 50% 60%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(210 25% 98%) 0%, hsl(210 25% 95%) 100%);
-    --gradient-card: linear-gradient(145deg, hsla(210 30% 99% / 1) 0%, hsla(210 25% 95% / 0.95) 100%);
-    --gradient-button: linear-gradient(135deg, hsl(215 100% 50%) 0%, hsl(220 100% 65%) 100%);
+    /* Magical Educational Gradients ✨ */
+    --gradient-hero: linear-gradient(135deg, hsl(215 100% 50%) 0%, hsl(280 100% 70%) 25%, hsl(340 80% 65%) 50%, hsl(200 100% 60%) 75%, hsl(150 60% 55%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(260 60% 65%) 0%, hsl(340 70% 60%) 30%, hsl(150 50% 60%) 100%);
+    --gradient-rainbow: linear-gradient(135deg, hsl(0 100% 70%) 0%, hsl(60 100% 65%) 20%, hsl(120 60% 60%) 40%, hsl(200 100% 65%) 60%, hsl(280 100% 70%) 80%, hsl(340 80% 65%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(210 25% 98%) 0%, hsl(220 30% 96%) 50%, hsl(240 20% 97%) 100%);
+    --gradient-card: linear-gradient(145deg, hsla(210 30% 99% / 1) 0%, hsla(340 20% 98% / 0.98) 50%, hsla(210 25% 95% / 0.95) 100%);
+    --gradient-button: linear-gradient(135deg, hsl(215 100% 50%) 0%, hsl(280 90% 65%) 50%, hsl(220 100% 65%) 100%);
+    --gradient-magic: linear-gradient(135deg, hsl(340 80% 65%) 0%, hsl(280 90% 70%) 30%, hsl(200 100% 65%) 70%, hsl(150 60% 60%) 100%);
+    --gradient-sparkle: linear-gradient(45deg, hsl(50 100% 80%) 0%, hsl(200 100% 70%) 25%, hsl(280 90% 75%) 50%, hsl(340 80% 70%) 75%, hsl(60 100% 75%) 100%);
 
-    /* Enhanced Professional Shadows */
-    --shadow-elegant: 0 25px 80px hsla(215 100% 50% / 0.15);
-    --shadow-glow: 0 0 50px hsla(220 100% 65% / 0.25);
-    --shadow-card: 0 8px 28px hsla(220 80% 35% / 0.08);
-    --shadow-hero: 0 40px 120px hsla(215 100% 50% / 0.2);
-    --shadow-button: 0 12px 40px hsla(220 100% 65% / 0.25);
-    --shadow-golden: 0 0 50px hsla(215 100% 50% / 0.25);
+    /* Magical Professional Shadows ✨ */
+    --shadow-elegant: 0 30px 100px hsla(280 90% 70% / 0.2), 0 0 60px hsla(340 80% 65% / 0.15);
+    --shadow-glow: 0 0 80px hsla(220 100% 65% / 0.3), 0 0 120px hsla(280 90% 70% / 0.2);
+    --shadow-card: 0 15px 35px hsla(220 80% 35% / 0.1), 0 5px 15px hsla(340 60% 60% / 0.08);
+    --shadow-hero: 0 50px 150px hsla(215 100% 50% / 0.25), 0 0 100px hsla(280 90% 70% / 0.15);
+    --shadow-button: 0 20px 60px hsla(220 100% 65% / 0.3), 0 0 40px hsla(340 80% 65% / 0.2);
+    --shadow-golden: 0 0 80px hsla(50 100% 70% / 0.3), 0 0 120px hsla(200 100% 65% / 0.2);
+    --shadow-magical: 0 25px 80px hsla(280 90% 70% / 0.25), 0 0 60px hsla(340 80% 65% / 0.2);
+    --shadow-sparkle: 0 0 50px hsla(50 100% 70% / 0.4), 0 0 100px hsla(280 90% 70% / 0.3);
 
     /* Typography */
     --font-heading: 'Inter', system-ui, sans-serif;
@@ -179,9 +184,37 @@
 
 @layer components {
   .glass-card {
-    @apply backdrop-blur-md border border-white/30;
+    @apply backdrop-blur-xl border border-white/40;
     background: var(--gradient-card);
     box-shadow: var(--shadow-card);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.8s ease;
+  }
+
+  .glass-card:hover::before {
+    left: 100%;
+  }
+
+  .glass-card::after {
+    content: '✨';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+    opacity: 0;
+    animation: sparkle 3s ease-in-out infinite;
+    animation-delay: 1s;
   }
 
   .hero-gradient {
@@ -194,6 +227,45 @@
 
   .button-gradient {
     background: var(--gradient-button);
+    background-size: 200% 200%;
+    animation: rainbow-shift 6s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .button-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+  }
+
+  .button-gradient:hover::before {
+    left: 100%;
+  }
+
+  .magical-button {
+    background: var(--gradient-magic);
+    background-size: 400% 400%;
+    animation: rainbow-shift 4s ease-in-out infinite;
+    box-shadow: var(--shadow-magical);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .magical-button::after {
+    content: '✨';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 10px;
+    opacity: 0.7;
+    animation: sparkle 2s ease-in-out infinite;
   }
 
   .text-gradient {
@@ -236,10 +308,58 @@
     @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
   }
 
-  /* Enhanced Animations */
+  /* Magical Enhanced Animations ✨ */
   @keyframes fade-in {
-    0% { opacity: 0; transform: translateY(2rem); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% { opacity: 0; transform: translateY(2rem) scale(0.95); }
+    50% { opacity: 0.5; transform: translateY(1rem) scale(0.98); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  @keyframes sparkle {
+    0%, 100% {
+      opacity: 0;
+      transform: scale(0) rotate(0deg);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1) rotate(180deg);
+    }
+  }
+
+  @keyframes float-magical {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    33% {
+      transform: translateY(-8px) rotate(1deg);
+    }
+    66% {
+      transform: translateY(-4px) rotate(-1deg);
+    }
+  }
+
+  @keyframes rainbow-shift {
+    0% { 
+      background-position: 0% 50%;
+      filter: hue-rotate(0deg);
+    }
+    50% { 
+      background-position: 100% 50%;
+      filter: hue-rotate(45deg);
+    }
+    100% { 
+      background-position: 0% 50%;
+      filter: hue-rotate(0deg);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsla(280 90% 70% / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 60px hsla(340 80% 65% / 0.6), 0 0 100px hsla(200 100% 65% / 0.4);
+    }
   }
   .animate-on-scroll {
     @apply opacity-0 translate-y-8;
@@ -271,6 +391,49 @@
 
   .hover-glow {
     @apply smooth-transition hover:shadow-glow hover:scale-105;
+    animation: float-magical 6s ease-in-out infinite;
+  }
+
+  .hover-sparkle {
+    @apply smooth-transition hover:scale-110;
+    position: relative;
+  }
+
+  .hover-sparkle::before {
+    content: '✨';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .hover-sparkle:hover::before {
+    opacity: 1;
+    animation: sparkle 1s ease-in-out;
+  }
+
+  .magical-card {
+    @apply smooth-transition hover:-translate-y-2;
+    background: var(--gradient-sparkle);
+    background-size: 300% 300%;
+    animation: rainbow-shift 8s ease-in-out infinite;
+    box-shadow: var(--shadow-sparkle);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .magical-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+    animation: pulse-glow 4s ease-in-out infinite;
   }
 
   .interactive-card {
