@@ -76,22 +76,22 @@ const SchoolLife = () => {
   ];
 
   return (
-    <section id="school-life" className="py-16 sm:py-20 md:py-24 bg-gradient-subtle">
-      <div className="container mx-auto px-4">
+    <section id="school-life" className="py-8 sm:py-12 md:py-16 bg-gradient-subtle">
+      <div className="container mx-auto px-3 md:px-4">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-12 sm:mb-16 md:mb-20">
-            <Badge variant="secondary" className="mb-4 sm:mb-6 text-base sm:text-lg px-4 sm:px-6 py-2">School Life & Culture</Badge>
-            <h2 className="mobile-section-title font-bold text-foreground mb-6 sm:mb-8 animate-fade-in">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <Badge variant="secondary" className="mb-3 sm:mb-4 md:mb-6 text-sm sm:text-base md:text-lg px-3 sm:px-4 md:px-6 py-1 sm:py-2">School Life & Culture</Badge>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4 sm:mb-6 md:mb-8 animate-fade-in">
               A Day in the Life at <span className="text-gradient">Gyandeep</span>
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-2 sm:px-4 md:px-0">
               Experience vibrant school culture where 1500 students learn and grow together daily.
             </p>
           </div>
 
           {/* Featured Morning Assembly */}
-          <div className="glass-card rounded-2xl sm:rounded-3xl p-8 sm:p-10 md:p-12 mb-16 sm:mb-20 md:mb-24 relative overflow-hidden animate-on-scroll">
+          <div className="glass-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 mb-8 sm:mb-12 md:mb-16 relative overflow-hidden animate-on-scroll">
             <div className="relative z-10 grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
               <div>
                 <Badge variant="outline" className="mb-4 sm:mb-6 text-base sm:text-lg px-4 py-2">Daily Tradition</Badge>
