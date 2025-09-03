@@ -33,17 +33,17 @@ const GyandeepAcademic = () => {
   };
 
   return (
-    <section id="academic" className="py-8 sm:py-12 md:py-16">
-      <div className="container mx-auto px-3 md:px-4">
+    <section id="academic" className="py-16 sm:py-20 md:py-24">
+      <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-6 sm:mb-8 md:mb-10">
-            <Badge variant="secondary" className="mb-0 text-sm sm:text-base md:text-lg px-3 sm:px-4 md:px-6 py-1 sm:py-2">Academic Excellence</Badge>
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <Badge variant="secondary" className="mb-0 text-base sm:text-lg px-4 sm:px-6 py-2">Academic Excellence</Badge>
           </div>
 
-          <div className="glass-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 mb-8 sm:mb-12 md:mb-16 animate-on-scroll">
-            <div className="text-center mb-6 sm:mb-8 md:mb-10">
-              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-2 sm:mb-3 md:mb-4">Co-curricular Activities</h3>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="glass-card rounded-2xl sm:rounded-3xl p-8 sm:p-10 md:p-12 mb-16 sm:mb-20 animate-on-scroll">
+            <div className="text-center mb-8 sm:mb-12">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">Co-curricular Activities</h3>
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
                 Various activities including competitions, festivals, and hobby classes for complete personality development.
               </p>
             </div>
