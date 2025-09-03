@@ -57,7 +57,7 @@ const GyandeepHero = () => {
                   <Button 
                     variant="outline" 
                     size="lg" 
-                    className="button-gradient text-white border-0 px-4 md:px-6 lg:px-8 py-3 md:py-4 lg:py-6 text-sm md:text-base lg:text-lg rounded-2xl shadow-button hover:shadow-glow"
+                    className="bg-primary text-primary-foreground border-0 px-4 md:px-6 lg:px-8 py-3 md:py-4 lg:py-6 text-sm md:text-base lg:text-lg rounded-2xl shadow-button hover:shadow-glow"
                   >
                     Our Story
                   </Button>
@@ -76,14 +76,14 @@ const GyandeepHero = () => {
                     <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-2">
                       <BookOpen className="w-6 h-6 text-accent" />
                     </div>
-                    <div className="text-lg md:text-xl lg:text-2xl font-bold text-accent">25+</div>
+                    <div className="text-lg md:text-xl lg:text-2xl font-bold text-primary">25+</div>
                     <div className="text-xs md:text-sm text-muted-foreground">Years</div>
                   </div>
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-purple-force rounded-xl flex items-center justify-center mx-auto mb-2 shadow-purple glow-effect">
-                      <Award className="w-6 h-6 text-purple-force" style={{color: 'hsl(280 100% 60)'}} />
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-2">
+                      <Award className="w-6 h-6 text-primary" />
                     </div>
-                    <div className="text-lg md:text-xl lg:text-2xl font-bold text-purple-force" style={{color: 'hsl(280 100% 60)'}}>98%</div>
+                    <div className="text-lg md:text-xl lg:text-2xl font-bold text-primary">98%</div>
                     <div className="text-xs md:text-sm text-muted-foreground">Success</div>
                   </div>
                 </div>
