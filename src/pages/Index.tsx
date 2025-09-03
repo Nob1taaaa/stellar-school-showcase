@@ -1,4 +1,4 @@
-import GyandeepNavigation from "@/components/GyandeepNavigation";
+import Navigation from "@/components/Navigation";
 import GyandeepHero from "@/components/GyandeepHero";
 import GyandeepAcademic from "@/components/GyandeepAcademic";
 import SchoolLife from "@/components/SchoolLife";
@@ -10,7 +10,7 @@ import Chatbot from "@/components/Chatbot";
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <GyandeepNavigation />
+      <Navigation />
       <GyandeepHero />
       <GyandeepAcademic />
       <SchoolLife />
