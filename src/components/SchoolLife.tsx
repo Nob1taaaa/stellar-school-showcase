@@ -158,15 +158,15 @@ const SchoolLife = () => {
             {dailyActivities.map((activity, index) => {
               const Icon = activity.icon;
               return (
-                <Card key={index} className="glass-card border-none interactive-card group animate-on-scroll anim-border-flow rounded-2xl overflow-hidden" style={{animationDelay: `${index * 0.1}s`}}>
+                <Card key={index} className="glass-card border-none animate-on-scroll anim-border-flow rounded-2xl overflow-hidden" style={{animationDelay: `${index * 0.1}s`}}>
                   <CardContent className="mobile-card-padding">
                     <div className="flex items-center justify-between mb-4 sm:mb-6">
-                      <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-accent rounded-2xl flex items-center justify-center group-hover:scale-110 smooth-transition">
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-accent rounded-2xl flex items-center justify-center">
                         <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-accent-foreground" />
                       </div>
                       <Badge variant="outline" className="text-xs sm:text-sm">{activity.time}</Badge>
                     </div>
-                    <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4 group-hover:text-accent smooth-transition">
+                    <h4 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4">
                       {activity.title}
                     </h4>
                     <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">{activity.description}</p>
